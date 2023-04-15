@@ -14,12 +14,14 @@ const HomePage: FC = () => {
 				<title>{title}</title>
 			</Head>
 			<div className={scss.home__page}>
-				<h3>
-					<FormattedMessage id="page.home.title" />
-				</h3>
-				<p>
-					<FormattedMessage id="page.home.description" />
-				</p>
+				<div className="container">
+					<h3>
+						<FormattedMessage id="page.home.title" />
+					</h3>
+					<p>
+						<FormattedMessage id="page.home.description" />
+					</p>
+				</div>
 			</div>
 		</>
 	);

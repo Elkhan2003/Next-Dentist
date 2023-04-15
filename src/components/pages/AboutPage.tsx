@@ -14,12 +14,14 @@ const AboutPage: FC = () => {
 				<title>{title}</title>
 			</Head>
 			<div className={scss.about__page}>
-				<h3>
-					<FormattedMessage id="page.about.title" />
-				</h3>
-				<p>
-					<FormattedMessage id="page.about.about.me" />
-				</p>
+				<div className="container">
+					<h3>
+						<FormattedMessage id="page.about.title" />
+					</h3>
+					<p>
+						<FormattedMessage id="page.about.about.me" />
+					</p>
+				</div>
 			</div>
 		</>
 	);
