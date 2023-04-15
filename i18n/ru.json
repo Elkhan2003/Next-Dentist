@@ -4,7 +4,7 @@
 	"page.head.meta.description": "Пример i18n в Next.js - Английский",
 	"page.header.home": "Главная",
 	"page.header.about": "О нас",
-	"page.header.switch.lang": "Переключить языка",
+	"page.header.switch.lang": "Переключить язык",
 	"page.header.switch.theme": "Внешний вид",
 	"page.home.title": "Добро пожаловать на <b>домашнюю страницу</b>",
 	"page.home.description": "Вы просматриваете домашнюю страницу на русском языке",
