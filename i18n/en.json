@@ -1,0 +1,12 @@
+{
+	"page.head.title": "Next.js i18n example",
+	"page.head.meta.description": "Next.js i18n example - English",
+	"page.header.home": "Home",
+	"page.header.about": "About Us",
+	"page.header.switch.lang": "Switch language",
+	"page.header.switch.theme": "Appearance",
+	"page.home.title": "Welcome to <b>the home page</b>",
+	"page.home.description": "You are currently viewing the home page in english",
+	"page.about.title": "About me",
+	"page.about.about.me": "Elkhan was born and raised in the small city of Karakol in eastern Kyrgyzstan. His parents were simple people who worked in local businesses and always encouraged their son to learn and develop.From an early age, Elkhan showed an interest in computers and technology. When he was 12 years old, his parents bought him his first computer, and since then he has been interested in programming.In school, Elkhan was an excellent student and often participated in computer science Olympiads. After graduating from high school, he decided to enroll in university and study programming more deeply.In university, Elkhan chose the specialty \"Software for Computer Systems,\" where he learned about the world of frontend development and fell in love with it. He enjoyed creating beautiful and functional websites that users could use to solve their problems.After graduating from university, Elkhan found a job in a small web studio in Karakol. He worked there for a year and gained a lot of experience creating websites for local businesses and organizations.One day, Elkhan received a job offer from a large IT company in Bishkek, the capital of Kyrgyzstan. It was a great opportunity for him, and he accepted the offer.Since then, Elkhan has been working in this company and developing the frontend part for many web applications and websites. He continues to learn new technologies and improve his skills to become the best in his field.Elkhan is very proud that he was born and raised in the small city of Karakol and is glad that he can contribute to the development of technology and programming in his country."
+}

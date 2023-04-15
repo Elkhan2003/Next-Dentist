@@ -1,0 +1,12 @@
+{
+	"page.head.title": "Next.js i18n мисалы",
+	"page.head.meta.description": "Next.js i18n мисалы - Кыргызча",
+	"page.header.home": "Башкы бет",
+	"page.header.about": "Биз жөнүндө",
+	"page.header.switch.lang": "Тилди өзгөртүү",
+	"page.header.switch.theme": "Көрүнүшү",
+	"page.home.title": "<b>Башкы бетке</b> кош келиңиз",
+	"page.home.description": "Сиз французча тилдеги башкы бетти көрүп жатасыз",
+	"page.about.title": "Менин жөнүндө",
+	"page.about.about.me": "Elkhan est né et a grandi dans une petite ville appelée Karakol à l'est du Kirghizistan. Ses parents étaient des travailleurs locaux et ont toujours encouragé leur fils à étudier et à se développer.Depuis son plus jeune âge, Elkhan a montré de l'intérêt pour les ordinateurs et les technologies. Lorsqu'il avait 12 ans, ses parents lui ont acheté son premier ordinateur et depuis lors, il s'est intéressé à la programmation.À l'école, Elkhan était un excellent élève et a souvent participé à des compétitions d'informatique. Après avoir terminé ses études secondaires, il a décidé de poursuivre ses études à l'université pour approfondir ses connaissances en programmation.À l'université, Elkhan a choisi la spécialisation \"Logiciel pour systèmes informatiques\", où il a découvert le monde du développement frontend et en est tombé amoureux. Il aimait créer de beaux sites Web fonctionnels que les utilisateurs pouvaient utiliser pour résoudre leurs problèmes.Après avoir obtenu son diplôme universitaire, Elkhan a trouvé un emploi dans une petite agence web à Karakol. Il y a travaillé pendant un an et a acquis beaucoup d'expérience en créant des sites Web pour des entreprises et des organisations locales.Un jour, Elkhan a reçu une offre d'emploi d'une grande entreprise informatique à Bichkek, la capitale du Kirghizistan. C'était une grande opportunité pour lui et il a accepté l'offre.Depuis lors, Elkhan travaille pour cette entreprise et développe la partie frontend de nombreux sites Web et applications Web. Il continue à apprendre de nouvelles technologies et à améliorer ses compétences pour devenir le meilleur dans son domaine.Elkhan est très fier d'être né et d'avoir grandi dans la petite ville de Karakol et est heureux de contribuer au développement de la technologie et de la programmation dans son pays."
+}
