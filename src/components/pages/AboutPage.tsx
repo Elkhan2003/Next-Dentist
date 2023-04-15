@@ -6,7 +6,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 const AboutPage: FC = () => {
 	const intl: any = useIntl();
 
-	const title: any = intl.formatMessage({ id: "page.head.title" });
+	const title: any = intl.formatMessage({ id: "page.head.about.title" });
 
 	return (
 		<>

@@ -1,5 +1,6 @@
 {
-	"page.head.title": "Home",
+	"page.head.home.title": "Home",
+	"page.head.about.title": "About",
 	"page.head.meta.description": "Next.js i18n example - English",
 	"page.header.home": "Home",
 	"page.header.about": "About Us",

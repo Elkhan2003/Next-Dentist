@@ -1,5 +1,6 @@
 {
-	"page.head.title": "Башкы бет",
+	"page.head.home.title": "Башкы бет",
+	"page.head.about.title": "Биз жөнүндө",
 	"page.head.meta.description": "Next.js i18n мисалы - Кыргызча",
 	"page.header.home": "Башкы бет",
 	"page.header.about": "Биз жөнүндө",

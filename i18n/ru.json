@@ -1,5 +1,6 @@
 {
-	"page.head.title": "Главная",
+	"page.head.home.title": "Главная",
+	"page.head.about.title": "О нас",
 	"page.head.meta.description": "Пример i18n в Next.js - Английский",
 	"page.header.home": "Главная",
 	"page.header.about": "О нас",

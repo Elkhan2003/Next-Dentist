@@ -39,7 +39,7 @@ const Layout: FC<LayoutProps> = ({ children, dir }) => {
 
 	const intl: any = useIntl();
 
-	const title: any = intl.formatMessage({ id: "page.head.title" });
+	const title: any = intl.formatMessage({ id: "page.head.home.title" });
 	const description: any = intl.formatMessage({
 		id: "page.head.meta.description"
 	});
