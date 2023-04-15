@@ -87,64 +87,6 @@
 				color: var(--header-ActText-dark);
 			}
 		}
-
-		// ? dropdown menu for desktop
-		.dropdown {
-			position: relative;
-			padding: 10px 30px 10px 12px;
-			font-weight: 500;
-			cursor: pointer;
-			transition: 0.3s;
-
-			.arrow__icon {
-				transition: 0.3s;
-			}
-
-			.icon {
-				position: relative;
-			}
-
-			span {
-				.arrow__icon {
-					position: absolute;
-					top: 53%;
-					right: -20px;
-					transform: translateY(-50%);
-					width: 17px;
-					height: 17px;
-				}
-			}
-
-			.dropdown__content {
-				position: absolute;
-				top: 40px;
-				right: 0;
-				opacity: 0;
-				visibility: hidden;
-
-				padding: 10px;
-				display: flex;
-				flex-direction: column;
-				box-shadow: 0px 5px 20px #00000046;
-
-				border-radius: 10px;
-				transform: scale(0.8) translateZ(0);
-				transition: opacity 0.2s, transform 0.3s, visibility 0s;
-
-				cursor: default;
-
-				a {
-					border-radius: 10px;
-					cursor: pointer;
-				}
-			}
-
-			&:hover .dropdown__content {
-				opacity: 1;
-				visibility: visible;
-				transform: none;
-			}
-		}
 	}
 
 	.right {

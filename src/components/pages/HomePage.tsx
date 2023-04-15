@@ -7,15 +7,11 @@ const HomePage: FC = () => {
 	const intl: any = useIntl();
 
 	const title: any = intl.formatMessage({ id: "page.head.title" });
-	const description: any = intl.formatMessage({
-		id: "page.head.meta.description"
-	});
 
 	return (
 		<>
 			<Head>
 				<title>{title}</title>
-				<meta name="description" content={description} />
 			</Head>
 			<div className={scss.home__page}>
 				<h3>
