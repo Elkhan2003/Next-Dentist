@@ -54,7 +54,7 @@ const Layout: FC<LayoutProps> = ({ children, dir }) => {
 				<link rel="icon" href="/favicon.ico" hrefLang="x-default" />
 				<link rel="icon" href="/favicon.ico" hrefLang="ru" />
 				<link rel="icon" href="/favicon.ico" hrefLang="en" />
-				<link rel="icon" href="/favicon.ico" hrefLang="fr" />
+				<link rel="icon" href="/favicon.ico" hrefLang="kg" />
 			</Head>
 			<div dir={dir}>
 				<div className={`${inter.className} ${scss.layout}`}>

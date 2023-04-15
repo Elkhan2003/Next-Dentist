@@ -6,12 +6,12 @@ import { IntlProvider } from "react-intl";
 
 import ru from "../../i18n/ru.json";
 import en from "../../i18n/en.json";
-import fr from "../../i18n/kg.json";
+import ky from "../../i18n/ky.json";
 
 const messages: any = {
 	ru,
 	en,
-	fr
+	ky
 };
 
 function getDirection(locale: any): "ltr" {
