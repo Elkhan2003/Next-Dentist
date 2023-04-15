@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { FC, ReactNode, useState } from "react";
 import scss from "./Layout.module.scss";
 import Header from "@/components/layout/header/Header";
@@ -5,7 +6,6 @@ import Footer from "@/components/layout/footer/Footer";
 import { useIntl } from "react-intl";
 
 import { Inter } from "next/font/google";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,14 +56,16 @@ const Layout: FC<LayoutProps> = ({ children, dir }) => {
 				<link rel="icon" href="/favicon.ico" hrefLang="en" />
 				<link rel="icon" href="/favicon.ico" hrefLang="fr" />
 			</Head>
-			<div dir={dir} className={`${inter.className} ${scss.layout}`}>
-				<header>
-					<Header {...props} />
-				</header>
-				<main>{children}</main>
-				<footer>
-					<Footer />
-				</footer>
+			<div dir={dir}>
+				<div className={`${inter.className} ${scss.layout}`}>
+					<header>
+						<Header {...props} />
+					</header>
+					<main>{children}</main>
+					<footer>
+						<Footer />
+					</footer>
+				</div>
 			</div>
 		</>
 	);
