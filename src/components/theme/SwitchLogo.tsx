@@ -22,7 +22,7 @@ const SwitchLogo: FC<SwitchLogoProps> = ({ className }) => {
 	const logo: any = logoDevX;
 	const logo_dark: any = logoDevX_dark;
 
-	const { resolvedTheme } = useTheme();
+	const { resolvedTheme }: any = useTheme();
 	let src;
 
 	switch (resolvedTheme) {
