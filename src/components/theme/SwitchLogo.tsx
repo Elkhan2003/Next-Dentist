@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
 import Image from "next/image";
 import logoDevX from "@/assets/logo-dark.png";
 import logoDevX_dark from "@/assets/logo.png";
@@ -9,6 +9,16 @@ interface SwitchLogoProps {
 }
 
 const SwitchLogo: FC<SwitchLogoProps> = ({ className }) => {
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	if (!mounted) {
+		return null;
+	}
+
 	const logo: any = logoDevX;
 	const logo_dark: any = logoDevX_dark;
 
@@ -23,14 +33,17 @@ const SwitchLogo: FC<SwitchLogoProps> = ({ className }) => {
 			src = logo_dark;
 			break;
 		default:
-			src =
-				"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+			src = null;
 			break;
 	}
 
 	return (
 		<>
-			<Image className={className} src={src} alt="logo" />
+			{src ? (
+				<Image className={className} src={src} alt="logo" />
+			) : (
+				<p>Unable to determine theme.</p>
+			)}
 		</>
 	);
 };
