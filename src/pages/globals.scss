@@ -19,38 +19,9 @@
 	margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
-}
-
 .container {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1300px;
 	padding: 0 20px;
-}
-
-:root {
-	// todo dark
-	// ! wrapper
-	--wrapper-bg-all-dark: #1e1e20;
-
-	// ! header
-	--header-scroll-dark: #0c131b00;
-	--header-ActScroll-dark: #1e1e20e5;
-	--header-box-shadow-dark: #3f3f3f;
-	--header-text-dark: #f8f8ef;
-	--header-ActText-dark: #9499ff;
-	--header-border-dark: rgba(255, 255, 255, 0.151);
-	--header-burger-button-dark: #fff;
-	--header-burger-menu-dark: #1e1e20;
-	--header-burger-line-dark: #ffffff21;
-	--header-switch-bg-dark: #252529;
-	--header-switch-text-dark: #9c9ca3;
-	--header-HoverDropdown-text-dark: #a0a5ad;
-	--header-dropdown-content-bg-dark: #252529;
-	--header-HoverDropdown-content-button-dark: #313136;
-	--header-HoverMenuDropdown-text-dark: #646cff;
 }

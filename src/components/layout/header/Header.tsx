@@ -9,6 +9,7 @@ import { LangIcon } from "@/components/svgs/index";
 import logoDevX from "@/assets/logo.png";
 
 import { IsOpenProps } from "@/components/layout/Layout";
+import SwitchThemeIcon from "@/components/theme/SwitchThemeIcon";
 
 interface HeaderProps extends IsOpenProps {}
 
@@ -124,8 +125,11 @@ const Header: FC<HeaderProps> = (props) => {
 										</div>
 									</div>
 									<div className={scss.switch__theme}>
-										{/*<SwitchTheme />*/}
-										SwitchTheme
+										<SwitchThemeIcon
+											className__Icon={scss.icon}
+											className__MoonIcon={scss.moon}
+											className__SunIcon={scss.sun}
+										/>
 									</div>
 								</div>
 							</div>

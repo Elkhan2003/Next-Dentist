@@ -1,0 +1,43 @@
+:root {
+	// ! wrapper
+	--wrapper-bg-all-dark: #ffffff;
+
+	// ! header
+	--header-scroll-dark: #ffffff00;
+	--header-ActScroll-dark: #fffffff5;
+	--header-box-shadow-dark: #a1a1a1;
+	--header-text-dark: #494950;
+	--header-ActText-dark: #646cff;
+	--header-border-dark: rgba(255, 255, 255, 0.151);
+	--header-burger-button-dark: #797979;
+	--header-burger-menu-dark: #ffffff;
+	--header-burger-line-dark: #00000049;
+	--header-switch-bg-dark: #f6f6f7;
+	--header-switch-text-dark: #737379;
+	--header-HoverDropdown-text-dark: #808088;
+	--header-dropdown-content-bg-dark: #ffffff;
+	--header-HoverDropdown-content-button-dark: #f6f6f7;
+	--header-HoverMenuDropdown-text-dark: #646cff;
+}
+
+[data-theme="dark"] {
+	// ! wrapper
+	--wrapper-bg-all-dark: #1e1e20;
+
+	// ! header
+	--header-scroll-dark: #0c131b00;
+	--header-ActScroll-dark: #1e1e20e5;
+	--header-box-shadow-dark: #3f3f3f;
+	--header-text-dark: #f8f8ef;
+	--header-ActText-dark: #9499ff;
+	--header-border-dark: rgba(255, 255, 255, 0.151);
+	--header-burger-button-dark: #fff;
+	--header-burger-menu-dark: #1e1e20;
+	--header-burger-line-dark: #ffffff21;
+	--header-switch-bg-dark: #252529;
+	--header-switch-text-dark: #9c9ca3;
+	--header-HoverDropdown-text-dark: #a0a5ad;
+	--header-dropdown-content-bg-dark: #252529;
+	--header-HoverDropdown-content-button-dark: #313136;
+	--header-HoverMenuDropdown-text-dark: #646cff;
+}

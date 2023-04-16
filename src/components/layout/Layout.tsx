@@ -57,7 +57,7 @@ const Layout: FC<LayoutProps> = ({ children, dir }) => {
 				<link rel="icon" href="/favicon.ico" hrefLang="kg" />
 			</Head>
 			<div dir={dir}>
-				<div className={`${inter.className} ${scss.layout}`}>
+				<div className={`${scss.layout} ${inter.className}`}>
 					<header>
 						<Header {...props} />
 					</header>

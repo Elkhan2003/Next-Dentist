@@ -13,12 +13,16 @@
 		"@types/node": "18.15.11",
 		"@types/react": "18.0.35",
 		"@types/react-dom": "18.0.11",
+		"add": "^2.0.6",
+		"json5": "^2.2.3",
 		"next": "13.3.0",
 		"next-i18next": "^13.2.2",
+		"next-themes": "^0.2.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-intl": "^6.3.2",
 		"sass": "^1.62.0",
-		"typescript": "5.0.4"
+		"typescript": "5.0.4",
+		"yarn": "^1.22.19"
 	}
 }
