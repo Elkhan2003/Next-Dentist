@@ -5,7 +5,7 @@ import logoLight from "@/assets/logo.png";
 import { useTheme } from "next-themes";
 
 interface SwitchLogoProps {
-	className?: string;
+	className?: any;
 }
 
 const SwitchLogo: FC<SwitchLogoProps> = ({ className }) => {
