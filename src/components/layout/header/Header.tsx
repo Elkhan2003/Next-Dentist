@@ -4,12 +4,15 @@ import { FormattedMessage } from "react-intl";
 import Link from "next/link";
 import Image from "next/image";
 import scss from "./Header.module.scss";
-import { ArrowIcon } from "@/components/svgs/index";
-import { LangIcon } from "@/components/svgs/index";
+import { ArrowIcon } from "@/components/svgs";
+import { LangIcon } from "@/components/svgs";
 import logoDevX from "@/assets/logo.png";
+import {
+	SwitchThemeButton,
+	SwitchThemeIcon
+} from "@/components/theme/SwitchTheme";
 
 import { IsOpenProps } from "@/components/layout/Layout";
-import SwitchThemeIcon from "@/components/theme/SwitchThemeIcon";
 
 interface HeaderProps extends IsOpenProps {}
 
@@ -126,9 +129,9 @@ const Header: FC<HeaderProps> = (props) => {
 									</div>
 									<div className={scss.switch__theme}>
 										<SwitchThemeIcon
-											className__Icon={scss.icon}
-											className__MoonIcon={scss.moon}
-											className__SunIcon={scss.sun}
+											className__Icons={scss.icons}
+											className__SunIcon={scss.SunIcon}
+											className__MoonIcon={scss.MoonIcon}
 										/>
 									</div>
 								</div>
@@ -212,18 +215,14 @@ const Header: FC<HeaderProps> = (props) => {
 									</div>
 								</div>
 								<div className={scss.burger__menu__switch__theme}>
-									<div
-										className={scss.button__switch__theme}
-										// onClick={() => {
-										// 	setIsDark(!isDark);
-										// }}
-									>
+									<SwitchThemeButton className={scss.button__switch__theme}>
 										<FormattedMessage id="page.header.switch.theme" />
-									</div>
-									<div className={scss.icon__switch__theme}>
-										{/*<SwitchTheme />*/}
-										Switch
-									</div>
+										<SwitchThemeIcon
+											className__Icons={scss.icons}
+											className__SunIcon={scss.SunIcon}
+											className__MoonIcon={scss.MoonIcon}
+										/>
+									</SwitchThemeButton>
 								</div>
 								<div className={scss.right}>
 									{/*<Logout />*/}
