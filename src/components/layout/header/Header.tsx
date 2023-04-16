@@ -1,12 +1,11 @@
 import React, { FC, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { FormattedMessage } from "react-intl";
 import Link from "next/link";
-import Image from "next/image";
+import { FormattedMessage } from "react-intl";
 import scss from "./Header.module.scss";
+import SwitchLogo from "@/components/theme/SwitchLogo";
 import { ArrowIcon } from "@/components/svgs";
 import { LangIcon } from "@/components/svgs";
-import logoDevX from "@/assets/logo.png";
 import {
 	SwitchThemeButton,
 	SwitchThemeIcon
@@ -24,8 +23,8 @@ interface linksProps {
 const Header: FC<HeaderProps> = (props) => {
 	const [headerScroll, setHeaderScroll] = useState<boolean>(false);
 	const { locales, locale: activeLocale, pathname }: any = useRouter();
-	const logo: any = logoDevX;
 
+	// ! Scroll
 	useEffect(() => {
 		const changeBackground = () => {
 			if (typeof window !== "undefined" && window.scrollY >= 10) {
@@ -75,7 +74,7 @@ const Header: FC<HeaderProps> = (props) => {
 										props.setIsOpenDropdownLanguage(false);
 									}}
 								>
-									<Image className={scss.logoDevX} src={logo} alt="logo" />
+									<SwitchLogo className={scss.logoDevX} />
 								</Link>
 							</div>
 							<div className={scss.nav__menu}>
