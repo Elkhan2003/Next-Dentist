@@ -9,7 +9,7 @@ interface SwitchLogoProps {
 }
 
 const SwitchLogo: FC<SwitchLogoProps> = ({ className }) => {
-	const [mounted, setMounted] = useState(false);
+	const [mounted, setMounted]: any = useState(false);
 
 	useEffect(() => {
 		setMounted(true);
