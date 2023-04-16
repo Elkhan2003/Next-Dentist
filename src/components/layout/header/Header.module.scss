@@ -50,9 +50,10 @@
 		}
 	}
 
+	// ? links position
 	.nav__menu {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
 		width: 100%;
 	}
@@ -94,7 +95,7 @@
 		display: flex;
 		align-items: center;
 
-		// ? dropdown language menu for desktop
+		// ! dropdown language menu for desktop
 		.dropdown__language__menu__for__desktop {
 			position: relative;
 			height: 100%;
@@ -196,6 +197,7 @@
 		}
 	}
 
+	// ! switch theme
 	.switch__theme {
 		display: inline-flex;
 		margin: 0 20px;
@@ -223,6 +225,49 @@
 
 		.MoonIcon {
 			fill: #ffe900;
+		}
+	}
+
+	// ! timetable
+	.timetable {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		//margin-left: 10px;
+
+		.icon__text {
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+
+			svg {
+				$header-icon-size: 18px;
+				width: $header-icon-size;
+				height: $header-icon-size;
+			}
+
+			.text {
+				margin-left: 10px;
+			}
+
+			&:first-child {
+				margin-bottom: 5px;
+				font-size: 12px;
+				color: #d1e6ff;
+
+				svg {
+					fill: #ffe6a9;
+				}
+			}
+
+			&:last-child {
+				font-size: 14px;
+				color: #fff;
+
+				svg {
+					fill: #ffe6a9;
+				}
+			}
 		}
 	}
 

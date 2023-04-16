@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import scss from "./Header.module.scss";
 import SwitchLogo from "@/components/theme/SwitchLogo";
-import { ArrowIcon } from "@/components/svgs";
+import { ArrowIcon, PhoneIcon, TimeIcon } from "@/components/svgs";
 import { LangIcon } from "@/components/svgs";
 import {
 	SwitchThemeButton,
@@ -97,6 +97,7 @@ const Header: FC<HeaderProps> = (props) => {
 								</div>
 
 								<div className={scss.right}>
+									{/* ! switch lang */}
 									<div className={scss.dropdown__language__menu__for__desktop}>
 										<div className={scss.icon}>
 											<span>
@@ -126,12 +127,26 @@ const Header: FC<HeaderProps> = (props) => {
 											))}
 										</div>
 									</div>
+
+									{/* ! switch theme */}
 									<div className={scss.switch__theme}>
 										<SwitchThemeIcon
 											className__Icons={scss.icons}
 											className__SunIcon={scss.SunIcon}
 											className__MoonIcon={scss.MoonIcon}
 										/>
+									</div>
+
+									{/* ! timetable */}
+									<div className={scss.timetable}>
+										<div className={scss.icon__text}>
+											<TimeIcon />
+											<p className={scss.text}>ПН - ПТ 10:00 - 18:00</p>
+										</div>
+										<div className={scss.icon__text}>
+											<PhoneIcon />
+											<p className={scss.text}>+996 990 38 50 56</p>
+										</div>
 									</div>
 								</div>
 							</div>

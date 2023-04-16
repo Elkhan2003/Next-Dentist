@@ -18,6 +18,9 @@
 	--header-dropdown-content-bg: #ffffff;
 	--header-dropdown-content-button-hover: #f6f6f7;
 	--header-menu-dropdown-text-hover: #646cff;
+
+	//	! main
+	--home--bg: url("../assets/img/Background_Light.jpg");
 }
 
 [data-theme="dark"] {
@@ -40,4 +43,7 @@
 	--header-dropdown-content-bg: #252529;
 	--header-dropdown-content-button-hover: #313136;
 	--header-menu-dropdown-text-hover: #646cff;
+
+	//	! main
+	--home--bg: url("../assets/img/Background_Dark.jpg");
 }

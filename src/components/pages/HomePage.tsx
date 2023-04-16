@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import Head from "next/head";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
+import Image from "next/image";
+import woman from "@/assets/img/Woman.jpg";
 
 const HomePage: FC = () => {
 	const intl: any = useIntl();
@@ -15,12 +17,43 @@ const HomePage: FC = () => {
 			</Head>
 			<div className={scss.home__page}>
 				<div className="container">
-					<h3>
-						<FormattedMessage id="page.home.title" />
-					</h3>
-					<p>
-						<FormattedMessage id="page.home.description" />
-					</p>
+					<div className={scss.content}>
+						{/* ! left */}
+						<div className={scss.left}>
+							{/*<p></p>*/}
+							<p></p>
+							<div className={scss.sub__title}>
+								<h1 className={scss.title}>Мы создаем улыбки, которые сияют</h1>
+								<a
+									href="https://wa.me/996990385056"
+									className={scss.button__call}
+									target="_blank"
+								>
+									Связаться
+								</a>
+							</div>
+
+							<div className={scss.stats}>
+								<div className={scss.customers}>
+									<h1>1687+</h1>
+									<hr />
+									<p>Довольных клиентов</p>
+								</div>
+								<div className={scss.years}>
+									<h1>8</h1>
+									<hr />
+									<p>Лет на рынке</p>
+								</div>
+							</div>
+						</div>
+
+						{/* ! right */}
+						<div className={scss.right}>
+							<div className={scss.woman}>
+								<Image src={woman} alt="Woman" />
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</>
