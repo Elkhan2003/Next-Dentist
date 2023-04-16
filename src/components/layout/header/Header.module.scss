@@ -199,6 +199,7 @@
 	.switch__theme {
 		display: inline-flex;
 		margin: 0 20px;
+		border-radius: 50%;
 
 		transition: all 0.3s ease-in-out;
 
@@ -208,11 +209,20 @@
 			cursor: default;
 		}
 
-		img {
-			$theme_size: 27px;
-			width: $theme_size;
-			height: $theme_size;
+		.icons {
+			$size: 27px;
+			width: $size;
+			height: $size;
+
 			border-radius: 50%;
+		}
+
+		.SunIcon {
+			fill: #0096ff;
+		}
+
+		.MoonIcon {
+			fill: #ffe900;
 		}
 	}
 
@@ -414,11 +424,11 @@
 				}
 
 				.SunIcon {
-					color: #0096ff;
+					fill: #0096ff;
 				}
 
 				.MoonIcon {
-					color: #fff800;
+					fill: #ffe900;
 				}
 			}
 		}

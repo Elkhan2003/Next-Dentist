@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect, ReactNode } from "react";
 import { useTheme } from "next-themes";
 // @ts-ignore
-import { SunIcon, MoonIcon } from "@/components/svgs/Icons";
+import { SunIcon, MoonIcon } from "@/components/svgs/index";
 
 interface SwitchThemeButtonProps {
 	children?: ReactNode;
@@ -52,12 +52,12 @@ const SwitchThemeIcon: FC<SwitchThemeIconProps> = ({
 	return (
 		<>
 			{isLight ? (
-				<SunIcon
+				<MoonIcon
 					className={`${className__Icons} ${className__SunIcon}`}
 					onClick={() => setTheme("dark")}
 				/>
 			) : (
-				<MoonIcon
+				<SunIcon
 					className={`${className__Icons} ${className__MoonIcon}`}
 					onClick={() => setTheme("light")}
 				/>
