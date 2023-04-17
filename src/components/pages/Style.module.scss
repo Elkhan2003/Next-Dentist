@@ -208,6 +208,10 @@
 			text-transform: uppercase;
 
 			color: #ffffff;
+
+			@media (max-width: 768px) {
+				font-size: 40px;
+			}
 		}
 
 		.video__text {
@@ -220,6 +224,10 @@
 			@media (max-width: 1340px) {
 				flex-wrap: wrap;
 				justify-content: center;
+			}
+
+			@media (max-width: 768px) {
+				margin: 30px 0;
 			}
 
 			.face__video {
