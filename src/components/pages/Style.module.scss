@@ -259,3 +259,43 @@
 		}
 	}
 }
+
+// ! AboutTicket
+.about__ticket {
+	background: #1e1e1e;
+	box-shadow: 0px -20px 100px rgba(255, 255, 255, 0.2);
+
+	.content {
+		padding: 70px 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+
+		.card {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			max-width: 230px;
+
+			.icon {
+				margin-bottom: 20px;
+				width: 100%;
+				max-width: 100px;
+				height: 100%;
+				max-height: 100px;
+			}
+
+			.text {
+				text-align: center;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 128.4%;
+				letter-spacing: 0.035em;
+
+				color: #ffe6a9;
+			}
+		}
+	}
+}

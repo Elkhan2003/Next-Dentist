@@ -5,9 +5,10 @@ import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
 import { useIntl } from "react-intl";
 
-import { Inter } from "next/font/google";
+// Inter
+import { Montserrat } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ["latin"] });
 
 interface LayoutProps {
 	children: ReactNode;
@@ -57,7 +58,7 @@ const Layout: FC<LayoutProps> = ({ children, dir }) => {
 				<link rel="icon" href="/favicon.ico" hrefLang="kg" />
 			</Head>
 			<div dir={dir}>
-				<div className={`${scss.layout} ${inter.className}`}>
+				<div className={`${scss.layout} ${font.className}`}>
 					<header>
 						<Header {...props} />
 					</header>
