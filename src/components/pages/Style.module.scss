@@ -198,7 +198,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 90vh;
+		padding: 90px 0;
 
 		.title {
 			font-weight: 700;
@@ -217,10 +217,16 @@
 			align-items: center;
 			width: 100%;
 
+			@media (max-width: 1340px) {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
 			.face__video {
 				width: 100%;
 				max-width: 700px;
-				height: 420px;
+				height: 100%;
+				max-height: 420px;
 			}
 
 			.text {
