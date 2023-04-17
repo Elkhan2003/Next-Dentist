@@ -1,3 +1,4 @@
+// ! HomePage
 .home__page {
 	background: var(--home--bg) no-repeat center/cover;
 	width: 100%;
@@ -183,6 +184,56 @@
 	}
 }
 
-.about__page {
+// ! AboutPage_Test
+.about__page__test {
 	margin-top: 90px;
+}
+
+// ! AboutPage
+.about__page {
+	background: #1e1e1e;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 90vh;
+
+		.title {
+			font-weight: 700;
+			font-size: 55px;
+			line-height: 128.4%;
+			letter-spacing: 0.035em;
+			text-transform: uppercase;
+
+			color: #ffffff;
+		}
+
+		.video__text {
+			margin: 70px 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			.face__video {
+				width: 100%;
+				max-width: 700px;
+				height: 420px;
+			}
+
+			.text {
+				width: 100%;
+				max-width: 580px;
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 128.4%;
+				letter-spacing: 0.035em;
+
+				color: #ffe6a9;
+				opacity: 0.7;
+			}
+		}
+	}
 }

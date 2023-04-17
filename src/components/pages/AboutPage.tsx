@@ -1,26 +1,25 @@
 import React, { FC } from "react";
 import scss from "./Style.module.scss";
-import Head from "next/head";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
+import Image from "next/image";
+import FaceVideo from "@/assets/img/Video_Dentist.png";
 
 const AboutPage: FC = () => {
-	const intl: any = useIntl();
-
-	const title: any = intl.formatMessage({ id: "page.head.about.title" });
-
 	return (
 		<>
-			<Head>
-				<title>{title}</title>
-			</Head>
 			<div className={scss.about__page}>
 				<div className="container">
-					<h3>
-						<FormattedMessage id="page.about.title" />
-					</h3>
-					<p>
-						<FormattedMessage id="page.about.about.me" />
-					</p>
+					<div className={scss.content}>
+						<h3 className={scss.title}>
+							<FormattedMessage id="page.about.title" />
+						</h3>
+						<div className={scss.video__text}>
+							<Image className={scss.face__video} src={FaceVideo} alt="video" />
+							<p className={scss.text}>
+								<FormattedMessage id="page.about.about.me" />
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</>

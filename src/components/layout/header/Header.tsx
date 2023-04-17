@@ -47,7 +47,7 @@ const Header: FC<HeaderProps> = (props) => {
 			label: <FormattedMessage id="page.header.home" />
 		},
 		{
-			href: "/about",
+			href: "/about_test",
 			label: <FormattedMessage id="page.header.about" />
 		}
 	];
