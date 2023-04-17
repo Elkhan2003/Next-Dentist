@@ -215,7 +215,6 @@
 		}
 
 		.video__text {
-			margin: 70px 0;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -226,15 +225,17 @@
 				justify-content: center;
 			}
 
-			@media (max-width: 768px) {
-				margin: 30px 0;
-			}
-
 			.face__video {
+				margin: 70px 0;
+
 				width: 100%;
 				max-width: 700px;
 				height: 100%;
 				max-height: 420px;
+
+				@media (max-width: 768px) {
+					margin: 30px 0;
+				}
 			}
 
 			.text {
@@ -247,6 +248,13 @@
 
 				color: #ffe6a9;
 				opacity: 0.7;
+
+				@media (max-width: 570px) {
+					font-size: 20px;
+				}
+				@media (max-width: 390px) {
+					font-size: 18px;
+				}
 			}
 		}
 	}
