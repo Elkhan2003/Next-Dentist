@@ -58,19 +58,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 			}
 		}));
 
-	const notify = () => {
-		toast.success("Ваша форма успешно отправлена!", {
-			position: "bottom-right",
-			autoClose: 5000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-			progress: undefined,
-			theme: "dark"
-		});
-	};
-
 	const onSubmit = async (event: any) => {
 		event.preventDefault();
 		// @ts-ignore
@@ -83,6 +70,10 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 		} catch (error) {
 			// @ts-ignore
 			setState((prev) => ({ ...prev, isLoading: false, error: error.message }));
+			setTimeout(() => {
+				// @ts-ignore
+				setState((prev) => ({ ...prev, error: "" }));
+			}, 3000);
 		}
 	};
 
@@ -93,6 +84,19 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 		if (!pattern.test(inputChar)) {
 			event.preventDefault();
 		}
+	};
+
+	const notify = () => {
+		toast.success("Ваша форма успешно отправлена!", {
+			position: "bottom-right",
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: "dark"
+		});
 	};
 
 	return (
