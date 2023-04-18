@@ -7,14 +7,14 @@
 	z-index: 9999;
 
 	.headerScroll {
-		padding: 20px 0;
+		padding: 30px 0;
 		background: var(--header-scroll);
 
 		transition: padding 0.5s;
 	}
 
 	.headerScroll.active {
-		padding: 14px 0;
+		padding: 15px 0;
 
 		backdrop-filter: blur(4px);
 		-webkit-backdrop-filter: blur(4px);
@@ -72,7 +72,7 @@
 		.link {
 			padding: 10px 12px;
 
-			font-size: 15px;
+			font-size: 16px;
 			font-weight: 500;
 			text-decoration: none;
 
@@ -142,6 +142,7 @@
 			.dropdown__content {
 				position: absolute;
 				background: var(--header-dropdown-content-bg);
+				box-shadow: 0 0 30px #e3aa1b;
 				top: 42px;
 				right: 0;
 				opacity: 0;
@@ -174,12 +175,12 @@
 
 					&:hover {
 						background: var(--header-dropdown-content-button-hover);
-						color: var(--header-menu-dropdown-text-hover);
+						color: var(--header-text-colot);
 					}
 				}
 
 				.button.active {
-					color: var(--header-menu-dropdown-text-hover);
+					color: var(--header-text-color-active);
 
 					cursor: default;
 
@@ -253,7 +254,7 @@
 			&:first-child {
 				margin-bottom: 5px;
 				font-size: 12px;
-				color: #d1e6ff;
+				color: #ffe6a9;
 
 				svg {
 					fill: #ffe6a9;
@@ -262,7 +263,7 @@
 
 			&:last-child {
 				font-size: 14px;
-				color: #fff;
+				color: #ffe6a9;
 
 				svg {
 					fill: #ffe6a9;
@@ -352,7 +353,7 @@
 				cursor: pointer;
 
 				&:hover {
-					color: var(--header-menu-dropdown-text-hover);
+					color: var(--header-text-color-active);
 				}
 
 				@media (max-width: 700px) {
@@ -425,7 +426,7 @@
 
 		.dropdown__language__menu__for__mobile.open {
 			span {
-				color: var(--header-menu-dropdown-text-hover);
+				color: var(--header-text-color-active);
 
 				.arrow__icon__V2 {
 					transform: translateY(-50%) rotate(360deg);
