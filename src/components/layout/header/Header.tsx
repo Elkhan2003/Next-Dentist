@@ -4,8 +4,7 @@ import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 import scss from "./Header.module.scss";
 import SwitchLogo from "@/components/theme/SwitchLogo";
-import { ArrowIcon, PhoneIcon, TimeIcon } from "@/components/svgs";
-import { LangIcon } from "@/components/svgs";
+import { LangIcon, ArrowIcon, PhoneIcon, TimeIcon } from "@/components/svgs";
 import {
 	SwitchThemeButton,
 	SwitchThemeIcon
