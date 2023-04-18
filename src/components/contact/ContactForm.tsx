@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useState } from "react";
+import React, { FC, useState } from "react";
 import scss from "./Contact.module.scss";
 
 import { sendContactForm } from "../../../sms/lib/api";
@@ -97,10 +97,10 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 								className={`${scss.input__field} ${
 									touched.first_name && !values.first_name ? scss.error : null
 								}`}
-								placeholder='Имя*'
+								placeholder="Имя*"
 								value={values.first_name}
 								onChange={handleChange}
-								onBlur={onBlur} 
+								onBlur={onBlur}
 							/>
 							{touched.first_name && !values.first_name && (
 								<p className={scss.error}>Required</p>
@@ -112,7 +112,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							<input
 								type="text"
 								name="last_name"
-								placeholder='Фамилия*'
+								placeholder="Фамилия*"
 								className={`${scss.input__field} ${
 									touched.last_name && !values.last_name ? scss.error : null
 								}`}
@@ -130,7 +130,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							<input
 								type="email"
 								name="email"
-								placeholder='Адрес электронной почты*'
+								placeholder="Адрес электронной почты*"
 								className={`${scss.input__field} ${
 									touched.email && !values.email.match(/^\S+@\S+\.\S+$/)
 										? scss.error
@@ -192,7 +192,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 								className={`${scss.input__field} ${
 									touched.message && !values.message ? scss.error : null
 								}`}
-								placeholder='Опишите свою проблему в свободной форме*'
+								placeholder="Опишите свою проблему в свободной форме*"
 								value={values.message}
 								onChange={handleChange}
 								onBlur={onBlur}
