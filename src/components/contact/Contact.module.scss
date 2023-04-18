@@ -2,7 +2,36 @@
 	.container {
 		padding-top: 12px;
 		width: 100%;
-		//max-width: 350px;
+
+		.titles {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+
+			h2 {
+				font-weight: 600;
+				font-size: 28px;
+				line-height: 128.4%;
+				letter-spacing: 0.035em;
+
+				color: #ffffff;
+			}
+
+			p {
+				margin: 10px 0 20px 0;
+
+				width: 100%;
+				max-width: 330px;
+
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 128.4%;
+				letter-spacing: 0.035em;
+
+				color: #ffffff;
+			}
+		}
 
 		.error__message {
 			margin-bottom: 5px;
