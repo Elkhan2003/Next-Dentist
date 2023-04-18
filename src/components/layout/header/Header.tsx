@@ -34,6 +34,7 @@ const Header: FC<HeaderProps> = (props) => {
 			}
 		};
 
+		changeBackground();
 		window.addEventListener("scroll", changeBackground);
 
 		return () => {
