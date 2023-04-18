@@ -6,3 +6,6 @@ export { default as PhoneIcon } from "./phone.svg";
 export { default as TimeIcon } from "./time.svg";
 export { default as EmailIcon } from "./email.svg";
 export { default as MarkerIcon } from "./marker.svg";
+export { default as InstagramIcon } from "./instagram.svg";
+export { default as GithubIcon } from "./github.svg";
+export { default as DiscordIcon } from "./discord.svg";

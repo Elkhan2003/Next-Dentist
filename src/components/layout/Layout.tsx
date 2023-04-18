@@ -64,7 +64,7 @@ const Layout: FC<LayoutProps> = ({ children, dir }) => {
 					</header>
 					<main>{children}</main>
 					<footer>
-						<Footer />
+						<Footer {...props} />
 					</footer>
 				</div>
 			</div>

@@ -21,6 +21,16 @@
 
 	//	! main
 	--home--bg: url("../assets/img/Background_Light.webp");
+
+	// ! footer
+	--footer-bg-dark: #1e1e20;
+	--footer-title-dark: #5f62e2;
+	--footer-text-dark: #8b8c8e;
+	--footer-textHover-dark: #fff;
+	--footer-icon-dark: #ffffff;
+	--footer-icon-bg-dark: #272727;
+	--footer-iconHover-bg-dark: #5f62e2;
+	--footer-hr-dark: #a5a5a6;
 }
 
 [data-theme="dark"] {
@@ -46,4 +56,14 @@
 
 	//	! main
 	--home--bg: url("../assets/img/Background_Dark.webp");
+
+	// ! footer
+	--footer-bg-dark: #1e1e20;
+	--footer-title-dark: #5f62e2;
+	--footer-text-dark: #8b8c8e;
+	--footer-textHover-dark: #fff;
+	--footer-icon-dark: #ffffff;
+	--footer-icon-bg-dark: #272727;
+	--footer-iconHover-bg-dark: #5f62e2;
+	--footer-hr-dark: #a5a5a6;
 }
