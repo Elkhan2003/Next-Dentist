@@ -194,11 +194,11 @@
 	background: #1e1e1e;
 
 	.content {
+		padding: 90px 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 90px 0;
 
 		.title {
 			font-weight: 700;
@@ -295,6 +295,67 @@
 				letter-spacing: 0.035em;
 
 				color: #ffe6a9;
+			}
+		}
+	}
+}
+
+// ! ContactPage
+.contact__page {
+	.content {
+		padding: 70px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		.left {
+			width: 100%;
+			max-width: 600px;
+
+			.texts {
+				margin-bottom: 50px;
+
+				.title {
+					font-weight: 600;
+					font-size: 27px;
+					line-height: 128.4%;
+					letter-spacing: 0.035em;
+
+					color: #ffffff;
+				}
+
+				.text {
+					margin: 15px 0;
+
+					font-weight: 400;
+					font-size: 20px;
+					line-height: 128.4%;
+					letter-spacing: 0.035em;
+
+					color: #ffffff;
+				}
+
+				.email {
+					text-decoration: underline;
+				}
+			}
+
+			.map {
+				img {
+					width: 100%;
+					max-width: 600px;
+					height: 100%;
+					max-height: 350px;
+				}
+			}
+		}
+
+		.right {
+			width: 100%;
+			max-width: 450px;
+
+			.form__block {
 			}
 		}
 	}
