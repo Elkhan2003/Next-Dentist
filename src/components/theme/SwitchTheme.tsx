@@ -46,21 +46,34 @@ const SwitchThemeIcon: FC<SwitchThemeIconProps> = ({
 	className__SunIcon,
 	className__MoonIcon
 }) => {
+	const [mounted, setMounted]: any = useState(false);
 	const { theme, setTheme }: any = useTheme();
 	const isLight: any = theme === "light";
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	if (!mounted) {
+		return null;
+	}
 
 	return (
 		<>
 			{isLight ? (
-				<MoonIcon
-					className={`${className__Icons} ${className__SunIcon}`}
-					onClick={() => setTheme("dark")}
-				/>
+				<div>
+					<MoonIcon
+						className={`${className__Icons} ${className__SunIcon}`}
+						onClick={() => setTheme("dark")}
+					/>
+				</div>
 			) : (
-				<SunIcon
-					className={`${className__Icons} ${className__MoonIcon}`}
-					onClick={() => setTheme("light")}
-				/>
+				<div>
+					<SunIcon
+						className={`${className__Icons} ${className__MoonIcon}`}
+						onClick={() => setTheme("light")}
+					/>
+				</div>
 			)}
 		</>
 	);
