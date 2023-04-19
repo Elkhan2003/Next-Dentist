@@ -26,6 +26,10 @@
 			.link {
 				color: var(--header-scroll-text-color);
 
+				&:hover {
+					color: var(--header-scroll-text-color-active);
+				}
+
 				&.active {
 					color: var(--header-scroll-text-color-active);
 				}
@@ -264,19 +268,19 @@
 			&:first-child {
 				margin-bottom: 5px;
 				font-size: 12px;
-				color: #ffe6a9;
+				color: var(--header-timetable);
 
 				svg {
-					fill: #ffe6a9;
+					fill: var(--header-timetable);
 				}
 			}
 
 			&:last-child {
 				font-size: 14px;
-				color: #ffe6a9;
+				color: var(--header-timetable);
 
 				svg {
-					fill: #ffe6a9;
+					fill: var(--header-timetable);
 				}
 			}
 		}
