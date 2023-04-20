@@ -23,9 +23,7 @@ const HomePage: FC = () => {
 							<p></p>
 							<p></p>
 							<div className={scss.sub__title}>
-								<h1 className={scss.title}>
-									Мы создаем улыбки, которые сияют!
-								</h1>
+								<h1 className={scss.title}>Мы заботимся о вашей улыбке!</h1>
 								<a
 									href="https://wa.me/996990385056"
 									className={scss.button__call}
