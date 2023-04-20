@@ -34,7 +34,6 @@ const handler = async (req, res) => {
 			!data.last_name ||
 			!data.email ||
 			!data.subject ||
-			!data.message ||
 			!data.phone
 		) {
 			return res.status(400).send({ message: "Bad request" });
