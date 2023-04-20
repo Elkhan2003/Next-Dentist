@@ -2,6 +2,20 @@
 # yarn lockfile v1
 
 
+"@2gis/mapgl-clusterer@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@2gis/mapgl-clusterer/-/mapgl-clusterer-2.5.0.tgz#73051a41a095194cd282ca0b192696bbc9a8e68d"
+  integrity sha512-b+LNm6wGIHHUExylJnI5VPA4k70pEtOTfGsJcwCFXJDXPIUO5diMNlKBLV1IpsIbWsvk/fts1z/w+WgTOZN5kQ==
+  dependencies:
+    "@types/supercluster" "^5.0.2"
+
+"@2gis/mapgl@^1.35.1":
+  version "1.35.1"
+  resolved "https://registry.yarnpkg.com/@2gis/mapgl/-/mapgl-1.35.1.tgz#d790bddcc693b327582e6179be7847861c497f9e"
+  integrity sha512-8QsL+oIKrZBmObvzNmiAIBH4cKvDAL96Y0GLXbMp5QkG644A+u8Hj44OiNT/cEUiYxlDkqdLErGqmFx5ogYyZg==
+  dependencies:
+    "@types/geojson" "^7946.0.7"
+
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.1.tgz#99e8e11851128b8702cd57c33684f1d0f260b630"
@@ -1271,6 +1285,11 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
+"@types/geojson@*", "@types/geojson@^7946.0.7":
+  version "7946.0.10"
+  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.10.tgz#6dfbf5ea17142f7f9a043809f1cd4c448cb68249"
+  integrity sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==
+
 "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -1309,6 +1328,13 @@
   version "0.16.3"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.3.tgz#cef09e3ec9af1d63d2a6cc5b383a737e24e6dcf5"
   integrity sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==
+
+"@types/supercluster@^5.0.2":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@types/supercluster/-/supercluster-5.0.3.tgz#aa03a77c6545265e63b50fa267ab12afe0c27658"
+  integrity sha512-XMSqQEr7YDuNtFwSgaHHOjsbi0ZGL62V9Js4CW45RBuRYlNWSW/KDqN+RFFE7HdHcGhJPtN0klKvw06r9Kg7rg==
+  dependencies:
+    "@types/geojson" "*"
 
 ansi-styles@^3.2.1:
   version "3.2.1"

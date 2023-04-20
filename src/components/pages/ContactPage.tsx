@@ -4,6 +4,7 @@ import ContactForm from "@/components/contact/ContactForm";
 import Image from "next/image";
 import MapTest from "@/assets/img/map_test.png";
 import { EmailIcon, MarkerIcon, PhoneIcon } from "@/components/svgs";
+import Mapgl from "@/components/map/Mapgl";
 
 const ContactPage: FC = () => {
 	return (
@@ -12,6 +13,9 @@ const ContactPage: FC = () => {
 				<div className="container">
 					<div className={scss.content}>
 						<div className={scss.left}>
+							<ContactForm className={scss.form__block} />
+						</div>
+						<div className={scss.right}>
 							<div className={scss.texts}>
 								<h1 className={scss.title}>Наши контакты:</h1>
 								<p className={`${scss.text} ${scss.email}`}>
@@ -25,11 +29,9 @@ const ContactPage: FC = () => {
 								</p>
 							</div>
 							<div className={scss.map}>
-								<Image src={MapTest} alt="test map" />
+								{/*<Image src={MapTest} alt="test map" />*/}
+								<Mapgl />
 							</div>
-						</div>
-						<div className={scss.right}>
-							<ContactForm className={scss.form__block} />
 						</div>
 					</div>
 				</div>
