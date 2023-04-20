@@ -398,6 +398,8 @@
 				overflow: hidden;
 				position: relative;
 				z-index: 1;
+				border-radius: 15px;
+
 				width: $yandex-width;
 				height: $yandex-height;
 
@@ -406,6 +408,7 @@
 					z-index: 2;
 					left: 0;
 					top: -450px;
+
 					width: $yandex-width;
 					height: $yandex-height;
 				}
