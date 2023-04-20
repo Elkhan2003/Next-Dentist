@@ -21,7 +21,7 @@
 			justify-content: space-around;
 			align-items: flex-start;
 			width: 100%;
-			max-width: 690px;
+			max-width: 730px;
 
 			.sub__title {
 				display: flex;
@@ -51,6 +51,7 @@
 					@media (max-width: 415px) {
 						font-size: 33px;
 						letter-spacing: 4px;
+						line-height: 60px;
 					}
 					@media (max-width: 390px) {
 						font-size: 33px;

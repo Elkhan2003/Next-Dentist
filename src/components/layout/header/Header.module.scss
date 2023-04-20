@@ -27,7 +27,7 @@
 				color: var(--header-scroll-text-color);
 
 				&:hover {
-					color: var(--header-scroll-text-color-active);
+					color: var(--header-scroll-text-color-hover);
 				}
 
 				&.active {
@@ -95,7 +95,7 @@
 			color: var(--header-text-color);
 
 			&:hover {
-				color: var(--header-text-color-active);
+				color: var(--header-text-color-hover);
 			}
 
 			&.active {
