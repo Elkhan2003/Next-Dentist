@@ -29,8 +29,8 @@ const ContactPage: FC = () => {
 								</p>
 							</div>
 							<div className={scss.map}>
-								{/*<Image src={MapTest} alt="test map" />*/}
-								<Mapgl />
+								<Image src={MapTest} alt="test map" />
+								{/*<Mapgl />*/}
 							</div>
 						</div>
 					</div>
