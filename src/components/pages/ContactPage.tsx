@@ -5,6 +5,7 @@ import Image from "next/image";
 import MapTest from "@/assets/img/map_test.png";
 import { EmailIcon, MarkerIcon, PhoneIcon } from "@/components/svgs";
 import Mapgl from "@/components/map/Mapgl";
+import MapYandex from "@/components/map/MapYandex";
 
 const ContactPage: FC = () => {
 	return (
@@ -29,8 +30,9 @@ const ContactPage: FC = () => {
 								</p>
 							</div>
 							<div className={scss.map}>
-								<Image src={MapTest} alt="test map" />
+								{/*<Image src={MapTest} alt="test map" />*/}
 								{/*<Mapgl />*/}
+								<MapYandex className={scss.size} />
 							</div>
 						</div>
 					</div>
