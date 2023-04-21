@@ -105,44 +105,46 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 						<div className={scss.titles}>
 							<h2>Хотите записаться на прием?</h2>
 							<p>Оставьте свои контакты и наш менеджер свяжется с вами.</p>
+							{error && <pre className={scss.error__message}>{error}</pre>}
 						</div>
-						{error && <p className={scss.error__message}>{error}</p>}
 						<div className={scss.inputs}>
-							<div className={scss.input}>
+							<div className={scss.inputBx}>
 								<input
 									type="text"
 									name="first_name"
 									className={`${scss.input__field} ${
 										touched.first_name && !values.first_name ? scss.error : null
 									}`}
-									placeholder="Ваше имя*"
 									value={values.first_name}
 									onChange={handleChange}
 									onBlur={onBlur}
+									required
 								/>
+								<i>Ваше имя*</i>
 								{touched.first_name && !values.first_name && (
 									<p className={scss.error}>обязательное поле</p>
 								)}
 							</div>
 
-							<div className={scss.input}>
+							<div className={scss.inputBx}>
 								<input
 									type="text"
 									name="last_name"
-									placeholder="Ваша фамилия*"
 									className={`${scss.input__field} ${
 										touched.last_name && !values.last_name ? scss.error : null
 									}`}
 									value={values.last_name}
 									onChange={handleChange}
 									onBlur={onBlur}
+									required
 								/>
+								<i>Ваша фамилия*</i>
 								{touched.last_name && !values.last_name && (
 									<p className={scss.error}>обязательное поле</p>
 								)}
 							</div>
 
-							{/*<div className={scss.input}>*/}
+							{/*<div className={scss.inputBx}>*/}
 							{/*	<label>Email</label>*/}
 							{/*	<input*/}
 							{/*		type="email"*/}
@@ -156,6 +158,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							{/*		value={values.email}*/}
 							{/*		onChange={handleChange}*/}
 							{/*		onBlur={onBlur}*/}
+							{/*      required*/}
 							{/*	/>*/}
 							{/*	{touched.email && !values.email.match(/^\S+@\S+\.\S+$/) && (*/}
 							{/*		<p className={scss.error}>*/}
@@ -164,7 +167,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							{/*	)}*/}
 							{/*</div>*/}
 
-							<div className={scss.input}>
+							<div className={scss.inputBx}>
 								<input
 									type="text"
 									name="phone"
@@ -179,7 +182,9 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onChange={handleChange}
 									onBlur={onBlur}
 									onKeyPress={handleKeyPress}
+									required={!values.phone || values.phone.length < 13}
 								/>
+								<i>Номер телефона*</i>
 								{touched.phone && !values.phone.match(/^\+?\d{12,13}$/) && (
 									<p className={scss.error}>
 										Пожалуйста, введите действующий телефонный номер
@@ -187,27 +192,28 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 								)}
 							</div>
 
-							<div className={scss.input}>
+							<div className={scss.inputBx}>
 								<input
 									type="text"
 									name="subject"
-									placeholder="Тема для обращения*"
 									className={`${scss.input__field} ${
 										touched.subject && !values.subject ? scss.error : null
 									}`}
 									value={values.subject}
 									onChange={handleChange}
 									onBlur={onBlur}
+									required
 								/>
+								<i>Тема для обращения*</i>
 								{touched.subject && !values.subject && (
 									<p className={scss.error}>обязательное поле</p>
 								)}
 							</div>
 
-							<div className={scss.input}>
+							<div className={scss.textareaBx}>
 								<textarea
 									name="message"
-									className={`${scss.input__field} ${scss.message}`}
+									className={`${scss.message}`}
 									placeholder="Опишите свою проблему в свободной форме*"
 									value={values.message}
 									onChange={handleChange}
