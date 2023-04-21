@@ -346,6 +346,7 @@
 		}
 
 		.left {
+			margin-bottom: 40px;
 			width: 100%;
 			max-width: 430px;
 
@@ -354,7 +355,6 @@
 		}
 
 		.right {
-			margin-bottom: 40px;
 			width: 100%;
 			max-width: 700px;
 
@@ -394,30 +394,30 @@
 			$yandex-max-height-vh: 47vh;
 
 			.map {
-				overflow: hidden;
-				position: relative;
-				z-index: 1;
-				border-radius: 10px;
-
-				width: 100%;
-				height: $yandex-max-height-vh;
-
-				.size {
-					position: absolute;
-					z-index: 2;
-					left: 0;
-					top: -450px;
-
-					width: 100%;
-					height: $yandex-max-height-vh;
-				}
-
-				//img {
+				//overflow: hidden;
+				//position: relative;
+				//z-index: 1;
+				//border-radius: 10px;
+				//
+				//width: 100%;
+				//height: $yandex-max-height-vh;
+				//
+				//.size {
+				//	position: absolute;
+				//	z-index: 2;
+				//	left: 0;
+				//	top: -450px;
+				//
 				//	width: 100%;
-				//	max-width: 700px;
-				//	height: 100%;
-				//	max-height: 450px;
+				//	height: $yandex-max-height-vh;
 				//}
+
+				img {
+					width: 100%;
+					max-width: 700px;
+					height: 100%;
+					max-height: 450px;
+				}
 			}
 		}
 	}

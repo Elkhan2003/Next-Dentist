@@ -30,9 +30,9 @@ const ContactPage: FC = () => {
 								</p>
 							</div>
 							<div className={scss.map}>
-								{/*<Image src={MapTest} alt="test map" />*/}
+								<Image src={MapTest} alt="test map" />
 								{/*<Mapgl />*/}
-								<MapYandex className={scss.size} />
+								{/*<MapYandex className={scss.size} />*/}
 							</div>
 						</div>
 					</div>
