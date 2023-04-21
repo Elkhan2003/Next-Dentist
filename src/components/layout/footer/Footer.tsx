@@ -15,6 +15,7 @@ const Footer: FC<FooterProps> = (props) => {
 					<div className={scss.footer__top}>
 						<div className={scss.block}>
 							<Link
+								className={scss.logo__link}
 								href="/"
 								onClick={() => {
 									props.setIsOpen(false);
@@ -22,7 +23,9 @@ const Footer: FC<FooterProps> = (props) => {
 									props.setIsOpenDropdownLanguage(false);
 								}}
 							>
-								<SwitchLogo className={scss.logo} />
+								<div className={scss.bg}>
+									<SwitchLogo className={scss.logoDevX} />
+								</div>
 							</Link>
 							<p>
 								Level up your career, income, and life. WEDEVX helped over 432
