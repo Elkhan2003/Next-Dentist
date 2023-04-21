@@ -362,42 +362,83 @@
 			width: 100%;
 			max-width: 700px;
 
-			.texts {
+			.block {
 				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
+				justify-content: space-between;
+				align-items: center;
 
-				.title {
-					font-weight: 600;
-					font-size: 27px;
-					line-height: 128.4%;
-					letter-spacing: 0.035em;
+				// ? texts
+				.texts {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
 
-					color: var(--contact-text-color);
+					.title {
+						font-weight: 600;
+						font-size: 27px;
+						line-height: 128.4%;
+						letter-spacing: 0.035em;
+
+						color: var(--contact-text-color);
+					}
+
+					.text {
+						display: flex;
+						align-items: center;
+						margin: 15px 0;
+
+						font-weight: 400;
+						font-size: 20px;
+						line-height: 128.4%;
+						letter-spacing: 0.035em;
+
+						color: var(--contact-text-color);
+
+						svg {
+							margin-right: 10px;
+							fill: var(--contact-icon);
+						}
+					}
 				}
 
-				.text {
-					display: flex;
-					align-items: center;
-					margin: 15px 0;
+				// ? logo
+				.logo {
+					$logo__size: 150px;
+					position: relative;
 
-					font-weight: 400;
-					font-size: 20px;
-					line-height: 128.4%;
-					letter-spacing: 0.035em;
+					width: 100%;
+					height: 100%;
+					max-width: $logo__size;
+					max-height: $logo__size;
+					border-radius: 50%;
 
-					color: var(--contact-text-color);
+					@media (max-width: 500px) {
+						display: none;
+					}
 
-					svg {
-						margin-right: 10px;
-						fill: var(--contact-icon);
+					.logo__bg {
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+
+						background: white;
+						max-width: $logo__size;
+						max-height: $logo__size;
+						border-radius: 50%;
+
+						.logo__img {
+							width: 100%;
+							height: 100%;
+							max-width: $logo__size;
+							max-height: $logo__size;
+							border-radius: 50%;
+						}
 					}
 				}
 			}
 
-			$yandex-max-height-vh: 47vh;
-
 			.map {
+				$yandex-max-height-vh: 47vh;
 				//overflow: hidden;
 				//position: relative;
 				//z-index: 1;

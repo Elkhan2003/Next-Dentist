@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Image from "next/image";
 // import logoDark from "@/assets/logo-dark.png";
 // import logoLight from "@/assets/logo.png";
-import logoOrtodont from "@/assets/ortodont.webp";
+import logoOrtodont from "@/assets/ortodont-logo.webp";
 import { useTheme } from "next-themes";
 
 interface SwitchLogoProps {
