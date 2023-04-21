@@ -174,6 +174,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									type="text"
 									name="phone"
 									id="phone-input"
+									aria-label="phone-input"
 									className={`${scss.input__field} ${
 										touched.phone && !values.phone.match(/^\+?\d{12,13}$/)
 											? scss.error
