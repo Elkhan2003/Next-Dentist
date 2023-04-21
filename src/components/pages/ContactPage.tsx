@@ -38,7 +38,11 @@ const ContactPage: FC = () => {
 								</div>
 							</div>
 							<div className={scss.map}>
-								<Image src={MapTest} alt="test map" />
+								<iframe
+									src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0104d8fd2fce3ebe9b6941505ffd9358e15d07f3b15e49a32188767462a62cf&amp;source=constructor"
+									frameBorder="0"
+								></iframe>
+								{/*<Image src={MapTest} alt="test map" />*/}
 								{/*<Mapgl />*/}
 								{/*<MapYandex className={scss.size} />*/}
 							</div>
