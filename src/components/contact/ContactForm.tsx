@@ -8,10 +8,9 @@ import { sendContactForm } from "../../../sms/lib/api";
 interface ContactFormValues {
 	first_name: string;
 	last_name: string;
-	email: string;
+	phone: string;
 	subject: string;
 	message: string;
-	phone: string;
 }
 
 interface ContactFormState {
@@ -23,10 +22,9 @@ interface ContactFormState {
 const initValues: ContactFormValues = {
 	first_name: "",
 	last_name: "",
-	email: "",
+	phone: "",
 	subject: "",
-	message: "",
-	phone: ""
+	message: ""
 };
 
 const initState: ContactFormState = {

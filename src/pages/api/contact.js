@@ -3,10 +3,10 @@ import { mailOptions, transporter } from "../../../sms/config/nodemailer";
 const CONTACT_MESSAGE_FIELDS = {
 	first_name: "First Name",
 	last_name: "Last Name",
-	email: "Mail Address",
+	// email: "Mail Address",
+	phone: "Phone",
 	subject: "Subject",
-	message: "Message",
-	phone: "Phone"
+	message: "Message"
 };
 
 const generateEmailContent = (data) => {
@@ -32,8 +32,8 @@ const handler = async (req, res) => {
 			!data ||
 			!data.first_name ||
 			!data.last_name ||
-			!data.subject ||
-			!data.phone
+			!data.phone ||
+			!data.subject
 		) {
 			return res.status(400).send({ message: "Bad request" });
 		}
