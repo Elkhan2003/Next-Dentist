@@ -17,10 +17,8 @@ const AboutPage_Test: FC = () => {
 				<div className="container">
 					<h1>
 						<FormattedMessage id="page.about.title" />
-					</h1>
-					<h3>
 						<FormattedMessage id="page.about.about.me" />
-					</h3>
+					</h1>
 				</div>
 			</div>
 		</>
