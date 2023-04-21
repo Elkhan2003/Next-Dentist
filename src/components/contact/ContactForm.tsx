@@ -111,7 +111,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 						{error && <p className={scss.error__message}>{error}</p>}
 						<div className={scss.inputs}>
 							<div className={scss.input}>
-								{/* <label>First Name</label> */}
 								<input
 									type="text"
 									name="first_name"
@@ -129,7 +128,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							</div>
 
 							<div className={scss.input}>
-								{/* <label>Last Name</label> */}
 								<input
 									type="text"
 									name="last_name"
@@ -146,30 +144,29 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 								)}
 							</div>
 
-							<div className={scss.input}>
-								{/* <label>Email</label> */}
-								<input
-									type="email"
-									name="email"
-									placeholder="Адрес электронной почты*"
-									className={`${scss.input__field} ${
-										touched.email && !values.email.match(/^\S+@\S+\.\S+$/)
-											? scss.error
-											: null
-									}`}
-									value={values.email}
-									onChange={handleChange}
-									onBlur={onBlur}
-								/>
-								{touched.email && !values.email.match(/^\S+@\S+\.\S+$/) && (
-									<p className={scss.error}>
-										Пожалуйста, введите действительный адрес электронной почты
-									</p>
-								)}
-							</div>
+							{/*<div className={scss.input}>*/}
+							{/*	<label>Email</label>*/}
+							{/*	<input*/}
+							{/*		type="email"*/}
+							{/*		name="email"*/}
+							{/*		placeholder="Адрес электронной почты*"*/}
+							{/*		className={`${scss.input__field} ${*/}
+							{/*			touched.email && !values.email.match(/^\S+@\S+\.\S+$/)*/}
+							{/*				? scss.error*/}
+							{/*				: null*/}
+							{/*		}`}*/}
+							{/*		value={values.email}*/}
+							{/*		onChange={handleChange}*/}
+							{/*		onBlur={onBlur}*/}
+							{/*	/>*/}
+							{/*	{touched.email && !values.email.match(/^\S+@\S+\.\S+$/) && (*/}
+							{/*		<p className={scss.error}>*/}
+							{/*			Пожалуйста, введите действительный адрес электронной почты*/}
+							{/*		</p>*/}
+							{/*	)}*/}
+							{/*</div>*/}
 
 							<div className={scss.input}>
-								{/* <label>Phone</label> */}
 								<input
 									type="text"
 									name="phone"
@@ -193,7 +190,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							</div>
 
 							<div className={scss.input}>
-								{/* <label>Subject</label> */}
 								<input
 									type="text"
 									name="subject"
@@ -211,7 +207,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							</div>
 
 							<div className={scss.input}>
-								{/* <label>Message</label> */}
 								<textarea
 									name="message"
 									className={`${scss.input__field} ${scss.message}`}

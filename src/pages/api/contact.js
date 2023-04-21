@@ -32,7 +32,6 @@ const handler = async (req, res) => {
 			!data ||
 			!data.first_name ||
 			!data.last_name ||
-			!data.email ||
 			!data.subject ||
 			!data.phone
 		) {
