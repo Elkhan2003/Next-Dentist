@@ -70,13 +70,28 @@ const Footer: FC<FooterProps> = (props) => {
 							Copyright © 2023 DevX | Powered by Elcho911
 						</div>
 						<div className={scss.icons}>
-							<a href="https://www.instagram.com/elcho911/" target="_blank">
+							<a
+								className={scss.link}
+								href="https://www.instagram.com/elcho911/"
+								target="_blank"
+								aria-label="Link to Instagram profile"
+							>
 								<InstagramIcon />
 							</a>
-							<a href="https://github.com/Elkhan2003" target="_blank">
+							<a
+								className={scss.link}
+								href="https://github.com/Elkhan2003"
+								target="_blank"
+								aria-label="Link to GitHub profile"
+							>
 								<GithubIcon />
 							</a>
-							<a href="https://discord.gg/NZpxaY4CGC" target="_blank">
+							<a
+								className={scss.link}
+								href="https://discord.gg/NZpxaY4CGC"
+								target="_blank"
+								aria-label="Link to Discord Call"
+							>
 								<DiscordIcon />
 							</a>
 						</div>
