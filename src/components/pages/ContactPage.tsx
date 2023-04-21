@@ -25,7 +25,7 @@ const ContactPage: FC = () => {
 										<EmailIcon /> testemail@gmail.com
 									</p>
 									<p className={scss.text}>
-										<PhoneIcon /> +707 787 686 079
+										<PhoneIcon /> +996 990 38 50 56
 									</p>
 									<p className={scss.text}>
 										<MarkerIcon /> Lenina 967
