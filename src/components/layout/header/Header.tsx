@@ -131,13 +131,13 @@ const Header: FC<HeaderProps> = (props) => {
 									</div>
 
 									{/* ! switch theme */}
-									<div className={scss.switch__theme}>
-										<SwitchThemeIcon
-											className__Icons={scss.icons}
-											className__SunIcon={scss.SunIcon}
-											className__MoonIcon={scss.MoonIcon}
-										/>
-									</div>
+									{/*<div className={scss.switch__theme}>*/}
+									{/*	<SwitchThemeIcon*/}
+									{/*		className__Icons={scss.icons}*/}
+									{/*		className__SunIcon={scss.SunIcon}*/}
+									{/*		className__MoonIcon={scss.MoonIcon}*/}
+									{/*	/>*/}
+									{/*</div>*/}
 
 									{/* ! timetable */}
 									<div className={scss.timetable}>
@@ -180,6 +180,7 @@ const Header: FC<HeaderProps> = (props) => {
 									</Link>
 								))}
 
+								{/* ! switch lang */}
 								<div
 									className={
 										props.isOpenDropdownLanguage
@@ -230,19 +231,29 @@ const Header: FC<HeaderProps> = (props) => {
 										))}
 									</div>
 								</div>
-								<div className={scss.burger__menu__switch__theme}>
-									<SwitchThemeButton className={scss.button__switch__theme}>
-										<FormattedMessage id="page.header.switch.theme" />
-										<SwitchThemeIcon
-											className__Icons={scss.icons}
-											className__SunIcon={scss.SunIcon}
-											className__MoonIcon={scss.MoonIcon}
-										/>
-									</SwitchThemeButton>
-								</div>
-								<div className={scss.right}>
-									{/*<Logout />*/}
-									Logout
+
+								{/* ! switch theme */}
+								{/*<div className={scss.burger__menu__switch__theme}>*/}
+								{/*	<SwitchThemeButton className={scss.button__switch__theme}>*/}
+								{/*		<FormattedMessage id="page.header.switch.theme" />*/}
+								{/*		<SwitchThemeIcon*/}
+								{/*			className__Icons={scss.icons}*/}
+								{/*			className__SunIcon={scss.SunIcon}*/}
+								{/*			className__MoonIcon={scss.MoonIcon}*/}
+								{/*		/>*/}
+								{/*	</SwitchThemeButton>*/}
+								{/*</div>*/}
+
+								{/* ! timetable */}
+								<div className={scss.timetable}>
+									<div className={scss.icon__text}>
+										<TimeIcon />
+										<p className={scss.text}>ПН - ПТ 10:00 - 18:00</p>
+									</div>
+									<div className={scss.icon__text}>
+										<PhoneIcon />
+										<p className={scss.text}>+996 990 38 50 56</p>
+									</div>
 								</div>
 							</div>
 

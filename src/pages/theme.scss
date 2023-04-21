@@ -1,40 +1,40 @@
 :root {
 	// ! wrapper
-	--wrapper-bg: #ffffff;
+	--wrapper-bg: #1e1e20;
 
 	// ! header
-	--header-scroll-box-shadow: #a1a1a1;
-	--header-scroll: #ffffff00;
-	--header-scroll-active: #fffffff5;
-	--header-scroll-text-color: #0026ff;
-	--header-scroll-text-color-active: #ff0000;
+	--header-scroll-box-shadow: #3f3f3f;
+	--header-scroll: #0c131b00;
+	--header-scroll-active: #1e1e20e5;
+	--header-scroll-text-color: #fff;
+	--header-scroll-text-color-active: #ffe6a9;
 	--header-scroll-text-color-hover: #bdbdbd;
-	--header-text-color: #494950;
-	--header-text-color-active: #646cff;
+	--header-text-color: #fff;
+	--header-text-color-active: #ffe6a9;
 	--header-text-color-hover: #bdbdbd;
-	--header-burger-button: #797979;
-	--header-burger-menu: #ffffff;
+	--header-burger-button: #fff;
+	--header-burger-menu: #1e1e20;
 	--header-burger-menu-border: rgba(255, 255, 255, 0.151);
-	--header-burger-menu-button-line: #00000049;
-	--header-burger-menu-switch-theme-button: #f6f6f7;
-	--header-burger-menu-switch-theme-text: #737379;
-	--header-dropdown-lang-icon-hover: #808088;
-	--header-dropdown-lang-bg: #ffffff;
-	--header-dropdown-lang-button-hover: #f6f6f7;
+	--header-burger-menu-button-line: #ffffff21;
+	--header-burger-menu-switch-theme-button: #252529;
+	--header-burger-menu-switch-theme-text: #9c9ca3;
+	--header-dropdown-lang-icon-hover: #bdbdbd;
+	--header-dropdown-lang-bg: #252529;
+	--header-dropdown-lang-button-hover: #c1ad7b;
 	--header-timetable: #ffe6a9;
 
 	//	! main
-	--home--bg: url("../assets/img/Background_Light.webp");
-	--home-border-radius-dentist: #c9c9c9;
-	--about-bg: #ffffff;
-	--about-title-color: #1e1e1e;
-	--about-text-color: #1e1e1e;
-	--about2-bg: #585858;
-	--contact-bg: #ffffff;
-	--contact-text-color: #101010;
-	--contact-icon: #949494;
-	--contact-form-input-bg: #d2d2d2;
-	--contact-form-input-placeholder: #ffffff;
+	--home--bg: url("../assets/img/Background_Dark.webp");
+	--home-border-radius-dentist: #ffe6a9;
+	--about-bg: #1e1e1e;
+	--about-title-color: #ffffff;
+	--about-text-color: rgba(255, 230, 169, 0.7);
+	--about2-bg: #1e1e1e;
+	--contact-bg: #262626;
+	--contact-text-color: #ffffff;
+	--contact-icon: #ffe6a9;
+	--contact-form-input-bg: #ffffff;
+	--contact-form-input-placeholder: #999999;
 
 	// ! footer
 	--footer-bg-dark: #1e1e20;
