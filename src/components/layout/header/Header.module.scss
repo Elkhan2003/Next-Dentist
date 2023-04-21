@@ -50,18 +50,40 @@
 		margin-right: 2rem;
 
 		a {
+			position: relative;
+			padding: 20px 0;
+
 			display: flex;
 			align-items: center;
+			border-radius: 50%;
+
+			$logo-size: 60px;
+
+			.bg {
+				position: absolute;
+
+				background: white;
+				border-radius: 50%;
+				width: $logo-size;
+				height: $logo-size;
+			}
+
+			.logoDevX {
+				position: absolute;
+
+				width: $logo-size;
+				height: $logo-size;
+			}
 
 			@media (max-width: 700px) {
 				cursor: default;
 			}
 		}
 
-		.logoDevX {
-			width: 140px;
-			height: 24px;
-		}
+		//.logoDevX {
+		//	width: 140px;
+		//	height: 24px;
+		//}
 	}
 
 	// ? links position

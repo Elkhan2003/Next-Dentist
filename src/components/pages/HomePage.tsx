@@ -3,7 +3,7 @@ import scss from "./Style.module.scss";
 import Head from "next/head";
 import { useIntl } from "react-intl";
 import Image from "next/image";
-import woman from "@/assets/img/Woman.jpg";
+import woman from "@/assets/img/Woman.webp";
 
 const HomePage: FC = () => {
 	const intl: any = useIntl();

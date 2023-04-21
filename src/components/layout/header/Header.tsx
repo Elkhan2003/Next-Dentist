@@ -74,7 +74,9 @@ const Header: FC<HeaderProps> = (props) => {
 										props.setIsOpenDropdownLanguage(false);
 									}}
 								>
-									<SwitchLogo className={scss.logoDevX} />
+									<div className={scss.bg}>
+										<SwitchLogo className={scss.logoDevX} />
+									</div>
 								</Link>
 							</div>
 							<div className={scss.nav__menu}>
