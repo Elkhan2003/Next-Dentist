@@ -15,12 +15,12 @@ const AboutPage_Test: FC = () => {
 			</Head>
 			<div className={scss.about__page__test}>
 				<div className="container">
-					<h3>
+					<h1>
 						<FormattedMessage id="page.about.title" />
-					</h3>
-					<p>
+					</h1>
+					<h3>
 						<FormattedMessage id="page.about.about.me" />
-					</p>
+					</h3>
 				</div>
 			</div>
 		</>
