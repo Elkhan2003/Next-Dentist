@@ -391,17 +391,19 @@
 				}
 			}
 
-			.map {
-				$yandex-width: 700px;
-				$yandex-height: 450px;
+			$yandex-width: 700px;
+			$yandex-height: 450px;
 
+			.map {
 				overflow: hidden;
 				position: relative;
 				z-index: 1;
 				border-radius: 10px;
 
-				width: $yandex-width;
-				height: $yandex-height;
+				width: 100%;
+				height: 45vh;
+				max-width: $yandex-width;
+				max-height: $yandex-height;
 
 				.size {
 					position: absolute;
@@ -409,8 +411,10 @@
 					left: 0;
 					top: -450px;
 
-					width: $yandex-width;
-					height: $yandex-height;
+					width: 100%;
+					height: 45vh;
+					max-width: $yandex-width;
+					max-height: $yandex-height;
 				}
 
 				//img {
