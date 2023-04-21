@@ -22,13 +22,13 @@ const ContactPage: FC = () => {
 								<div className={scss.texts}>
 									<h1 className={scss.title}>Наши контакты:</h1>
 									<p className={`${scss.text} ${scss.email}`}>
-										<EmailIcon /> testemail@gmail.com
+										<EmailIcon /> boss.armsport@gmail.com
 									</p>
 									<p className={scss.text}>
 										<PhoneIcon /> +996 990 38 50 56
 									</p>
 									<p className={scss.text}>
-										<MarkerIcon /> Lenina 967
+										<MarkerIcon /> DevX 911
 									</p>
 								</div>
 								<div className={scss.logo}>
