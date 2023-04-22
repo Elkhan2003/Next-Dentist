@@ -87,7 +87,7 @@ const Header: FC<HeaderProps> = (props) => {
 	};
 
 	const handleSetInactive = () => {
-		window.scrollBy(0, 1);
+		window.scrollBy(0, 5);
 	};
 
 	return (
