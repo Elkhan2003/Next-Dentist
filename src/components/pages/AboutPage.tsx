@@ -7,7 +7,7 @@ import FaceVideo from "@/assets/img/Video_Dentist.png";
 const AboutPage: FC = () => {
 	return (
 		<>
-			<div className={scss.about__page}>
+			<div id="about" className={scss.about__page}>
 				<div className="container">
 					<div className={scss.content}>
 						<h3 className={scss.title}>

@@ -66,14 +66,14 @@
 		margin-right: 2rem;
 
 		a {
+			$logo-size: 75px;
+
 			position: relative;
 			padding: 15px 0;
-
 			display: flex;
 			align-items: center;
 			border-radius: 50%;
-
-			$logo-size: 75px;
+			cursor: pointer;
 
 			transition: 0.4s;
 
@@ -137,6 +137,7 @@
 			font-size: 16px;
 			font-weight: 500;
 			text-decoration: none;
+			cursor: pointer;
 
 			transition: 0.3s;
 

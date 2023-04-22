@@ -15,7 +15,7 @@ const HomePage: FC = () => {
 			<Head>
 				<title>{title}</title>
 			</Head>
-			<div className={scss.home__page}>
+			<div id="/" className={scss.home__page}>
 				<div className="container">
 					<div className={scss.content}>
 						{/* ! left */}

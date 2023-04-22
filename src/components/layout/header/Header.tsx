@@ -1,27 +1,33 @@
 import React, { FC, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import { FormattedMessage } from "react-intl";
 import scss from "./Header.module.scss";
 import SwitchLogo from "@/components/theme/SwitchLogo";
 import { LangIcon, ArrowIcon, PhoneIcon, TimeIcon } from "@/components/svgs";
-import {
-	SwitchThemeButton,
-	SwitchThemeIcon
-} from "@/components/theme/SwitchTheme";
+// import {
+// 	SwitchThemeButton,
+// 	SwitchThemeIcon
+// } from "@/components/theme/SwitchTheme";
 
 import { IsOpenProps } from "@/components/layout/Layout";
 
 interface HeaderProps extends IsOpenProps {}
 
 interface linksProps {
-	href: string;
+	to: string;
 	label: any;
+	spy: boolean;
+	smooth: boolean;
+	offset: number;
+	duration: number;
 }
 
 const Header: FC<HeaderProps> = (props) => {
 	const [headerScroll, setHeaderScroll] = useState<boolean>(false);
 	const { locales, locale: activeLocale, pathname }: any = useRouter();
+	const [activeLink, setActiveLink] = useState<string>("");
 
 	// ! Scroll
 	useEffect(() => {
@@ -43,14 +49,26 @@ const Header: FC<HeaderProps> = (props) => {
 
 	const links: linksProps[] = [
 		{
-			href: "/",
-			label: <FormattedMessage id="page.header.home" />
+			label: <FormattedMessage id="page.header.home" />,
+			to: "/",
+			spy: true,
+			smooth: true,
+			offset: -50,
+			duration: 500
 		},
 		{
-			href: "/about_test",
-			label: <FormattedMessage id="page.header.about" />
+			label: <FormattedMessage id="page.header.about" />,
+			to: "about",
+			spy: true,
+			smooth: true,
+			offset: -50,
+			duration: 500
 		}
 	];
+
+	const handleSetActive = (to: string) => {
+		setActiveLink(to);
+	};
 
 	return (
 		<div>
@@ -66,8 +84,12 @@ const Header: FC<HeaderProps> = (props) => {
 						<div className={scss.content}>
 							{/* ! header menu */}
 							<div className={scss.logo}>
-								<Link
-									href="/"
+								<ScrollLink
+									to="/"
+									spy={true}
+									smooth={true}
+									offset={0}
+									duration={500}
 									onClick={() => {
 										props.setIsOpen(false);
 										props.setIsOpenDropdown(false);
@@ -77,23 +99,26 @@ const Header: FC<HeaderProps> = (props) => {
 									<div className={scss.logo__bg}>
 										<SwitchLogo className={scss.logo__img} />
 									</div>
-								</Link>
+								</ScrollLink>
 							</div>
 							<div className={scss.nav__menu}>
 								<div className={scss.left}>
 									<div className={scss.links}>
 										{links.map((link) => (
-											<Link
-												key={link.href}
-												href={link.href}
-												className={
-													pathname === link.href
-														? `${scss.link} ${scss.active}`
-														: `${scss.link}`
-												}
+											<ScrollLink
+												key={link.to}
+												to={link.to}
+												spy={link.spy}
+												smooth={link.smooth}
+												offset={link.offset}
+												duration={link.duration}
+												className={`${scss.link} ${
+													activeLink === link.to ? scss.active : ""
+												}`}
+												onSetActive={() => handleSetActive(link.to)}
 											>
 												{link.label}
-											</Link>
+											</ScrollLink>
 										))}
 									</div>
 								</div>
@@ -162,22 +187,25 @@ const Header: FC<HeaderProps> = (props) => {
 								}
 							>
 								{links.map((link) => (
-									<Link
-										key={link.href}
-										href={link.href}
+									<ScrollLink
+										key={link.to}
+										to={link.to}
+										spy={link.spy}
+										smooth={link.smooth}
+										offset={link.offset}
+										duration={link.duration}
 										onClick={() => {
 											props.setIsOpen(false);
 											props.setIsOpenDropdown(false);
 											props.setIsOpenDropdownLanguage(false);
 										}}
-										className={
-											pathname === link.href
-												? `${scss.link} ${scss.active}`
-												: `${scss.link}`
-										}
+										className={`${scss.link} ${
+											activeLink === link.to ? scss.active : ""
+										}`}
+										onSetActive={() => handleSetActive(link.to)}
 									>
 										{link.label}
-									</Link>
+									</ScrollLink>
 								))}
 
 								{/* ! switch lang */}
