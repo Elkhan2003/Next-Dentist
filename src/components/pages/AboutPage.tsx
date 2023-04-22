@@ -31,24 +31,24 @@ const AboutPage: FC = () => {
 					</div>
 				</div>
 
-				<div className={scss.block__2}>
-					<div className="container">
-						<div className={scss.about__ticket}>
-							<div className={scss.card}>
-								<Image className={scss.icon} src={MedPlus} alt="MedPlus" />
-								<p className={scss.text}>Современные методики лечения</p>
-							</div>
-							<div className={scss.card}>
-								<Image className={scss.icon} src={CheckMark} alt="CheckMark" />
-								<p className={scss.text}>Детская стоматология</p>
-							</div>
-							<div className={scss.card}>
-								<Image className={scss.icon} src={BxChild} alt="BxChild" />
-								<p className={scss.text}>Гаранития качества</p>
-							</div>
-						</div>
-					</div>
-				</div>
+				{/*<div className={scss.block__2}>*/}
+				{/*	<div className="container">*/}
+				{/*		<div className={scss.about__ticket}>*/}
+				{/*			<div className={scss.card}>*/}
+				{/*				<Image className={scss.icon} src={MedPlus} alt="MedPlus" />*/}
+				{/*				<p className={scss.text}>Современные методики лечения</p>*/}
+				{/*			</div>*/}
+				{/*			<div className={scss.card}>*/}
+				{/*				<Image className={scss.icon} src={CheckMark} alt="CheckMark" />*/}
+				{/*				<p className={scss.text}>Детская стоматология</p>*/}
+				{/*			</div>*/}
+				{/*			<div className={scss.card}>*/}
+				{/*				<Image className={scss.icon} src={BxChild} alt="BxChild" />*/}
+				{/*				<p className={scss.text}>Гаранития качества</p>*/}
+				{/*			</div>*/}
+				{/*		</div>*/}
+				{/*	</div>*/}
+				{/*</div>*/}
 			</div>
 		</>
 	);
