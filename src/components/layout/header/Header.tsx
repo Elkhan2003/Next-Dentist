@@ -117,6 +117,7 @@ const Header: FC<HeaderProps> = (props) => {
 										props.setIsOpen(false);
 										props.setIsOpenDropdown(false);
 										props.setIsOpenDropdownLanguage(false);
+										handleScroll();
 									}}
 								>
 									<div className={scss.logo__bg}>
@@ -139,7 +140,9 @@ const Header: FC<HeaderProps> = (props) => {
 													activeLink === link.to ? scss.active : ""
 												}`}
 												onSetActive={() => handleSetActive(link.to)}
-												onClick={handleScroll}
+												onClick={() => {
+													handleScroll();
+												}}
 											>
 												{link.label}
 											</ScrollLink>
