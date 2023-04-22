@@ -120,7 +120,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onBlur={onBlur}
 									required
 								/>
-								<i>Ваше имя*</i>
+								<label>Ваше имя*</label>
 								{touched.first_name && !values.first_name && (
 									<p className={scss.error}>обязательное поле</p>
 								)}
@@ -138,7 +138,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onBlur={onBlur}
 									required
 								/>
-								<i>Ваша фамилия*</i>
+								<label>Ваша фамилия*</label>
 								{touched.last_name && !values.last_name && (
 									<p className={scss.error}>обязательное поле</p>
 								)}
@@ -184,7 +184,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onKeyPress={handleKeyPress}
 									required={!values.phone || values.phone.length < 13}
 								/>
-								<i>Номер телефона*</i>
+								<label>Номер телефона*</label>
 								{touched.phone && !values.phone.match(/^\+?\d{12,13}$/) && (
 									<p className={scss.error}>
 										Пожалуйста, введите действующий телефонный номер
@@ -204,7 +204,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onBlur={onBlur}
 									required
 								/>
-								<i>Тема для обращения*</i>
+								<label>Тема для обращения*</label>
 								{touched.subject && !values.subject && (
 									<p className={scss.error}>обязательное поле</p>
 								)}

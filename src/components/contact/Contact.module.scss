@@ -68,8 +68,8 @@
 					font-weight: 500;
 					font-size: 1em;
 
-					&:focus ~ i,
-					&:valid ~ i {
+					&:focus ~ label,
+					&:valid ~ label {
 						transform: translateY(-7.5px);
 						font-size: 0.8em;
 						color: #fff;
@@ -80,7 +80,7 @@
 					}
 				}
 
-				i {
+				label {
 					position: absolute;
 					left: 0;
 					padding: 15px 10px;
