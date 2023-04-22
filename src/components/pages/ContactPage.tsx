@@ -38,6 +38,7 @@ const ContactPage: FC = () => {
 								<iframe
 									src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0104d8fd2fce3ebe9b6941505ffd9358e15d07f3b15e49a32188767462a62cf&amp;source=constructor"
 									frameBorder="0"
+									title="Карта на Яндексе"
 								></iframe>
 							</div>
 						</div>
