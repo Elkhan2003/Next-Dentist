@@ -87,7 +87,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 	const notify = () => {
 		toast.success("Ваша форма успешно отправлена!", {
 			position: "bottom-right",
-			autoClose: 5000,
+			autoClose: 3000,
 			hideProgressBar: false,
 			closeOnClick: true,
 			pauseOnHover: true,

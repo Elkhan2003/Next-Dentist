@@ -315,16 +315,25 @@
 					max-width: 90px;
 					height: 100%;
 					max-height: 90px;
+
+					@media (max-width: 500px) {
+						max-width: 70px;
+						max-height: 70px;
+					}
 				}
 
 				.text {
 					text-align: center;
 					font-weight: 400;
-					font-size: 1.2rem;
+					font-size: 20px;
 					line-height: 128.4%;
 					letter-spacing: 0.035em;
 
 					color: #ffe6a9;
+
+					@media (max-width: 500px) {
+						font-size: 16px;
+					}
 				}
 			}
 		}
@@ -383,14 +392,14 @@
 					.title {
 						margin-bottom: 15px;
 						font-weight: 600;
-						font-size: 27px;
+						font-size: 21px;
 						line-height: 128.4%;
 						letter-spacing: 0.035em;
 
 						color: var(--contact-text-color);
 
 						@media (max-width: 500px) {
-							font-size: 20px;
+							font-size: 18px;
 						}
 					}
 
@@ -400,14 +409,14 @@
 						margin-bottom: 10px;
 
 						font-weight: 400;
-						font-size: 20px;
+						font-size: 16px;
 						line-height: 128.4%;
 						letter-spacing: 0.035em;
 
 						color: var(--contact-text-color);
 
 						@media (max-width: 500px) {
-							font-size: 16px;
+							font-size: 13px;
 						}
 
 						svg {
