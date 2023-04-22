@@ -209,15 +209,15 @@
 		padding: 70px 0;
 		background: var(--about-bg);
 
+		@media (max-width: 500px) {
+			padding: 50px 0;
+		}
+
 		.about__us {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-
-			@media (max-width: 500px) {
-				padding: 50px 0;
-			}
 
 			.title {
 				font-weight: 700;

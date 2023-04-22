@@ -53,7 +53,7 @@ const Header: FC<HeaderProps> = (props) => {
 			to: "/",
 			spy: true,
 			smooth: true,
-			offset: -50,
+			offset: -30,
 			duration: 500
 		},
 		{
@@ -61,7 +61,7 @@ const Header: FC<HeaderProps> = (props) => {
 			to: "about",
 			spy: true,
 			smooth: true,
-			offset: -50,
+			offset: -30,
 			duration: 500
 		},
 		{
@@ -69,7 +69,7 @@ const Header: FC<HeaderProps> = (props) => {
 			to: "contact",
 			spy: true,
 			smooth: true,
-			offset: -50,
+			offset: -30,
 			duration: 500
 		}
 	];
