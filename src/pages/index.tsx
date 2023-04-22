@@ -10,7 +10,7 @@ const Index: FC = () => {
 		<>
 			<Layout>
 				<HomePage />
-				<AboutPage />
+				{/*<AboutPage />*/}
 				<FeedBack />
 				<ContactPage />
 			</Layout>
