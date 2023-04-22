@@ -5,7 +5,7 @@ const FeedBack: FC = () => {
 	return (
 		<>
 			<div id="feedback" className={scss.feed__back}>
-				<h3>FeedBack</h3>
+				<h1>FeedBack</h1>
 			</div>
 		</>
 	);
