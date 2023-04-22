@@ -9,7 +9,7 @@ const AnimatedNumbers: FC<AnimatedNumbersProps> = ({ value }) => {
 	const ref: any = useRef(null);
 
 	const motionValue: any = useMotionValue(0);
-	const springValue: any = useSpring(motionValue, { duration: 5000 });
+	const springValue: any = useSpring(motionValue, { duration: 7000 });
 	const isView: boolean = useInView(ref);
 
 	useEffect(() => {
