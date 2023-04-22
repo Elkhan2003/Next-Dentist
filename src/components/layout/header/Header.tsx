@@ -86,6 +86,10 @@ const Header: FC<HeaderProps> = (props) => {
 		setActiveLink(to);
 	};
 
+	const handleSetInactive = () => {
+		window.scrollBy(0, 1);
+	};
+
 	return (
 		<div>
 			<header className={scss.header}>
@@ -132,6 +136,7 @@ const Header: FC<HeaderProps> = (props) => {
 													activeLink === link.to ? scss.active : ""
 												}`}
 												onSetActive={() => handleSetActive(link.to)}
+												onSetInactive={handleSetInactive}
 											>
 												{link.label}
 											</ScrollLink>
@@ -219,6 +224,7 @@ const Header: FC<HeaderProps> = (props) => {
 											activeLink === link.to ? scss.active : ""
 										}`}
 										onSetActive={() => handleSetActive(link.to)}
+										onSetInactive={handleSetInactive}
 									>
 										{link.label}
 									</ScrollLink>
