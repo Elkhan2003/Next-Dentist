@@ -9,8 +9,6 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@2gis/mapgl": "^1.35.1",
-		"@2gis/mapgl-clusterer": "^2.5.0",
 		"@svgr/webpack": "^7.0.0",
 		"@types/node": "18.15.11",
 		"@types/react": "18.0.35",
@@ -25,7 +23,6 @@
 		"react-intl": "^6.3.2",
 		"react-scroll": "^1.8.9",
 		"react-toastify": "^9.1.2",
-		"react-yandex-maps": "^4.6.0",
 		"sass": "^1.62.0",
 		"typescript": "5.0.4",
 		"yarn": "^1.22.19"
