@@ -2,11 +2,8 @@ import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import ContactForm from "@/components/contact/ContactForm";
 import Image from "next/image";
-import MapTest from "@/assets/img/map_test.png";
 import { EmailIcon, MarkerIcon, PhoneIcon } from "@/components/svgs";
 import logo from "@/assets/ortodont.webp";
-import Mapgl from "@/components/map/Mapgl";
-import MapYandex from "@/components/map/MapYandex";
 
 const ContactPage: FC = () => {
 	return (
@@ -42,9 +39,6 @@ const ContactPage: FC = () => {
 									src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0104d8fd2fce3ebe9b6941505ffd9358e15d07f3b15e49a32188767462a62cf&amp;source=constructor"
 									frameBorder="0"
 								></iframe>
-								{/*<Image src={MapTest} alt="test map" />*/}
-								{/*<Mapgl />*/}
-								{/*<MapYandex className={scss.size} />*/}
 							</div>
 						</div>
 					</div>
