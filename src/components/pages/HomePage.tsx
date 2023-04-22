@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useIntl } from "react-intl";
 import Image from "next/image";
 import woman from "@/assets/img/Woman.webp";
+import AnimatedNumbers from "@/components/framer-motion/AnimatedNumbers";
 
 const HomePage: FC = () => {
 	const intl: any = useIntl();
@@ -37,12 +38,16 @@ const HomePage: FC = () => {
 
 							<div className={scss.stats}>
 								<div className={scss.customers}>
-									<h1>1687+</h1>
+									<h1>
+										<AnimatedNumbers value={1687} />+
+									</h1>
 									<hr />
 									<p>Довольных клиентов</p>
 								</div>
 								<div className={scss.years}>
-									<h1>8</h1>
+									<h1>
+										<AnimatedNumbers value={9} />+
+									</h1>
 									<hr />
 									<p>Лет на рынке</p>
 								</div>
