@@ -33,6 +33,7 @@
 					font-size: 60px;
 					letter-spacing: 7px;
 					line-height: 80px;
+					text-shadow: 0px 0px 14px rgba(218, 165, 32, 0.5);
 
 					color: #ffffff;
 
@@ -102,7 +103,7 @@
 					letter-spacing: 0.035em;
 					text-shadow: 0px 0px 14px rgba(218, 165, 32, 0.5);
 
-					color: #ffe6a9;
+					color: #ffdf95;
 
 					@media (max-width: 560px) {
 						font-size: 30px;
@@ -110,12 +111,12 @@
 				}
 
 				hr {
-					border: 2px solid #ffe6a9;
+					border: 2px solid #ffdf95;
 					width: 50px;
 					transform: rotate(90deg);
 
 					@media (max-width: 560px) {
-						border: 1px solid #ffe6a9;
+						border: 1px solid #ffdf95;
 						width: 30px;
 					}
 				}
@@ -125,8 +126,9 @@
 					font-size: 18px;
 					line-height: 128.4%;
 					letter-spacing: 0.035em;
+					text-shadow: 0px 0px 14px rgba(218, 165, 32, 0.5);
 
-					color: #ffe6a9;
+					color: #ffdf95;
 
 					@media (max-width: 560px) {
 						font-size: 13px;
