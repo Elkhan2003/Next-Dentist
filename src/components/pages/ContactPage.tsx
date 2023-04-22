@@ -4,6 +4,7 @@ import ContactForm from "@/components/contact/ContactForm";
 import Image from "next/image";
 import { EmailIcon, MarkerIcon, PhoneIcon } from "@/components/svgs";
 import logo from "@/assets/ortodont.webp";
+import AnimatedNumbers from "@/components/framer-motion/AnimatedNumbers";
 
 const ContactPage: FC = () => {
 	return (
@@ -19,13 +20,17 @@ const ContactPage: FC = () => {
 								<div className={scss.texts}>
 									<h1 className={scss.title}>Наши контакты:</h1>
 									<p className={`${scss.text} ${scss.email}`}>
-										<EmailIcon /> boss.armsport@gmail.com
+										<EmailIcon />
+										boss.armsport@gmail.com
 									</p>
 									<p className={scss.text}>
-										<PhoneIcon /> +996 990 38 50 56
+										<PhoneIcon />
+										+996 990 38 50 56
 									</p>
 									<p className={scss.text}>
-										<MarkerIcon /> DevX 911
+										<MarkerIcon />
+										DevX&nbsp;
+										<AnimatedNumbers value={911} />
 									</p>
 								</div>
 								<div className={scss.logo}>
@@ -38,7 +43,7 @@ const ContactPage: FC = () => {
 								<iframe
 									src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0104d8fd2fce3ebe9b6941505ffd9358e15d07f3b15e49a32188767462a62cf&amp;source=constructor"
 									frameBorder="0"
-									title="Карта на Яндексе"
+									title="Map on yandex"
 								></iframe>
 							</div>
 						</div>
