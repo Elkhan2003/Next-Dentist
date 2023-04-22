@@ -14,9 +14,9 @@ const AboutPage: FC = () => {
 				<div className={scss.block__1}>
 					<div className="container">
 						<div className={scss.about__us}>
-							<h3 className={scss.title}>
+							<h1 className={scss.title}>
 								<FormattedMessage id="page.about.title" />
-							</h3>
+							</h1>
 							<div className={scss.video__text}>
 								<Image
 									className={scss.face__video}
