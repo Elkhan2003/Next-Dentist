@@ -205,135 +205,134 @@
 
 // ! AboutPage
 .about__page {
-	background: var(--about-bg);
-
-	.content {
+	.block__1 {
 		padding: 70px 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		background: var(--about-bg);
 
-		@media (max-width: 500px) {
-			padding: 50px 0;
-		}
-
-		.title {
-			font-weight: 700;
-			font-size: 50px;
-			line-height: 128.4%;
-			letter-spacing: 0.035em;
-			text-transform: uppercase;
-
-			position: relative;
-
-			color: var(--about-title-color);
-
-			@media (max-width: 768px) {
-				font-size: 40px;
-			}
-
-			@media (max-width: 450px) {
-				font-size: 25px;
-			}
-
-			&::after {
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: -10px;
-
-				width: 100%;
-				height: 1px;
-
-				background-color: var(--about-title-color);
-			}
-		}
-
-		.video__text {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			width: 100%;
-
-			@media (max-width: 1340px) {
-				flex-wrap: wrap;
-				justify-content: center;
-			}
-
-			.face__video {
-				margin: 70px 0;
-
-				width: 100%;
-				max-width: 700px;
-				height: 100%;
-				max-height: 420px;
-
-				@media (max-width: 768px) {
-					margin: 30px 0;
-				}
-			}
-
-			.text {
-				width: 100%;
-				max-width: 580px;
-				font-weight: 400;
-				font-size: 1.3rem;
-				line-height: 128.4%;
-				letter-spacing: 0.035em;
-
-				color: var(--about-text-color);
-
-				@media (max-width: 570px) {
-					font-size: 20px;
-				}
-				@media (max-width: 390px) {
-					font-size: 18px;
-				}
-			}
-		}
-	}
-}
-
-// ! AboutTicket
-.about__ticket {
-	position: relative;
-	z-index: 1;
-	background: var(--about2-bg);
-	box-shadow: 0px -20px 100px rgba(255, 255, 255, 0.2);
-
-	.content {
-		padding: 40px 0;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		align-items: flex-start;
-
-		.card {
-			margin: 20px 0;
+		.about__us {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			width: 100%;
-			max-width: 230px;
 
-			.icon {
-				margin-bottom: 20px;
-				width: 100%;
-				max-width: 90px;
-				height: 100%;
-				max-height: 90px;
+			@media (max-width: 500px) {
+				padding: 50px 0;
 			}
 
-			.text {
-				text-align: center;
-				font-weight: 400;
-				font-size: 1.2rem;
+			.title {
+				font-weight: 700;
+				font-size: 50px;
 				line-height: 128.4%;
 				letter-spacing: 0.035em;
+				text-transform: uppercase;
 
-				color: #ffe6a9;
+				position: relative;
+
+				color: var(--about-title-color);
+
+				@media (max-width: 768px) {
+					font-size: 40px;
+				}
+
+				@media (max-width: 450px) {
+					font-size: 25px;
+				}
+
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: -10px;
+
+					width: 100%;
+					height: 1px;
+
+					background-color: var(--about-title-color);
+				}
+			}
+
+			.video__text {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+
+				@media (max-width: 1340px) {
+					flex-wrap: wrap;
+					justify-content: center;
+				}
+
+				.face__video {
+					margin: 70px 0;
+
+					width: 100%;
+					max-width: 700px;
+					height: 100%;
+					max-height: 420px;
+
+					@media (max-width: 768px) {
+						margin: 30px 0;
+					}
+				}
+
+				.text {
+					width: 100%;
+					max-width: 580px;
+					font-weight: 400;
+					font-size: 1.3rem;
+					line-height: 128.4%;
+					letter-spacing: 0.035em;
+
+					color: var(--about-text-color);
+
+					@media (max-width: 570px) {
+						font-size: 20px;
+					}
+					@media (max-width: 390px) {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	.block__2 {
+		padding: 40px 0;
+		background: var(--about2-bg);
+		box-shadow: 0px -20px 100px rgba(255, 255, 255, 0.2);
+
+		.about__ticket {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: flex-start;
+
+			.card {
+				margin: 20px 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				max-width: 230px;
+
+				.icon {
+					margin-bottom: 20px;
+					width: 100%;
+					max-width: 90px;
+					height: 100%;
+					max-height: 90px;
+				}
+
+				.text {
+					text-align: center;
+					font-weight: 400;
+					font-size: 1.2rem;
+					line-height: 128.4%;
+					letter-spacing: 0.035em;
+
+					color: #ffe6a9;
+				}
 			}
 		}
 	}
