@@ -194,19 +194,8 @@
 	}
 }
 
-// ! AboutPage_Test
-.about__page__test {
-	margin-top: 90px;
-
-	.text {
-		color: white;
-	}
-}
-
 // ! AboutPage
 .about__page {
-	padding: 3px 0;
-
 	.block__1 {
 		padding: 70px 0;
 		background: var(--about-bg);
@@ -340,10 +329,14 @@
 	}
 }
 
+// ! FeedBack
+.feed__back {
+	height: 100vh;
+}
+
 // ! ContactPage
 .contact__page {
 	background: var(--contact-bg);
-	padding: 1px 0;
 
 	.content {
 		padding: 70px 0;

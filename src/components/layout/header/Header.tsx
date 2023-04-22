@@ -65,6 +65,14 @@ const Header: FC<HeaderProps> = (props) => {
 			duration: 500
 		},
 		{
+			label: <FormattedMessage id="page.header.feedback" />,
+			to: "feedback",
+			spy: true,
+			smooth: true,
+			offset: -30,
+			duration: 500
+		},
+		{
 			label: <FormattedMessage id="page.header.contact" />,
 			to: "contact",
 			spy: true,
