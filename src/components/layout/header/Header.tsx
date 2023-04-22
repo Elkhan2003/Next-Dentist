@@ -63,6 +63,14 @@ const Header: FC<HeaderProps> = (props) => {
 			smooth: true,
 			offset: -50,
 			duration: 500
+		},
+		{
+			label: <FormattedMessage id="page.header.contact" />,
+			to: "contact",
+			spy: true,
+			smooth: true,
+			offset: -50,
+			duration: 500
 		}
 	];
 

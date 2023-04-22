@@ -208,11 +208,15 @@
 	background: var(--about-bg);
 
 	.content {
-		padding: 90px 0;
+		padding: 70px 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		@media (max-width: 500px) {
+			padding: 50px 0;
+		}
 
 		.title {
 			font-weight: 700;
@@ -225,20 +229,24 @@
 
 			color: var(--about-title-color);
 
+			@media (max-width: 768px) {
+				font-size: 40px;
+			}
+
+			@media (max-width: 450px) {
+				font-size: 25px;
+			}
+
 			&::after {
 				content: "";
 				position: absolute;
 				left: 0;
-				bottom: -14px;
+				bottom: -10px;
 
 				width: 100%;
 				height: 1px;
 
 				background-color: var(--about-title-color);
-			}
-
-			@media (max-width: 768px) {
-				font-size: 40px;
 			}
 		}
 

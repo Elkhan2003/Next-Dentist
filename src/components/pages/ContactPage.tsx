@@ -11,7 +11,7 @@ import MapYandex from "@/components/map/MapYandex";
 const ContactPage: FC = () => {
 	return (
 		<>
-			<div className={scss.contact__page}>
+			<div id="contact" className={scss.contact__page}>
 				<div className="container">
 					<div className={scss.content}>
 						<div className={scss.left}>
