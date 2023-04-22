@@ -246,7 +246,7 @@
 				.button.active {
 					color: var(--header-text-color-active);
 
-					cursor: default;
+					cursor: not-allowed;
 
 					&:hover {
 						background: transparent;
