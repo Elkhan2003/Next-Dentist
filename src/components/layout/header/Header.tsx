@@ -53,7 +53,7 @@ const Header: FC<HeaderProps> = (props) => {
 			to: "/",
 			spy: true,
 			smooth: true,
-			offset: -30,
+			offset: -31,
 			duration: 500
 		},
 		{
