@@ -86,8 +86,11 @@ const Header: FC<HeaderProps> = (props) => {
 		setActiveLink(to);
 	};
 
-	const handleSetInactive = () => {
-		window.scrollBy(1, 1);
+	const handleScroll = () => {
+		window.scrollBy(0, 3);
+		setTimeout(() => {
+			window.scrollBy(0, 1);
+		}, 600);
 	};
 
 	return (
@@ -136,7 +139,7 @@ const Header: FC<HeaderProps> = (props) => {
 													activeLink === link.to ? scss.active : ""
 												}`}
 												onSetActive={() => handleSetActive(link.to)}
-												onSetInactive={handleSetInactive}
+												onClick={handleScroll}
 											>
 												{link.label}
 											</ScrollLink>
@@ -224,7 +227,7 @@ const Header: FC<HeaderProps> = (props) => {
 											activeLink === link.to ? scss.active : ""
 										}`}
 										onSetActive={() => handleSetActive(link.to)}
-										onSetInactive={handleSetInactive}
+										onClick={handleScroll}
 									>
 										{link.label}
 									</ScrollLink>
