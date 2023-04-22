@@ -112,6 +112,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 								<input
 									type="text"
 									name="first_name"
+									aria-labelledby="first_name"
 									className={`${scss.input__field} ${
 										touched.first_name && !values.first_name ? scss.error : null
 									}`}
@@ -130,6 +131,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 								<input
 									type="text"
 									name="last_name"
+									aria-labelledby="last_name"
 									className={`${scss.input__field} ${
 										touched.last_name && !values.last_name ? scss.error : null
 									}`}
@@ -196,6 +198,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 								<input
 									type="text"
 									name="subject"
+									aria-labelledby="subject"
 									className={`${scss.input__field} ${
 										touched.subject && !values.subject ? scss.error : null
 									}`}
@@ -213,6 +216,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							<div className={scss.textareaBx}>
 								<textarea
 									name="message"
+									aria-labelledby="message"
 									className={`${scss.message}`}
 									placeholder="Опишите свою проблему в свободной форме*"
 									value={values.message}
