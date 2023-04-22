@@ -222,12 +222,12 @@ const Header: FC<HeaderProps> = (props) => {
 											props.setIsOpen(false);
 											props.setIsOpenDropdown(false);
 											props.setIsOpenDropdownLanguage(false);
+											handleScroll();
 										}}
 										className={`${scss.link} ${
 											activeLink === link.to ? scss.active : ""
 										}`}
 										onSetActive={() => handleSetActive(link.to)}
-										onClick={handleScroll}
 									>
 										{link.label}
 									</ScrollLink>
