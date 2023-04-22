@@ -52,7 +52,7 @@ const HomePage: FC = () => {
 						{/* ! right */}
 						<div className={scss.right}>
 							<div className={scss.woman}>
-								<Image src={woman} alt="Woman" />
+								<Image src={woman} alt="Woman" priority={true} />
 							</div>
 						</div>
 					</div>
