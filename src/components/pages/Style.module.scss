@@ -279,10 +279,10 @@
 					color: var(--about-text-color);
 
 					@media (max-width: 570px) {
-						font-size: 20px;
-					}
-					@media (max-width: 390px) {
 						font-size: 18px;
+					}
+					@media (max-width: 450px) {
+						font-size: 16px;
 					}
 				}
 			}
@@ -351,6 +351,7 @@
 			flex-direction: column;
 			align-items: center;
 		}
+
 		@media (max-width: 500px) {
 			padding: 50px 0;
 		}
@@ -387,6 +388,10 @@
 						letter-spacing: 0.035em;
 
 						color: var(--contact-text-color);
+
+						@media (max-width: 500px) {
+							font-size: 20px;
+						}
 					}
 
 					.text {
@@ -400,6 +405,10 @@
 						letter-spacing: 0.035em;
 
 						color: var(--contact-text-color);
+
+						@media (max-width: 500px) {
+							font-size: 16px;
+						}
 
 						svg {
 							margin-right: 10px;
