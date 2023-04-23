@@ -1,0 +1,15 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+iframe {
+	width: 100%;
+	height: 400px;
+}
+
+@media (max-width: 452px) {
+	iframe {
+		height: 250px;
+	}
+}

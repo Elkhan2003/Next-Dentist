@@ -40,10 +40,15 @@ const ContactPage: FC = () => {
 								</div>
 							</div>
 							<div className={scss.map}>
+								{/*<iframe*/}
+								{/*	src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0104d8fd2fce3ebe9b6941505ffd9358e15d07f3b15e49a32188767462a62cf&amp;source=constructor"*/}
+								{/*	frameBorder="0"*/}
+								{/*	title="Map on yandex"*/}
+								{/*></iframe>*/}
 								<iframe
-									src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0104d8fd2fce3ebe9b6941505ffd9358e15d07f3b15e49a32188767462a62cf&amp;source=constructor"
+									src="/map.html"
 									frameBorder="0"
-									title="Map on yandex"
+									title="Map on 2GIS"
 								></iframe>
 							</div>
 						</div>
