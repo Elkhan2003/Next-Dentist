@@ -48,7 +48,7 @@ const Header: FC<HeaderProps> = (props) => {
 
 	// ! Link Scroll
 	const offsetScroll = -30;
-	const durationScroll = 500;
+	const durationScroll = 700;
 
 	const links: linksProps[] = [
 		{
@@ -88,7 +88,7 @@ const Header: FC<HeaderProps> = (props) => {
 	const handleScroll = () => {
 		setTimeout(() => {
 			window.scrollBy(0, 1);
-		}, 550);
+		}, 750);
 	};
 
 	return (
