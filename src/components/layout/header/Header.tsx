@@ -27,9 +27,8 @@ interface linksProps {
 const Header: FC<HeaderProps> = (props) => {
 	const [headerScroll, setHeaderScroll] = useState<boolean>(false);
 	const { locales, locale: activeLocale, pathname }: any = useRouter();
-	const [activeLink, setActiveLink] = useState<string>("");
 
-	// ! Scroll
+	// ! Scrolling Scroll
 	useEffect(() => {
 		const changeBackground = () => {
 			if (typeof window !== "undefined" && window.scrollY >= 10) {
@@ -47,6 +46,10 @@ const Header: FC<HeaderProps> = (props) => {
 		};
 	}, []);
 
+	// ! Link Scroll
+	const offsetScroll = -30;
+	const durationScroll = 500;
+
 	const links: linksProps[] = [
 		{
 			label: <FormattedMessage id="page.header.home" />,
@@ -54,43 +57,38 @@ const Header: FC<HeaderProps> = (props) => {
 			spy: true,
 			smooth: true,
 			offset: -30,
-			duration: 500
+			duration: durationScroll
 		},
 		{
 			label: <FormattedMessage id="page.header.about" />,
 			to: "about",
 			spy: true,
 			smooth: true,
-			offset: -30,
-			duration: 500
+			offset: offsetScroll,
+			duration: durationScroll
 		},
 		{
 			label: <FormattedMessage id="page.header.feedback" />,
 			to: "feedback",
 			spy: true,
 			smooth: true,
-			offset: -30,
-			duration: 500
+			offset: offsetScroll,
+			duration: durationScroll
 		},
 		{
 			label: <FormattedMessage id="page.header.contact" />,
 			to: "contact",
 			spy: true,
 			smooth: true,
-			offset: -30,
-			duration: 500
+			offset: offsetScroll,
+			duration: durationScroll
 		}
 	];
 
-	const handleSetActive = (to: string) => {
-		setActiveLink(to);
-	};
-
 	const handleScroll = () => {
-		window.scrollBy(0, 3);
 		setTimeout(() => {
 			window.scrollBy(0, 1);
-		}, 600);
+		}, 550);
 	};
 
 	return (
@@ -136,10 +134,8 @@ const Header: FC<HeaderProps> = (props) => {
 												smooth={link.smooth}
 												offset={link.offset}
 												duration={link.duration}
-												className={`${scss.link} ${
-													activeLink === link.to ? scss.active : ""
-												}`}
-												onSetActive={() => handleSetActive(link.to)}
+												className={scss.link}
+												activeClass={scss.active}
 												onClick={() => {
 													handleScroll();
 												}}
@@ -221,16 +217,14 @@ const Header: FC<HeaderProps> = (props) => {
 										smooth={link.smooth}
 										offset={link.offset}
 										duration={link.duration}
+										className={scss.link}
+										activeClass={scss.active}
 										onClick={() => {
 											props.setIsOpen(false);
 											props.setIsOpenDropdown(false);
 											props.setIsOpenDropdownLanguage(false);
 											handleScroll();
 										}}
-										className={`${scss.link} ${
-											activeLink === link.to ? scss.active : ""
-										}`}
-										onSetActive={() => handleSetActive(link.to)}
 									>
 										{link.label}
 									</ScrollLink>
