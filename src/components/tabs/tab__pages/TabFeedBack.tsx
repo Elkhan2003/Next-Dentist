@@ -4,7 +4,7 @@ import { SwiperOptions, Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import scss from "./Slider.module.scss";
+import scss from "./TabPages.module.scss";
 import Image from "next/image";
 
 import pic from "@/assets/DnI9rquWsAAgfKx-min.png";
