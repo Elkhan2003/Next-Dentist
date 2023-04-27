@@ -80,7 +80,7 @@ const TabFeedBack: FC = () => {
 		<>
 			<div className={scss.FeedBack__container}>
 				<div className={scss.title}>
-					Отзывы <span>Клиентов</span>!
+					Отзывы от наших <span>Клиентов</span>!
 				</div>
 				<Swiper {...options}>
 					{sliders.map((slid) => (
