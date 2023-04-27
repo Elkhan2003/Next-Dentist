@@ -41,6 +41,10 @@
 
 	&:hover {
 		opacity: 1 !important;
+
+		@media (max-width: 500px) {
+			opacity: 0.4 !important;
+		}
 	}
 }
 
