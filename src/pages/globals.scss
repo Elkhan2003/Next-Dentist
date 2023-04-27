@@ -26,6 +26,38 @@
 	padding: 0 20px;
 }
 
+// ! Swiper
 .swiper-wrapper {
 	width: 0 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	top: 105px !important;
+	color: #dec58b !important;
+	opacity: 0.4 !important;
+
+	transition: 0.4s !important;
+
+	&:hover {
+		opacity: 1 !important;
+	}
+}
+
+.swiper-pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+	background: #ffe6a9 !important;
+
+	transition: 0.3s !important;
+}
+
+.swiper-pagination-bullet-active {
+	background: #ffe6a9 !important;
+	width: 10px !important;
+	height: 10px !important;
 }

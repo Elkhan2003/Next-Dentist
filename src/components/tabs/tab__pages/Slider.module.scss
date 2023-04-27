@@ -3,12 +3,12 @@
 	width: 100%;
 
 	.card {
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 
 		.feed__back {
 			padding: 0 10px;
 			position: relative;
-			height: 190px;
+			height: 205px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -24,7 +24,7 @@
 			&:after {
 				content: "";
 				position: absolute;
-				top: 148px;
+				top: 162px;
 				left: 20px;
 
 				width: 50px;
@@ -36,7 +36,7 @@
 		}
 
 		.user {
-			margin-top: 25px;
+			margin-top: 30px;
 			height: 63px;
 			display: flex;
 			align-items: center;
