@@ -43,7 +43,7 @@ const TabFeedBack: FC<TabProps> = ({ title, text }) => {
 			}
 		},
 		autoplay: {
-			delay: 250000,
+			delay: 2500,
 			disableOnInteraction: false
 		}
 	};
