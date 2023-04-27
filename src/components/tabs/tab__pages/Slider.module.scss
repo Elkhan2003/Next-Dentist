@@ -8,6 +8,10 @@
 		font-size: 21px;
 		font-weight: 600;
 
+		@media (max-width: 1150px) {
+			margin: 20px 0;
+		}
+
 		span {
 			color: #dec58b;
 		}
