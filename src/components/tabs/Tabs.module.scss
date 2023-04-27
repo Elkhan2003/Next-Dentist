@@ -29,6 +29,10 @@
 				flex-direction: column;
 			}
 
+			@media (max-width: 500px) {
+				margin: 20px 0;
+			}
+
 			.buttons {
 				margin-right: 12px;
 				display: flex;
