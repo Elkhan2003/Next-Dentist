@@ -36,15 +36,21 @@ const AboutPage: FC = () => {
 						<div className={scss.about__ticket}>
 							<div className={scss.card}>
 								<Image className={scss.icon} src={MedPlus} alt="MedPlus" />
-								<p className={scss.text}>Современные методики лечения</p>
+								<p className={scss.text}>
+									<FormattedMessage id="page.about.ticket.first" />
+								</p>
 							</div>
 							<div className={scss.card}>
 								<Image className={scss.icon} src={CheckMark} alt="CheckMark" />
-								<p className={scss.text}>Детская стоматология</p>
+								<p className={scss.text}>
+									<FormattedMessage id="page.about.ticket.second" />
+								</p>
 							</div>
 							<div className={scss.card}>
 								<Image className={scss.icon} src={BxChild} alt="BxChild" />
-								<p className={scss.text}>Гаранития качества</p>
+								<p className={scss.text}>
+									<FormattedMessage id="page.about.ticket.third" />
+								</p>
 							</div>
 						</div>
 					</div>

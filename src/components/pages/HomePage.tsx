@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import Head from "next/head";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import Image from "next/image";
 import woman from "@/assets/img/Woman.webp";
 import AnimatedNumbers from "@/components/framer-motion/AnimatedNumbers";
@@ -25,14 +25,14 @@ const HomePage: FC = () => {
 							<p></p>
 							<div className={scss.sub__title}>
 								<h1 className={scss.title}>
-									Мы создаем красивые улыбки и заботимся о вас!
+									<FormattedMessage id="page.home.title" />
 								</h1>
 								<a
 									href="https://wa.me/996990385056"
 									className={scss.button__call}
 									target="_blank"
 								>
-									Связаться
+									<FormattedMessage id="page.home.call" />
 								</a>
 							</div>
 
@@ -42,14 +42,18 @@ const HomePage: FC = () => {
 										<AnimatedNumbers value={1687} />+
 									</h1>
 									<hr />
-									<p>Довольных клиентов</p>
+									<p>
+										<FormattedMessage id="page.home.stat.first" />
+									</p>
 								</div>
 								<div className={scss.years}>
 									<h1>
 										<AnimatedNumbers value={9} />+
 									</h1>
 									<hr />
-									<p>Лет на рынке</p>
+									<p>
+										<FormattedMessage id="page.home.stat.second" />
+									</p>
 								</div>
 							</div>
 						</div>

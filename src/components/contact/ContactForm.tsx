@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import scss from "./Contact.module.scss";
 
 import { sendContactForm } from "../../../sms/lib/api";
+import { FormattedMessage, useIntl } from "react-intl";
 
 interface ContactFormValues {
 	first_name: string;
@@ -86,7 +87,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 
 	const notify = () => {
 		toast.success("Ваша форма успешно отправлена!", {
-			position: "bottom-right",
+			position: "top-right",
 			autoClose: 3000,
 			hideProgressBar: false,
 			closeOnClick: true,
@@ -97,14 +98,20 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 		});
 	};
 
+	const intl: any = useIntl();
+
 	return (
 		<>
 			<div className={className}>
 				<form className={scss.form} onSubmit={onSubmit}>
 					<div className={scss.container}>
 						<div className={scss.titles}>
-							<h2>Хотите записаться на прием?</h2>
-							<p>Оставьте свои контакты и наш менеджер свяжется с вами.</p>
+							<h2>
+								<FormattedMessage id="page.contact.left.title" />
+							</h2>
+							<p>
+								<FormattedMessage id="page.contact.left.text" />
+							</p>
 							{error && <pre className={scss.error__message}>{error}</pre>}
 						</div>
 						<div className={scss.inputs}>
@@ -122,9 +129,13 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onBlur={onBlur}
 									required
 								/>
-								<label htmlFor="first_name">Ваше имя*</label>
+								<label htmlFor="first_name">
+									<FormattedMessage id="page.contact.input.fitst.name" />
+								</label>
 								{touched.first_name && !values.first_name && (
-									<p className={scss.error}>обязательное поле</p>
+									<p className={scss.error}>
+										<FormattedMessage id="page.contact.required.field" />
+									</p>
 								)}
 							</div>
 
@@ -142,9 +153,13 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onBlur={onBlur}
 									required
 								/>
-								<label htmlFor="last_name">Ваша фамилия*</label>
+								<label htmlFor="last_name">
+									<FormattedMessage id="page.contact.input.last.name" />
+								</label>
 								{touched.last_name && !values.last_name && (
-									<p className={scss.error}>обязательное поле</p>
+									<p className={scss.error}>
+										<FormattedMessage id="page.contact.required.field" />
+									</p>
 								)}
 							</div>
 
@@ -189,10 +204,12 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onKeyPress={handleKeyPress}
 									required={!values.phone || values.phone.length < 13}
 								/>
-								<label htmlFor="phone">Номер телефона*</label>
+								<label htmlFor="phone">
+									<FormattedMessage id="page.contact.input.phone" />
+								</label>
 								{touched.phone && !values.phone.match(/^\+?\d{12,13}$/) && (
 									<p className={scss.error}>
-										Пожалуйста, введите действующий телефонный номер
+										<FormattedMessage id="page.contact.required.field" />
 									</p>
 								)}
 							</div>
@@ -211,9 +228,13 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									onBlur={onBlur}
 									required
 								/>
-								<label htmlFor="subject">Тема для обращения*</label>
+								<label htmlFor="subject">
+									<FormattedMessage id="page.contact.input.subject" />
+								</label>
 								{touched.subject && !values.subject && (
-									<p className={scss.error}>обязательное поле</p>
+									<p className={scss.error}>
+										<FormattedMessage id="page.contact.required.field" />
+									</p>
 								)}
 							</div>
 
@@ -223,7 +244,9 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									aria-labelledby="message"
 									id="message"
 									className={`${scss.message}`}
-									placeholder="Опишите свою проблему в свободной форме*"
+									placeholder={intl.formatMessage({
+										id: "page.contact.input.message"
+									})}
 									value={values.message}
 									onChange={handleChange}
 									onBlur={onBlur}
@@ -234,7 +257,11 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							disabled={isLoading}
 							className={`${scss.button} ${isLoading ? scss.loading : null}`}
 						>
-							{isLoading ? "Отправка..." : "Отправить"}
+							{isLoading ? (
+								<FormattedMessage id="page.contact.sending" />
+							) : (
+								<FormattedMessage id="page.contact.send" />
+							)}
 						</button>
 						<ToastContainer
 							position="top-center"

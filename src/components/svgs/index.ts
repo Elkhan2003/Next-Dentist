@@ -17,3 +17,7 @@ export { default as StaffIcon } from "./staff.svg";
 export { default as PhotoIcon } from "./photo.svg";
 export { default as VideoIcon } from "./video.svg";
 export { default as CertificateIcon } from "./certificate.svg";
+
+// ! Slider
+export { default as ArrowLeftIcon } from "./arrow-left.svg";
+export { default as ArrowRightIcon } from "./arrow-right.svg";

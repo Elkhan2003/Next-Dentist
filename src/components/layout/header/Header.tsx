@@ -109,8 +109,8 @@ const Header: FC<HeaderProps> = (props) => {
 									to="/"
 									spy={true}
 									smooth={true}
-									offset={0}
-									duration={500}
+									offset={offsetScroll}
+									duration={durationScroll}
 									onClick={() => {
 										props.setIsOpen(false);
 										props.setIsOpenDropdown(false);
@@ -191,7 +191,9 @@ const Header: FC<HeaderProps> = (props) => {
 									<div className={scss.timetable}>
 										<div className={scss.icon__text}>
 											<TimeIcon />
-											<p className={scss.text}>ПН - ПТ 10:00 - 18:00</p>
+											<p className={scss.text}>
+												<FormattedMessage id="page.header.timetable" />
+											</p>
 										</div>
 										<div className={scss.icon__text}>
 											<PhoneIcon />
@@ -298,7 +300,9 @@ const Header: FC<HeaderProps> = (props) => {
 								<div className={scss.timetable}>
 									<div className={scss.icon__text}>
 										<TimeIcon />
-										<p className={scss.text}>ПН - ПТ 10:00 - 18:00</p>
+										<p className={scss.text}>
+											<FormattedMessage id="page.header.timetable" />
+										</p>
 									</div>
 									<div className={scss.icon__text}>
 										<PhoneIcon />

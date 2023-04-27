@@ -5,6 +5,7 @@ import Image from "next/image";
 import { EmailIcon, MarkerIcon, PhoneIcon } from "@/components/svgs";
 import logo from "@/assets/ortodont.webp";
 import AnimatedNumbers from "@/components/framer-motion/AnimatedNumbers";
+import { FormattedMessage } from "react-intl";
 
 const ContactPage: FC = () => {
 	return (
@@ -18,7 +19,9 @@ const ContactPage: FC = () => {
 						<div className={scss.right}>
 							<div className={scss.block}>
 								<div className={scss.texts}>
-									<h1 className={scss.title}>Наши контакты:</h1>
+									<h1 className={scss.title}>
+										<FormattedMessage id="page.contact.right.title" />
+									</h1>
 									<p className={`${scss.text} ${scss.email}`}>
 										<EmailIcon />
 										boss.armsport@gmail.com

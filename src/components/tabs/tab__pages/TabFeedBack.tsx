@@ -8,6 +8,7 @@ import scss from "./TabPages.module.scss";
 import Image from "next/image";
 
 import pic from "@/assets/DnI9rquWsAAgfKx-min.png";
+import { FormattedMessage } from "react-intl";
 
 interface SlidersProps {
 	id: number;
@@ -80,7 +81,10 @@ const TabFeedBack: FC = () => {
 		<>
 			<div className={scss.FeedBack__container}>
 				<div className={scss.title}>
-					Отзывы от наших <span>Клиентов</span>!
+					<FormattedMessage
+						id="page.tabs.title.feedback"
+						values={{ span: (chunks) => <span>{chunks}</span> }}
+					/>
 				</div>
 				<Swiper {...options}>
 					{sliders.map((slid) => (

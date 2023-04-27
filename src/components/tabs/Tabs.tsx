@@ -15,11 +15,12 @@ import {
 	VideoIcon,
 	CertificateIcon
 } from "@/components/svgs";
+import { FormattedMessage } from "react-intl";
 
 interface tabsProps {
 	id: number;
 	icon: any;
-	label: string;
+	label: any;
 	page?: any;
 }
 
@@ -27,37 +28,37 @@ const tabs: tabsProps[] = [
 	{
 		id: 1,
 		icon: <FeedBackIcon />,
-		label: "Отзывы",
+		label: <FormattedMessage id="page.tabs.button.feedback" />,
 		page: <TabFeedBack />
 	},
 	{
 		id: 2,
 		icon: <CalendarIcon />,
-		label: "Расписание",
+		label: <FormattedMessage id="page.tabs.button.schedule" />,
 		page: <TabCalendar />
 	},
 	{
 		id: 3,
 		icon: <StaffIcon />,
-		label: "Сотрудники",
+		label: <FormattedMessage id="page.tabs.button.employees" />,
 		page: <TabStaff />
 	},
 	{
 		id: 4,
 		icon: <PhotoIcon />,
-		label: "Фото",
+		label: <FormattedMessage id="page.tabs.button.photo" />,
 		page: <TabPhoto />
 	},
 	{
 		id: 5,
 		icon: <VideoIcon />,
-		label: "Видео",
+		label: <FormattedMessage id="page.tabs.button.video" />,
 		page: <TabVideo />
 	},
 	{
 		id: 6,
 		icon: <CertificateIcon />,
-		label: "Сертификат",
+		label: <FormattedMessage id="page.tabs.button.certificate" />,
 		page: <TabСertificate />
 	}
 ];
@@ -71,7 +72,7 @@ const Tabs: FC = () => {
 				<div className="container">
 					<div className={scss.content}>
 						<h1 className={scss.about__us}>
-							Основные возможности Ortodont Service?
+							<FormattedMessage id="page.tabs.title" />
 						</h1>
 						<div className={scss.tabs}>
 							<div className={scss.buttons}>
