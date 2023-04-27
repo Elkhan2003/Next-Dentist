@@ -300,7 +300,7 @@
 	.block__2 {
 		padding: 40px 0;
 		background: var(--about2-bg);
-		box-shadow: 0px -20px 100px rgba(255, 255, 255, 0.2);
+		box-shadow: 0px -50px 100px rgba(255, 255, 255, 0.1);
 
 		.about__ticket {
 			display: flex;
@@ -350,7 +350,6 @@
 
 // ! FeedBack
 .feed__back {
-	height: 100vh;
 }
 
 // ! ContactPage

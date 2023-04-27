@@ -1,0 +1,72 @@
+.FeedBack__container {
+	margin: 0 auto;
+	width: 100%;
+
+	.card {
+		margin-bottom: 30px;
+
+		.feed__back {
+			padding: 0 10px;
+			position: relative;
+			height: 190px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #f4f4f4;
+			border-radius: 4px;
+			text-align: center;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			color: #161616;
+			z-index: 10;
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 148px;
+				left: 20px;
+
+				width: 50px;
+				height: 50px;
+				background: #f4f4f4;
+				transform: rotate(72deg);
+				z-index: -1;
+			}
+		}
+
+		.user {
+			margin-top: 25px;
+			height: 63px;
+			display: flex;
+			align-items: center;
+
+			.image {
+				width: 100%;
+				height: 100%;
+				max-width: 63px;
+				max-height: 63px;
+
+				border-radius: 50%;
+			}
+
+			.user__working {
+				margin-left: 10px;
+
+				h3 {
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 19px;
+					color: #161616;
+				}
+
+				p {
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 140%;
+					color: #868686;
+				}
+			}
+		}
+	}
+}
