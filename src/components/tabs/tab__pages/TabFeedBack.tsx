@@ -15,12 +15,7 @@ interface SlidersProps {
 	text: string;
 }
 
-interface TabProps {
-	title?: any;
-	text?: any;
-}
-
-const TabFeedBack: FC<TabProps> = ({ title, text }) => {
+const TabFeedBack: FC = () => {
 	const options: SwiperOptions = {
 		modules: [Navigation, Pagination, Autoplay],
 		rewind: true,
@@ -84,7 +79,9 @@ const TabFeedBack: FC<TabProps> = ({ title, text }) => {
 	return (
 		<>
 			<div className={scss.FeedBack__container}>
-				<div className={title}>Отзывы Клиентов</div>
+				<div className={scss.title}>
+					Отзывы <span>Клиентов</span>!
+				</div>
 				<Swiper {...options}>
 					{sliders.map((slid) => (
 						<SwiperSlide key={slid.id}>
