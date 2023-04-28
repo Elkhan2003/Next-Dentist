@@ -298,6 +298,9 @@
 			}
 
 			.video__text {
+				position: relative;
+				z-index: 2;
+
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -309,8 +312,6 @@
 				}
 
 				.face__video {
-					position: relative;
-					z-index: 2;
 					margin: 70px 0;
 
 					width: 100%;
