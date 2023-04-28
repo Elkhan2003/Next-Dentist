@@ -23,8 +23,9 @@ const HomePage: FC = () => {
 						{/* ! left */}
 						<div className={scss.left}>
 							<div className={scss.sub__title}>
-								<div className={scss.title}>
-									<h1>
+								<div className={scss.title__block}>
+									<span className={scss.title__padding}></span>
+									<h1 className={scss.title}>
 										<Typewriter
 											words={[intl.formatMessage({ id: "page.home.title" })]}
 											loop={true}
