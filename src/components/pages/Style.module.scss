@@ -253,6 +253,10 @@
 					}
 				}
 
+				@media (max-width: 600px) {
+					left: -100px;
+				}
+
 				img {
 					width: 100%;
 					height: 100%;
@@ -260,6 +264,11 @@
 					max-height: 500px;
 
 					transform: rotate(12deg);
+
+					@media (max-width: 600px) {
+						max-width: 250px;
+						max-height: 250px;
+					}
 				}
 			}
 
@@ -283,6 +292,10 @@
 					}
 				}
 
+				@media (max-width: 600px) {
+					right: -100px;
+				}
+
 				img {
 					width: 100%;
 					height: 100%;
@@ -290,6 +303,11 @@
 					max-height: 500px;
 
 					transform: rotate(345deg);
+
+					@media (max-width: 600px) {
+						max-width: 250px;
+						max-height: 250px;
+					}
 				}
 			}
 
