@@ -233,7 +233,10 @@
 			justify-content: center;
 			align-items: center;
 
-			.blans__for__mobile {
+			.balance__for__mobile {
+				position: absolute;
+				left: 1000px;
+				top: 1000px;
 				width: 1px;
 				height: 1px;
 			}

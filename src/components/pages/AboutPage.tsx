@@ -16,7 +16,7 @@ const AboutPage: FC = () => {
 					<div className="container">
 						<div className={scss.about__us}>
 							<Image
-								className={scss.blans__for__mobile}
+								className={scss.balance__for__mobile}
 								src={TeethIcon}
 								alt={"teeth"}
 							/>
