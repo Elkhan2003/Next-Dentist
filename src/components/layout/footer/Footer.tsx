@@ -66,7 +66,7 @@ const Footer: FC<FooterProps> = (props) => {
 					<hr />
 					<div className={scss.footer__bottom}>
 						<div className={scss.copyright}>
-							Copyright © 2023 Ortodont-Service
+							Copyright © 2023 Ortodont-Group
 						</div>
 						<div className={scss.icons}>
 							<a
