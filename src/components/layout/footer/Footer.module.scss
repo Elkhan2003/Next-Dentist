@@ -65,8 +65,8 @@
 			p {
 				color: var(--footer-text-dark);
 
-				font-size: 16px;
-				font-weight: 600;
+				font-size: 15px;
+				font-weight: 500;
 				line-height: 1.25rem;
 				letter-spacing: -0.019rem;
 			}
@@ -75,6 +75,7 @@
 				color: var(--footer-title-dark);
 
 				margin: 25px 0 15px 0;
+				letter-spacing: 0.05rem;
 				font-weight: bold;
 				font-size: 20px;
 			}
@@ -84,7 +85,8 @@
 
 				margin-bottom: 7px;
 				text-decoration: none;
-				font-weight: 700;
+				font-weight: 500;
+				font-size: 15px;
 
 				transition: 0.3s;
 
@@ -117,7 +119,7 @@
 			color: var(--footer-text-dark);
 
 			text-align: center;
-			font-weight: 700;
+			font-weight: 500;
 		}
 
 		.icons {

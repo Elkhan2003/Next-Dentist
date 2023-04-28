@@ -27,35 +27,34 @@ const Footer: FC<FooterProps> = (props) => {
 									<SwitchLogo className={scss.logoDevX} />
 								</div>
 							</Link>
-							<p>
-								Level up your career, income, and life. WEDEVX helped over 432
-								students land their first jobs in tech, become the next one and
-								change your life today!
-							</p>
+							<p>Мы создаем красивые улыбки и заботимся о вас!</p>
 						</div>
 						<div className={scss.block}>
-							<h6>Courses</h6>
+							<h6>Страницы</h6>
 							<a className={scss.link__text} href="#">
-								SDET
+								Главная
 							</a>
 							<a className={scss.link__text} href="#">
-								Full Stack
+								О нас
+							</a>
+							<a className={scss.link__text} href="#">
+								Отзывы
+							</a>
+							<a className={scss.link__text} href="#">
+								Контакты
 							</a>
 						</div>
 						<div className={scss.block}>
-							<h6>Karakol-IKSU</h6>
+							<h6>Ortodont-Service</h6>
 							<a className={scss.link__text} href="#">
-								Pricing
-							</a>
-							<a className={scss.link__text} href="#">
-								About Us
+								Цены
 							</a>
 							<a className={scss.link__text} href="#">
 								FAQs
 							</a>
 						</div>
 						<div className={scss.block}>
-							<h6>Contact Us</h6>
+							<h6>Связаться с нами</h6>
 							<a className={scss.link__text} href="#">
 								hello@devxschool.com
 							</a>
@@ -67,7 +66,7 @@ const Footer: FC<FooterProps> = (props) => {
 					<hr />
 					<div className={scss.footer__bottom}>
 						<div className={scss.copyright}>
-							Copyright © 2023 DevX | Powered by Elcho911
+							Copyright © 2023 Ortodont-Service
 						</div>
 						<div className={scss.icons}>
 							<a
