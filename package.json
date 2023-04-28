@@ -27,6 +27,7 @@
 		"sass": "^1.62.0",
 		"swiper": "^9.2.4",
 		"typescript": "5.0.4",
+		"typewriter-effect": "^2.19.0",
 		"yarn": "^1.22.19"
 	}
 }

@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import scss from "./Style.module.scss";
 import { FormattedMessage } from "react-intl";
 import Image from "next/image";
+import TeethIcon from "@/assets/icons/Teeth.png";
 import FaceVideo from "@/assets/img/Video_Dentist.png";
 import MedPlus from "@/assets/icons/med_plus.png";
 import CheckMark from "@/assets/icons/check_mark.png";
@@ -14,6 +15,12 @@ const AboutPage: FC = () => {
 				<div className={scss.block__1}>
 					<div className="container">
 						<div className={scss.about__us}>
+							<div className={scss.icon__first}>
+								<Image src={TeethIcon} alt={"teeth"} />
+							</div>
+							<div className={scss.icon__second}>
+								<Image src={TeethIcon} alt={"teeth"} />
+							</div>
 							<h1 className={scss.title}>
 								<FormattedMessage id="page.about.title" />
 							</h1>

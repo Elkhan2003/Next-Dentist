@@ -4,6 +4,13 @@
 	width: 100%;
 	overflow: hidden;
 
+	.container {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1400px;
+		padding: 0 20px;
+	}
+
 	.content {
 		display: flex;
 		justify-content: space-between;
@@ -16,9 +23,10 @@
 
 		// ! left
 		.left {
+			position: relative;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-around;
+			justify-content: center;
 			align-items: flex-start;
 			width: 100%;
 			max-width: 730px;
@@ -30,66 +38,71 @@
 
 				.title {
 					font-weight: 600;
-					font-size: 60px;
+					font-size: 57px;
 					letter-spacing: 7px;
 					line-height: 80px;
-					text-shadow: 0px 0px 14px rgba(218, 165, 32, 0.5);
+					text-shadow: 0px 0px 14px rgba(218, 165, 32, 0.4);
 
 					color: #ffffff;
 
 					@media (max-width: 770px) {
 						font-size: 50px;
+						line-height: 55px;
 					}
 					@media (max-width: 470px) {
 						font-size: 40px;
 					}
 					@media (max-width: 510px) {
 						font-size: 37px;
+						letter-spacing: 3px;
 					}
 					@media (max-width: 435px) {
 						font-size: 35px;
 					}
 					@media (max-width: 415px) {
 						font-size: 33px;
-						letter-spacing: 4px;
-						line-height: 60px;
+						line-height: 50px;
 					}
 					@media (max-width: 390px) {
 						font-size: 33px;
-						letter-spacing: 3px;
 					}
 				}
 
 				.button__call {
-					margin-top: 50px;
-					padding: 1rem 50px;
+					bottom: 200px;
+					position: absolute;
+					padding: 20px 50px;
 
 					background: #00ffa3;
 					box-shadow: 0 0 20px #00ffa3;
 					border-radius: 101px;
 
-					font-weight: 500;
+					font-weight: 600;
 					font-size: 25px;
 					letter-spacing: 3px;
 					text-transform: uppercase;
 					text-decoration: none;
+					text-shadow: 0px 0px 12px black;
 
-					color: #060606;
+					//color: #060606;
+					color: #ffffff;
 
 					transition: 0.4s;
 
 					&:hover {
 						background: #102d22;
-						color: #ffffff;
 					}
 
-					@media (max-width: 400px) {
-						font-size: 20px;
+					@media (max-width: 450px) {
+						padding: 15px 30px;
+						font-size: 17px;
 					}
 				}
 			}
 
 			.stats {
+				bottom: 50px;
+				position: absolute;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -158,6 +171,10 @@
 
 					p {
 						max-width: 70px;
+
+						@media (max-width: 560px) {
+							max-width: 63px;
+						}
 					}
 				}
 			}
@@ -194,7 +211,7 @@
 					z-index: 1;
 
 					background: var(--home-border-radius-dentist);
-					opacity: 0.5;
+					opacity: 0.4;
 					border-radius: 50%;
 					width: 550px;
 					height: 550px;
@@ -207,6 +224,7 @@
 // ! AboutPage
 .about__page {
 	.block__1 {
+		overflow: hidden;
 		padding: 70px 0;
 		background: var(--about-bg);
 
@@ -215,10 +233,43 @@
 		}
 
 		.about__us {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+
+			.icon__first {
+				position: absolute;
+				left: -200px;
+				top: 0;
+				z-index: 1;
+				opacity: 0.2;
+				transform: rotate(12deg);
+
+				img {
+					width: 100%;
+					height: 100%;
+					max-width: 500px;
+					max-height: 500px;
+				}
+			}
+
+			.icon__second {
+				position: absolute;
+				right: -200px;
+				bottom: -20px;
+				z-index: 1;
+				opacity: 0.2;
+				transform: rotate(345deg);
+
+				img {
+					width: 100%;
+					height: 100%;
+					max-width: 500px;
+					max-height: 500px;
+				}
+			}
 
 			.title {
 				font-weight: 700;
@@ -264,6 +315,8 @@
 				}
 
 				.face__video {
+					position: relative;
+					z-index: 2;
 					margin: 70px 0;
 
 					width: 100%;
