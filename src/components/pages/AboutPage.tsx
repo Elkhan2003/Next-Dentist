@@ -15,6 +15,7 @@ const AboutPage: FC = () => {
 				<div className={scss.block__1}>
 					<div className="container">
 						<div className={scss.about__us}>
+							<Image src={TeethIcon} alt={"teeth"} />
 							<div className={scss.icon__first}>
 								<Image src={TeethIcon} alt={"teeth"} />
 							</div>
