@@ -523,7 +523,11 @@
 			}
 
 			.map {
-				margin: 20px 0;
+				margin: 35px 0;
+
+				@media (max-width: 500px) {
+					margin: 20px 0;
+				}
 
 				iframe {
 					width: 100%;
