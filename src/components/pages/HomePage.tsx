@@ -23,17 +23,19 @@ const HomePage: FC = () => {
 						{/* ! left */}
 						<div className={scss.left}>
 							<div className={scss.sub__title}>
-								<h1 className={scss.title}>
-									<Typewriter
-										words={[intl.formatMessage({ id: "page.home.title" })]}
-										loop={true}
-										cursor
-										cursorStyle="|"
-										typeSpeed={50}
-										deleteSpeed={10}
-										delaySpeed={1000}
-									/>
-								</h1>
+								<div className={scss.title}>
+									<h1>
+										<Typewriter
+											words={[intl.formatMessage({ id: "page.home.title" })]}
+											loop={true}
+											cursor
+											cursorStyle="|"
+											typeSpeed={50}
+											deleteSpeed={10}
+											delaySpeed={1000}
+										/>
+									</h1>
+								</div>
 								<a
 									href="https://wa.me/996990385056"
 									className={scss.button__call}
