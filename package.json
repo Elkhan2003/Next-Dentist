@@ -23,11 +23,11 @@
 		"react-dom": "18.2.0",
 		"react-intl": "^6.3.2",
 		"react-scroll": "^1.8.9",
+		"react-simple-typewriter": "^5.0.1",
 		"react-toastify": "^9.1.2",
 		"sass": "^1.62.0",
 		"swiper": "^9.2.4",
 		"typescript": "5.0.4",
-		"typewriter-effect": "^2.19.0",
 		"yarn": "^1.22.19"
 	}
 }

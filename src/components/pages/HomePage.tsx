@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Image from "next/image";
 import woman from "@/assets/img/Woman.webp";
 import AnimatedNumbers from "@/components/framer-motion/AnimatedNumbers";
-import Typewriter from "typewriter-effect";
+import { Typewriter } from "react-simple-typewriter";
 
 const HomePage: FC = () => {
 	const intl: any = useIntl();
@@ -25,14 +25,13 @@ const HomePage: FC = () => {
 							<div className={scss.sub__title}>
 								<h1 className={scss.title}>
 									<Typewriter
-										options={{
-											strings: [intl.formatMessage({ id: "page.home.title" })],
-											autoStart: true,
-											loop: true,
-											delay: 1,
-											deleteSpeed: 0.5,
-											pauseFor: 1800
-										}}
+										words={[intl.formatMessage({ id: "page.home.title" })]}
+										loop={true}
+										cursor
+										cursorStyle="|"
+										typeSpeed={50}
+										deleteSpeed={10}
+										delaySpeed={1000}
 									/>
 								</h1>
 								<a
