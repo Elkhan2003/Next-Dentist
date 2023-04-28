@@ -4,13 +4,14 @@
 
 	.title {
 		margin-bottom: 20px;
-		text-align: center;
+		margin-left: 15px;
 		font-size: 21px;
 		font-weight: 600;
 		color: #dcdcdc;
 
 		@media (max-width: 1150px) {
 			margin: 20px 0;
+			text-align: center;
 		}
 
 		span {
