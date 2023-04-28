@@ -31,7 +31,7 @@ const HomePage: FC = () => {
 										cursorStyle="|"
 										typeSpeed={50}
 										deleteSpeed={10}
-										delaySpeed={1000}
+										delaySpeed={1500}
 									/>
 								</h1>
 								<a
