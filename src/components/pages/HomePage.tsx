@@ -18,25 +18,22 @@ const HomePage: FC = () => {
 				<title>{title}</title>
 			</Head>
 			<div id="/" className={scss.home__page}>
-				<div className={scss.container}>
+				<div className="container">
 					<div className={scss.content}>
 						{/* ! left */}
 						<div className={scss.left}>
 							<div className={scss.sub__title}>
-								<div className={scss.title__block}>
-									<span className={scss.title__padding}></span>
-									<h1 className={scss.title}>
-										<Typewriter
-											words={[intl.formatMessage({ id: "page.home.title" })]}
-											loop={true}
-											cursor
-											cursorStyle="|"
-											typeSpeed={50}
-											deleteSpeed={10}
-											delaySpeed={1000}
-										/>
-									</h1>
-								</div>
+								<h1 className={scss.title}>
+									<Typewriter
+										words={[intl.formatMessage({ id: "page.home.title" })]}
+										loop={true}
+										cursor
+										cursorStyle="|"
+										typeSpeed={50}
+										deleteSpeed={10}
+										delaySpeed={1000}
+									/>
+								</h1>
 								<a
 									href="https://wa.me/996990385056"
 									className={scss.button__call}

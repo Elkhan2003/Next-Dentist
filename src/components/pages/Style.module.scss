@@ -4,13 +4,6 @@
 	width: 100%;
 	overflow: hidden;
 
-	.container {
-		margin: 0 auto;
-		width: 100%;
-		max-width: 1400px;
-		padding: 0 20px;
-	}
-
 	.content {
 		display: flex;
 		justify-content: space-between;
@@ -36,18 +29,8 @@
 				flex-direction: column;
 				align-items: flex-start;
 
-				.title__block {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-
-				.title__padding {
-					display: block;
-					padding: 200px 0;
-				}
-
 				.title {
+					height: 400px;
 					font-weight: 600;
 					font-size: 57px;
 					letter-spacing: 7px;
@@ -84,7 +67,7 @@
 					position: absolute;
 					padding: 20px 50px;
 
-					background: #00ffa3;
+					background: #01b675;
 					box-shadow: 0 0 20px #00ffa3;
 					border-radius: 101px;
 
