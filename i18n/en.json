@@ -42,5 +42,16 @@
 	"page.contact.input.message": "Describe your issue in free form*",
 	"page.contact.sending": "Sending...",
 	"page.contact.send": "Send",
-	"page.contact.required.field": "required field"
+	"page.contact.required.field": "required field",
+	"!--!--!--FOOTER--!--!--!": "!--!--!--FOOTER--!--!--!",
+	"page.footer.block_1.title": "We create beautiful smiles and take care of you!",
+	"page.footer.block_2.title": "Pages",
+	"page.footer.block_2.text_1": "Home",
+	"page.footer.block_2.text_2": "About Us",
+	"page.footer.block_2.text_3": "Reviews",
+	"page.footer.block_2.text_4": "Contact Us",
+	"page.footer.block_3.title": "Ortodont-Group",
+	"page.footer.block_3.text_1": "Prices",
+	"page.footer.block_3.text_2": "FAQs",
+	"page.footer.block_4.title": "Contact Us"
 }

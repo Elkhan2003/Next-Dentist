@@ -4,6 +4,7 @@ import { IsOpenProps } from "@/components/layout/Layout";
 import { DiscordIcon, GithubIcon, InstagramIcon } from "@/components/svgs";
 import SwitchLogo from "@/components/theme/SwitchLogo";
 import Link from "next/link";
+import { FormattedMessage } from "react-intl";
 
 interface FooterProps extends IsOpenProps {}
 
@@ -27,39 +28,47 @@ const Footer: FC<FooterProps> = (props) => {
 									<SwitchLogo className={scss.logoDevX} />
 								</div>
 							</Link>
-							<p>Мы создаем красивые улыбки и заботимся о вас!</p>
+							<p>
+								<FormattedMessage id="page.footer.block_1.title" />
+							</p>
 						</div>
 						<div className={scss.block}>
-							<h6>Страницы</h6>
+							<h6>
+								<FormattedMessage id="page.footer.block_2.title" />
+							</h6>
 							<a className={scss.link__text} href="#">
-								Главная
+								<FormattedMessage id="page.footer.block_2.text_1" />
 							</a>
 							<a className={scss.link__text} href="#">
-								О нас
+								<FormattedMessage id="page.footer.block_2.text_2" />
 							</a>
 							<a className={scss.link__text} href="#">
-								Отзывы
+								<FormattedMessage id="page.footer.block_2.text_3" />
 							</a>
 							<a className={scss.link__text} href="#">
-								Контакты
-							</a>
-						</div>
-						<div className={scss.block}>
-							<h6>Ortodont-Service</h6>
-							<a className={scss.link__text} href="#">
-								Цены
-							</a>
-							<a className={scss.link__text} href="#">
-								FAQs
+								<FormattedMessage id="page.footer.block_2.text_4" />
 							</a>
 						</div>
 						<div className={scss.block}>
-							<h6>Связаться с нами</h6>
+							<h6>
+								<FormattedMessage id="page.footer.block_3.title" />
+							</h6>
 							<a className={scss.link__text} href="#">
-								hello@devxschool.com
+								<FormattedMessage id="page.footer.block_3.text_1" />
 							</a>
 							<a className={scss.link__text} href="#">
-								312-667-9735
+								<FormattedMessage id="page.footer.block_3.text_2" />
+							</a>
+						</div>
+						<div className={scss.block}>
+							<h6>
+								<FormattedMessage id="page.footer.block_4.title" />
+							</h6>
+							<a className={scss.link__text} href="#">
+								boss.armsport@gmail.com
+							</a>
+							<a className={scss.link__text} href="#">
+								+996 990 38 50 56
 							</a>
 						</div>
 					</div>

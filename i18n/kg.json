@@ -42,5 +42,16 @@
 	"page.contact.input.message": "Көйгөйүңүздү эркин формада сүрөттөңүз*",
 	"page.contact.sending": "Жөнөтүү...",
 	"page.contact.send": "Жөнөтүү",
-	"page.contact.required.field": "милдеттүү талаа"
+	"page.contact.required.field": "милдеттүү талаа",
+	"!--!--!--FOOTER--!--!--!": "!--!--!--FOOTER--!--!--!",
+	"page.footer.block_1.title": "Биз кооз жылмаюуларды жаратабыз жана сизге кам көрөбүз!",
+	"page.footer.block_2.title": "Барактар",
+	"page.footer.block_2.text_1": "Башкы",
+	"page.footer.block_2.text_2": "Биз жөнүндө",
+	"page.footer.block_2.text_3": "Сын-пикир",
+	"page.footer.block_2.text_4": "Байланыш",
+	"page.footer.block_3.title": "Ortodont-Group",
+	"page.footer.block_3.text_1": "Баалар",
+	"page.footer.block_3.text_2": "Суроолор",
+	"page.footer.block_4.title": "Биз менен байланыш"
 }

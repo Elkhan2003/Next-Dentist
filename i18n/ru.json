@@ -42,5 +42,16 @@
 	"page.contact.input.message": "Опишите свою проблему в свободной форме*",
 	"page.contact.sending": "Отправка...",
 	"page.contact.send": "Отправить",
-	"page.contact.required.field": "обязательное поле"
+	"page.contact.required.field": "обязательное поле",
+	"!--!--!--FOOTER--!--!--!": "!--!--!--FOOTER--!--!--!",
+	"page.footer.block_1.title": "Мы создаем красивые улыбки и заботимся о вас!",
+	"page.footer.block_2.title": "Страницы",
+	"page.footer.block_2.text_1": "Главная",
+	"page.footer.block_2.text_2": "О нас",
+	"page.footer.block_2.text_3": "Отзывы",
+	"page.footer.block_2.text_4": "Контакты",
+	"page.footer.block_3.title": "Ortodont-Group",
+	"page.footer.block_3.text_1": "Цены",
+	"page.footer.block_3.text_2": "FAQs",
+	"page.footer.block_4.title": "Связаться с нами"
 }
