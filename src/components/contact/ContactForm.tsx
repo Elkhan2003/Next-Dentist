@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import scss from "./Contact.module.scss";
 
-import { sendContactForm } from "../../../sms/lib/api";
+import { sendContactForm } from "@/backend/lib/api";
 import { FormattedMessage, useIntl } from "react-intl";
 
 interface ContactFormValues {

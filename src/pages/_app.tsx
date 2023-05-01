@@ -6,9 +6,9 @@ import { useRouter } from "next/router";
 import { IntlProvider } from "react-intl";
 import { ThemeProvider } from "next-themes";
 
-import ru from "../../i18n/ru.json";
-import en from "../../i18n/en.json";
-import kg from "../../i18n/kg.json";
+import ru from "@/i18n/ru.json";
+import en from "@/i18n/en.json";
+import kg from "@/i18n/kg.json";
 
 const messages: any = {
 	ru,

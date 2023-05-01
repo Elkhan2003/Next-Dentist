@@ -1,4 +1,4 @@
-import { mailOptions, transporter } from "../../../sms/config/nodemailer";
+import { mailOptions, transporter } from "../../backend/config/nodemailer";
 
 const CONTACT_MESSAGE_FIELDS = {
 	first_name: "First Name",
