@@ -30,11 +30,21 @@ const AboutPage: FC = () => {
 								<FormattedMessage id="page.about.title" />
 							</h1>
 							<div className={scss.video__text}>
-								<Image
-									className={scss.face__video}
-									src={FaceVideo}
-									alt="video"
-								/>
+								{/*<Image*/}
+								{/*	className={scss.face__video}*/}
+								{/*	src={FaceVideo}*/}
+								{/*	alt="video"*/}
+								{/*/>*/}
+								<div className={scss.block__video}>
+									<iframe
+										className={scss.face__video}
+										src="https://www.youtube.com/embed/AsE0NpT7xwY?list=PLgPFR7fVYCL0fHEs8wGrN-PD2DNAxhWwj"
+										title="Dolgu yapımı"
+										frameBorder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowFullScreen
+									></iframe>
+								</div>
 								<p className={scss.text}>
 									<FormattedMessage id="page.about.about.me" />
 								</p>
