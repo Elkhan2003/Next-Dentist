@@ -7,6 +7,7 @@ import FaceVideo from "@/assets/img/Video_Dentist.png";
 import MedPlus from "@/assets/icons/med_plus.png";
 import CheckMark from "@/assets/icons/check_mark.png";
 import BxChild from "@/assets/icons/bx-child.png";
+// import dentist__video from '@/video/dentist.mp4'
 
 const AboutPage: FC = () => {
 	return (
@@ -30,21 +31,11 @@ const AboutPage: FC = () => {
 								<FormattedMessage id="page.about.title" />
 							</h1>
 							<div className={scss.video__text}>
-								{/*<Image*/}
-								{/*	className={scss.face__video}*/}
-								{/*	src={FaceVideo}*/}
-								{/*	alt="video"*/}
-								{/*/>*/}
-								<div className={scss.block__video}>
-									<iframe
-										className={scss.face__video}
-										src="https://www.youtube.com/embed/AsE0NpT7xwY?list=PLgPFR7fVYCL0fHEs8wGrN-PD2DNAxhWwj"
-										title="Dolgu yapımı"
-										frameBorder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-										allowFullScreen
-									></iframe>
-								</div>
+								<Image
+									className={scss.face__video}
+									src={FaceVideo}
+									alt="video"
+								/>
 								<p className={scss.text}>
 									<FormattedMessage id="page.about.about.me" />
 								</p>
