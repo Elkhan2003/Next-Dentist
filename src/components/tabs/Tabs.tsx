@@ -29,11 +29,11 @@ const tabs: tabsProps[] = [
 		label: <FormattedMessage id="page.tabs.button.feedback" />,
 		page: <TabFeedBack />
 	},
-	{
-		icon: <CalendarIcon />,
-		label: <FormattedMessage id="page.tabs.button.schedule" />,
-		page: <TabCalendar />
-	},
+	// {
+	// 	icon: <CalendarIcon />,
+	// 	label: <FormattedMessage id="page.tabs.button.schedule" />,
+	// 	page: <TabCalendar />
+	// },
 	{
 		icon: <StaffIcon />,
 		label: <FormattedMessage id="page.tabs.button.employees" />,
