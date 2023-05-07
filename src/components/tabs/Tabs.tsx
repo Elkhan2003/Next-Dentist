@@ -18,7 +18,6 @@ import {
 import { FormattedMessage } from "react-intl";
 
 interface tabsProps {
-	id: number;
 	icon: any;
 	label: any;
 	page?: any;
@@ -26,37 +25,31 @@ interface tabsProps {
 
 const tabs: tabsProps[] = [
 	{
-		id: 1,
 		icon: <FeedBackIcon />,
 		label: <FormattedMessage id="page.tabs.button.feedback" />,
 		page: <TabFeedBack />
 	},
 	{
-		id: 2,
 		icon: <CalendarIcon />,
 		label: <FormattedMessage id="page.tabs.button.schedule" />,
 		page: <TabCalendar />
 	},
 	{
-		id: 3,
 		icon: <StaffIcon />,
 		label: <FormattedMessage id="page.tabs.button.employees" />,
 		page: <TabStaff />
 	},
 	{
-		id: 4,
 		icon: <PhotoIcon />,
 		label: <FormattedMessage id="page.tabs.button.photo" />,
 		page: <TabPhoto />
 	},
 	{
-		id: 5,
 		icon: <VideoIcon />,
 		label: <FormattedMessage id="page.tabs.button.video" />,
 		page: <TabVideo />
 	},
 	{
-		id: 6,
 		icon: <CertificateIcon />,
 		label: <FormattedMessage id="page.tabs.button.certificate" />,
 		page: <TabСertificate />
@@ -64,7 +57,7 @@ const tabs: tabsProps[] = [
 ];
 
 const Tabs: FC = () => {
-	const [activeTab, setActiveTab] = useState<number>(tabs[0].id);
+	const [activeTab, setActiveTab] = useState<number>(tabs[0].label);
 
 	return (
 		<>
@@ -76,19 +69,19 @@ const Tabs: FC = () => {
 						</h1>
 						<div className={scss.tabs}>
 							<div className={scss.buttons}>
-								{tabs.map((tab) => (
+								{tabs.map((tab, index) => (
 									<button
-										key={tab.id}
+										key={index + 1}
 										onClick={() => {
-											setActiveTab(tab.id);
+											setActiveTab(tab.label);
 										}}
 										className={
-											activeTab === tab.id
+											activeTab === tab.label
 												? `${scss.button} ${scss.active}`
 												: `${scss.button}`
 										}
 									>
-										{activeTab === tab.id && (
+										{activeTab === tab.label && (
 											<motion.div
 												layoutId="active-pill"
 												className={scss.active}
@@ -103,9 +96,9 @@ const Tabs: FC = () => {
 									</button>
 								))}
 							</div>
-							{tabs.map((tab) =>
-								activeTab === tab.id ? (
-									<div key={tab.id} className={scss.tabs__content}>
+							{tabs.map((tab, index) =>
+								activeTab === tab.label ? (
+									<div key={index + 1} className={scss.tabs__content}>
 										{tab.page}
 									</div>
 								) : null
