@@ -1,109 +1,154 @@
 .FeedBack__container {
-	margin: 0 auto;
-	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 	.title {
 		margin-bottom: 20px;
-		margin-left: 15px;
 		font-size: 21px;
 		font-weight: 600;
 		color: #dcdcdc;
-
-		@media (max-width: 1150px) {
-			margin: 20px 0;
-			text-align: center;
-		}
 
 		span {
 			color: #dec58b;
 		}
 	}
 
-	.card {
-		margin-bottom: 40px;
+	.navigation__wrapper {
+		position: relative;
+		width: 100%;
 
-		.feed__back {
-			padding: 0 10px;
-			position: relative;
-			height: 205px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background: #f4f4f4;
+		// ! card
+		.card {
+			padding: 30px;
+			width: 100%;
+			background: #292a30;
 			border-radius: 12px;
-			text-align: center;
-			font-weight: 400;
-			font-size: 16px;
-			line-height: 130%;
-			color: #161616;
-			z-index: 10;
 
-			&:after {
-				content: "";
-				position: absolute;
-				top: 162px;
-				left: 20px;
+			cursor: grab;
 
-				width: 50px;
-				height: 50px;
-				background: #f4f4f4;
-				transform: rotate(72deg);
-				z-index: -1;
+			&:active {
+				cursor: grabbing;
+			}
+
+			.icon {
+				margin-bottom: 30px;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+
+				svg {
+					width: 140px;
+					height: 24px;
+					color: #ffd808;
+				}
+			}
+
+			.title {
+				margin-bottom: 10px;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 28px;
+			}
+
+			.text {
+				margin-bottom: 16px;
+				font-size: 16px;
+				color: #bdbfc7;
+			}
+
+			.user__date {
+				//color: #7e12ff;
+				color: #ffe6a9;
+				opacity: 0.8;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				margin-right: 5px;
+				font-weight: 600;
+				line-height: 18px;
 			}
 		}
+	}
 
-		.user {
-			margin-top: 30px;
-			height: 63px;
+	// ! dots
+	.dots {
+		padding: 30px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 12px;
+
+		.dot {
+			border: none;
+			//background: dodgerblue;
+			background: #ffe6a9;
+			opacity: 0.2;
+			border-radius: 50%;
+			margin: 0 5px;
+			padding: 5px;
+			cursor: pointer;
+
+			transition: 0.4s;
+		}
+
+		.dot:focus {
+			outline: none;
+		}
+
+		.dot.active {
+			padding: 6px;
+			opacity: 1;
+		}
+
+		// ! arrow
+		.arrow {
 			display: flex;
 			align-items: center;
+			font-size: 40px;
 
-			.image {
-				width: 100%;
-				height: 100%;
-				max-width: 63px;
-				max-height: 63px;
+			opacity: 0.4;
+			color: #fff;
+			cursor: pointer;
 
-				border-radius: 50%;
+			transition: 0.4s;
+
+			&:hover {
+				opacity: 1;
 			}
 
-			.user__working {
-				margin-left: 10px;
+			@media (max-width: 500px) {
+				cursor: default;
 
-				h3 {
-					font-weight: 500;
-					font-size: 16px;
-					line-height: 19px;
-					color: #fff;
-				}
-
-				p {
-					font-weight: 400;
-					font-size: 16px;
-					line-height: 140%;
-					color: #a9a9a9;
+				&:hover {
+					opacity: 0.4;
 				}
 			}
 		}
-	}
-}
 
-.Certificate__container {
-	.mySwiper1 {
-		.image {
-			width: 100%;
-			height: 100%;
-			max-width: 500px;
-			max-height: 500px;
+		.arrow__left {
+			padding-right: 50px;
+
+			&:hover {
+				padding-right: 60px;
+
+				@media (max-width: 500px) {
+					padding-right: 50px;
+				}
+			}
 		}
-	}
 
-	.mySwiper2 {
-		.image {
-			width: 100%;
-			height: 100%;
-			max-width: 500px;
-			max-height: 500px;
+		.arrow__right {
+			padding-left: 50px;
+
+			&:hover {
+				padding-left: 60px;
+
+				@media (max-width: 500px) {
+					padding-left: 50px;
+				}
+			}
 		}
 	}
 }

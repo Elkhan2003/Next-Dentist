@@ -1,107 +1,198 @@
-import React, { FC } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { SwiperOptions, Navigation, Pagination, Autoplay } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import React, { FC, useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 import scss from "./TabPages.module.scss";
-import Image from "next/image";
+import { ArrowLeftIcon, ArrowRightIcon, StarFiveIcon } from "@/components/svgs";
 
-import pic from "@/assets/DnI9rquWsAAgfKx-min.png";
 import { FormattedMessage } from "react-intl";
 
 interface SlidersProps {
 	id: number;
-	img: any;
+	title: string;
 	text: string;
+	user: string;
+	date: string;
 }
 
+const images: SlidersProps[] = [
+	{
+		id: 1,
+		title: "Amazing!",
+		text: "Amazing, great layout for captions, better accuracy than TikTok, and it’s free with no ads or watermarks? What’s the catch? Thank you.",
+		user: "Elcho911",
+		date: "14/10/2003"
+	},
+	{
+		id: 2,
+		title: "Works as advertised!",
+		text: "This app does exactly what it says it will do! Great app if you want your video captioned without having to do it yourself!",
+		user: "Sher911",
+		date: "30/09/2006"
+	},
+	{
+		id: 3,
+		title: "Download now!",
+		text: "If you not convinced, let me tell you right now: the qualities of my videos skyrocketed with THIS ONE APP and my videos look so clean and professional! If you’re at all interested in sprucing up your video content, this is the app for you!",
+		user: "Tima911",
+		date: "19/02/2004"
+	},
+	{
+		id: 4,
+		title: "Content creator need this",
+		text: "By far the best all-you-need app for existing or aspiring content creators! 🙌🏻",
+		user: "Elcho911",
+		date: "14/10/2003"
+	}
+];
+
 const TabFeedBack: FC = () => {
-	const options: SwiperOptions = {
-		modules: [Navigation, Pagination, Autoplay],
-		rewind: true,
-		navigation: true,
-		pagination: {
-			clickable: true
-		},
-		grabCursor: true,
-		spaceBetween: 30,
-		speed: 1000,
-		breakpoints: {
-			0: {
-				slidesPerView: 1
+	const [currentSlide, setCurrentSlide] = useState<any>(0);
+	const [loaded, setLoaded] = useState<any>(false);
+	const [ref, instanceRef] = useKeenSlider<HTMLDivElement>(
+		{
+			// ! slider
+			loop: true,
+			// mode: "free-snap",
+			slides: {
+				// origin: "center",
+				perView: 1,
+				spacing: 10
 			},
-			620: {
-				slidesPerView: 2
+
+			breakpoints: {
+				"(min-width: 650px)": {
+					slides: { perView: 2, spacing: 15 }
+				},
+				"(min-width: 1000px)": {
+					slides: { origin: "center", perView: 3, spacing: 25 }
+				}
 			},
-			950: {
-				slidesPerView: 3
+
+			// ! navigation + buttons
+			initial: 0,
+			slideChanged(slider) {
+				setCurrentSlide(slider.track.details.rel);
+			},
+			created() {
+				setLoaded(true);
 			}
 		},
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false
-		}
-	};
 
-	const sliders: SlidersProps[] = [
-		{
-			id: 1,
-			img: pic,
-			text: "«Жогорку сапаттагы билим, Англис тили жана SoftSkills сабактары өтүлөт, менторлор менен студенттердин арасында тыгыз байланыш.»"
-		},
-		{
-			id: 2,
-			img: pic,
-			text: "«Атмосферасы сонун, чөйрөсү аябай пайдалуу, кызыктуу конкурстар (ивенттер) уюштурулуп турат.»"
-		},
-		{
-			id: 3,
-			img: pic,
-			text: "«Артыкчылыгы кыргыз тилинде өтөт соонун. Аптасына 5 күн катары менен болгону.»"
-		},
-		{
-			id: 4,
-			img: pic,
-			text: "«Атмосферасы, тынчтыгы жана мугалимдердин жылмайып жүргөнү жагат.»"
-		},
-		{
-			id: 5,
-			img: pic,
-			text: " «Бул курста мага бүткүл чөйрөнүн программисттер чөйрөсүнө айланганы жагат, окуучулар, менторлор жана PeakSoftтогу студенттер бир имаратта чогуу жүргөндүктөн, маалымат алмашуу болот жана реалдуу проекттерге күбө болосуң.»"
-		},
-		{
-			id: 6,
-			img: pic,
-			text: "«Курс өтө соонун. Методдору, мугалимдери, аурасы өзгөчө! Көптөгөн мүмкүнчүлүктөрдү түзүп берген. Жеке личность катары баарын үйрөткөнгө аракет жасашат. Студенттердин санына эмес сапатына карагандары жакты.»"
-		}
-	];
+		// ! auto play
+		[
+			(slider) => {
+				let timeout: ReturnType<typeof setTimeout>;
+				let mouseOver = false;
+
+				function clearNextTimeout() {
+					clearTimeout(timeout);
+				}
+
+				function nextTimeout() {
+					clearTimeout(timeout);
+					if (mouseOver) return;
+					timeout = setTimeout(() => {
+						slider.next();
+					}, 1800);
+				}
+
+				slider.on("created", () => {
+					slider.container.addEventListener("mouseover", () => {
+						mouseOver = true;
+						clearNextTimeout();
+					});
+					slider.container.addEventListener("mouseout", () => {
+						mouseOver = false;
+						nextTimeout();
+					});
+					nextTimeout();
+				});
+				slider.on("dragStarted", clearNextTimeout);
+				slider.on("animationEnded", nextTimeout);
+				slider.on("updated", nextTimeout);
+			}
+		]
+	);
 
 	return (
 		<>
 			<div className={scss.FeedBack__container}>
-				<div className={scss.title}>
-					<FormattedMessage
-						id="page.tabs.title.feedback"
-						values={{ span: (chunks) => <span>{chunks}</span> }}
-					/>
-				</div>
-				<Swiper {...options}>
-					{sliders.map((slid) => (
-						<SwiperSlide key={slid.id}>
-							<div className={scss.card}>
-								<p className={scss.feed__back}>{slid.text}</p>
-								<div className={scss.user}>
-									<Image className={scss.image} src={slid.img} alt={"pic"} />
-									<div className={scss.user__working}>
-										<h3>Elcho911</h3>
-										<p>Frontend Developer. DevX</p>
+					<div className={scss.title}>
+						<FormattedMessage
+							id="page.tabs.title.feedback"
+							values={{ span: (chunks) => <span>{chunks}</span> }}
+						/>
+					</div>
+				<div className={scss.navigation__wrapper}>
+					<div ref={ref} className="keen-slider">
+						{images.map((item) => (
+							<div key={item.id} className="keen-slider__slide">
+								<div className={scss.card}>
+									<div className={scss.icon}>
+										<StarFiveIcon />
 									</div>
+									<h5 className={scss.title}>{item.title}</h5>
+									<p className={scss.text}>{item.text}</p>
+									<h5 className={scss.user__date}>
+										{item.user}, {item.date}
+									</h5>
 								</div>
 							</div>
-						</SwiperSlide>
-					))}
-				</Swiper>
+						))}
+					</div>
+				</div>
+
+				{loaded && instanceRef.current && (
+					<div className={scss.dots}>
+						{/* ! arrow__left */}
+						<div>
+							{loaded && instanceRef.current && (
+								<>
+									<span
+										className={`${scss.arrow} ${scss.arrow__left}`}
+										onClick={(e: any) =>
+											e.stopPropagation() || instanceRef.current?.prev()
+										}
+									>
+										<ArrowLeftIcon />
+									</span>
+								</>
+							)}
+						</div>
+						{/* ! dot */}
+						{Array.from(
+							{ length: instanceRef.current.track.details.slides.length },
+							(_, idx) => (
+								<button
+									key={idx}
+									onClick={() => {
+										instanceRef.current?.moveToIdx(idx);
+									}}
+									className={
+										currentSlide === idx
+											? `${scss.dot} ${scss.active}`
+											: `${scss.dot}`
+									}
+								></button>
+							)
+						)}
+						{/* ! arrow__right */}
+						<div>
+							{loaded && instanceRef.current && (
+								<>
+									<span
+										className={`${scss.arrow} ${scss.arrow__right}`}
+										onClick={(e: any) =>
+											e.stopPropagation() || instanceRef.current?.next()
+										}
+									>
+										<ArrowRightIcon />
+									</span>
+								</>
+							)}
+						</div>
+					</div>
+				)}
 			</div>
 		</>
 	);

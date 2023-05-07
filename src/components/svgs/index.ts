@@ -9,6 +9,7 @@ export { default as MarkerIcon } from "./marker.svg";
 export { default as InstagramIcon } from "./instagram.svg";
 export { default as GithubIcon } from "./github.svg";
 export { default as DiscordIcon } from "./discord.svg";
+export { default as StarFiveIcon } from "./star-five.svg";
 
 // ! Tabs
 export { default as FeedBackIcon } from "./feed-back.svg";
