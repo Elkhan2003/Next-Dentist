@@ -12,6 +12,7 @@ import { LangIcon, ArrowIcon, PhoneIcon, TimeIcon } from "@/components/svgs";
 // } from "@/components/theme/SwitchTheme";
 
 import { IsOpenProps } from "@/components/layout/Layout";
+import { motion } from "framer-motion";
 
 interface HeaderProps extends IsOpenProps {}
 
@@ -56,7 +57,7 @@ const Header: FC<HeaderProps> = (props) => {
 			to: "/",
 			spy: true,
 			smooth: true,
-			offset: -30,
+			offset: offsetScroll,
 			duration: durationScroll
 		},
 		{
