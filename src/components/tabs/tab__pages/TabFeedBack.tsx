@@ -93,7 +93,7 @@ const TabFeedBack: FC = () => {
 					if (mouseOver) return;
 					timeout = setTimeout(() => {
 						slider.next();
-					}, 1800);
+					}, 1500);
 				}
 
 				slider.on("created", () => {
