@@ -14,7 +14,8 @@ import { LangIcon, ArrowIcon, PhoneIcon, TimeIcon } from "@/components/svgs";
 import { IsOpenProps } from "@/components/layout/Layout";
 import { motion } from "framer-motion";
 
-interface HeaderProps extends IsOpenProps {}
+interface HeaderProps extends IsOpenProps {
+}
 
 interface linksProps {
 	to: string;
@@ -127,9 +128,9 @@ const Header: FC<HeaderProps> = (props) => {
 							<div className={scss.nav__menu}>
 								<div className={scss.left}>
 									<div className={scss.links}>
-										{links.map((link) => (
+										{links.map((link, index) => (
 											<ScrollLink
-												key={link.to}
+												key={index + 1}
 												to={link.to}
 												spy={link.spy}
 												smooth={link.smooth}
@@ -162,14 +163,14 @@ const Header: FC<HeaderProps> = (props) => {
 										</div>
 
 										<div className={scss.dropdown__content}>
-											{[...locales].map((locale) => (
+											{[...locales].map((locale, index) => (
 												<Link
+													key={index + 1}
 													className={
 														locale === activeLocale
 															? `${scss.button} ${scss.active}`
 															: `${scss.button}`
 													}
-													key={locale}
 													href={pathname}
 													locale={locale}
 												>
@@ -212,9 +213,9 @@ const Header: FC<HeaderProps> = (props) => {
 										: `${scss.nav__burger__menu}`
 								}
 							>
-								{links.map((link) => (
+								{links.map((link, index) => (
 									<ScrollLink
-										key={link.to}
+										key={index + 1}
 										to={link.to}
 										spy={link.spy}
 										smooth={link.smooth}
@@ -268,14 +269,14 @@ const Header: FC<HeaderProps> = (props) => {
 											props.setIsOpenDropdownLanguage(true);
 										}}
 									>
-										{[...locales].map((locale) => (
+										{[...locales].map((locale, index) => (
 											<Link
+												key={index + 1}
 												className={
 													locale === activeLocale
 														? `${scss.button} ${scss.active}`
 														: `${scss.button}`
 												}
-												key={locale}
 												href={pathname}
 												locale={locale}
 											>
