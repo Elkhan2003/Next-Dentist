@@ -3,12 +3,10 @@ import scss from "./Style.module.scss";
 import { FormattedMessage } from "react-intl";
 import Image from "next/image";
 import TeethIcon from "@/assets/icons/Teeth.png";
-import FaceVideo from "@/assets/img/Video_Dentist.png";
 import MedPlus from "@/assets/icons/med_plus.png";
 import CheckMark from "@/assets/icons/check_mark.png";
 import BxChild from "@/assets/icons/bx-child.png";
 import ReactYoutube from "@/react-youtube/ReactYoutube";
-// import dentist__video from '@/video/dentist.mp4'
 
 const AboutPage: FC = () => {
 	return (
