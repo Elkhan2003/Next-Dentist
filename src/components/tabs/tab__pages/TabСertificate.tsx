@@ -109,7 +109,7 @@ const TabСertificate: FC = () => {
 			<div className={scss.certificate__container}>
 				<div className={scss.title}>
 					<FormattedMessage
-						id="page.tabs.title.feedback"
+						id="page.tabs.title.certificate"
 						values={{ span: (chunks) => <span>{chunks}</span> }}
 					/>
 				</div>
