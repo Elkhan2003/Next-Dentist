@@ -10,8 +10,11 @@
 		flex-wrap: wrap;
 		height: 100vh;
 
-		@media (max-width: 1290px) {
+		@media (max-width: 1320px) {
 			justify-content: center;
+		}
+		@media (max-width: 450px) {
+			height: 90vh;
 		}
 
 		// ! left
@@ -182,7 +185,7 @@
 			width: 100%;
 			max-width: 550px;
 
-			@media (max-width: 1290px) {
+			@media (max-width: 1320px) {
 				display: none;
 			}
 
