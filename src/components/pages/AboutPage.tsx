@@ -16,15 +16,30 @@ const AboutPage: FC = () => {
 					<div className="container">
 						<div className={scss.about__us}>
 							<Image
+								priority={true}
+								quality={1}
+								loading="eager"
 								className={scss.balance__for__mobile}
 								src={TeethIcon}
 								alt={"teeth"}
 							/>
 							<div className={scss.icon__first}>
-								<Image src={TeethIcon} alt={"teeth"} />
+								<Image
+									priority={true}
+									quality={25}
+									loading="eager"
+									src={TeethIcon}
+									alt={"teeth"}
+								/>
 							</div>
 							<div className={scss.icon__second}>
-								<Image src={TeethIcon} alt={"teeth"} />
+								<Image
+									priority={true}
+									quality={25}
+									loading="eager"
+									src={TeethIcon}
+									alt={"teeth"}
+								/>
 							</div>
 							<h1 className={scss.title}>
 								<FormattedMessage id="page.about.title" />

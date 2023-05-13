@@ -19,7 +19,12 @@ const ReactYoutube: FC<YoutubeProps> = ({ className }) => {
 
 	return (
 		<>
-			<YouTube className={className} videoId="6QdbPfVbcdA" opts={opts} onReady={onPlayerReady} />
+			<YouTube
+				iframeClassName={className}
+				videoId="6QdbPfVbcdA"
+				opts={opts}
+				onReady={onPlayerReady}
+			/>
 		</>
 	);
 };

@@ -373,27 +373,25 @@
 						margin-bottom: 20px;
 					}
 
-					iframe {
-						border-radius: 12px;
-						width: 680px;
-						height: 400px;
+					border-radius: 12px;
+					width: 680px;
+					height: 400px;
 
-						@media (max-width: 730px) {
-							width: 600px;
-							height: 350px;
-						}
-						@media (max-width: 650px) {
-							width: 480px;
-							height: 300px;
-						}
-						@media (max-width: 500px) {
-							width: 380px;
-							height: 230px;
-						}
-						@media (max-width: 400px) {
-							width: 330px;
-							height: 200px;
-						}
+					@media (max-width: 730px) {
+						width: 600px;
+						height: 350px;
+					}
+					@media (max-width: 650px) {
+						width: 480px;
+						height: 300px;
+					}
+					@media (max-width: 500px) {
+						width: 380px;
+						height: 230px;
+					}
+					@media (max-width: 400px) {
+						width: 330px;
+						height: 200px;
 					}
 				}
 
