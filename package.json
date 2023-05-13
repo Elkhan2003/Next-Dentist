@@ -26,6 +26,7 @@
 		"react-scroll": "^1.8.9",
 		"react-simple-typewriter": "^5.0.1",
 		"react-toastify": "^9.1.2",
+		"react-youtube": "^10.1.0",
 		"sass": "^1.62.0",
 		"typescript": "5.0.4",
 		"yarn": "^1.22.19"

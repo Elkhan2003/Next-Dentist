@@ -7,6 +7,7 @@ import FaceVideo from "@/assets/img/Video_Dentist.png";
 import MedPlus from "@/assets/icons/med_plus.png";
 import CheckMark from "@/assets/icons/check_mark.png";
 import BxChild from "@/assets/icons/bx-child.png";
+import ReactYoutube from "@/react-youtube/ReactYoutube";
 // import dentist__video from '@/video/dentist.mp4'
 
 const AboutPage: FC = () => {
@@ -31,11 +32,7 @@ const AboutPage: FC = () => {
 								<FormattedMessage id="page.about.title" />
 							</h1>
 							<div className={scss.video__text}>
-								<Image
-									className={scss.face__video}
-									src={FaceVideo}
-									alt="video"
-								/>
+								<ReactYoutube className={scss.youtube} />
 								<p className={scss.text}>
 									<FormattedMessage id="page.about.about.me" />
 								</p>
