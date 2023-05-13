@@ -117,12 +117,12 @@ const TabFeedBack: FC = () => {
 	return (
 		<>
 			<div className={scss.FeedBack__container}>
-					<div className={scss.title}>
-						<FormattedMessage
-							id="page.tabs.title.feedback"
-							values={{ span: (chunks) => <span>{chunks}</span> }}
-						/>
-					</div>
+				<div className={scss.title}>
+					<FormattedMessage
+						id="page.tabs.title.feedback"
+						values={{ span: (chunks) => <span>{chunks}</span> }}
+					/>
+				</div>
 				<div className={scss.navigation__wrapper}>
 					<div ref={ref} className="keen-slider">
 						{images.map((item) => (
@@ -131,7 +131,7 @@ const TabFeedBack: FC = () => {
 									<div className={scss.icon}>
 										<StarFiveIcon />
 									</div>
-									<h5 className={scss.title}>{item.title}</h5>
+									<h5 className={scss.card__title}>{item.title}</h5>
 									<p className={scss.text}>{item.text}</p>
 									<h5 className={scss.user__date}>
 										{item.user}, {item.date}
