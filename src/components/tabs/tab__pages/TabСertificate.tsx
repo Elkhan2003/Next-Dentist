@@ -2,46 +2,35 @@ import React, { FC, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import scss from "./TabPages.module.scss";
-import { ArrowLeftIcon, ArrowRightIcon, StarFiveIcon } from "@/components/svgs";
+import { ArrowLeftIcon, ArrowRightIcon } from "@/components/svgs";
 
 import { FormattedMessage } from "react-intl";
+import Image from "next/image";
+import pic1 from "@/assets/certificate/ex-1.png";
+import pic2 from "@/assets/certificate/ex-2.png";
+import pic3 from "@/assets/certificate/ex-3.png";
+import pic4 from "@/assets/certificate/ex-4.png";
+import pic5 from "@/assets/certificate/ex-5.png";
 
 interface SlidersProps {
-	id: number;
-	title: string;
-	text: string;
-	user: string;
-	date: string;
+	img: any;
 }
 
 const images: SlidersProps[] = [
 	{
-		id: 1,
-		title: "Amazing!",
-		text: "Amazing, great layout for captions, better accuracy than TikTok, and it’s free with no ads or watermarks? What’s the catch? Thank you.",
-		user: "Elcho911",
-		date: "14/10/2003"
+		img: pic1
 	},
 	{
-		id: 2,
-		title: "Works as advertised!",
-		text: "This app does exactly what it says it will do! Great app if you want your video captioned without having to do it yourself!",
-		user: "Sher911",
-		date: "30/09/2006"
+		img: pic2
 	},
 	{
-		id: 3,
-		title: "Download now!",
-		text: "If you not convinced, let me tell you right now: the qualities of my videos skyrocketed with THIS ONE APP and my videos look so clean and professional! If you’re at all interested in sprucing up your video content, this is the app for you!",
-		user: "Tima911",
-		date: "19/02/2004"
+		img: pic3
 	},
 	{
-		id: 4,
-		title: "Content creator need this",
-		text: "By far the best all-you-need app for existing or aspiring content creators! 🙌🏻",
-		user: "Elcho911",
-		date: "14/10/2003"
+		img: pic4
+	},
+	{
+		img: pic5
 	}
 ];
 
@@ -93,6 +82,7 @@ const TabСertificate: FC = () => {
 					if (mouseOver) return;
 					timeout = setTimeout(() => {
 						slider.next();
+						4;
 					}, 1500);
 				}
 
@@ -116,7 +106,7 @@ const TabСertificate: FC = () => {
 
 	return (
 		<>
-			<div className={scss.FeedBack__container}>
+			<div className={scss.certificate__container}>
 				<div className={scss.title}>
 					<FormattedMessage
 						id="page.tabs.title.feedback"
@@ -125,17 +115,10 @@ const TabСertificate: FC = () => {
 				</div>
 				<div className={scss.navigation__wrapper}>
 					<div ref={ref} className="keen-slider">
-						{images.map((item) => (
-							<div key={item.id} className="keen-slider__slide">
+						{images.map((item, index) => (
+							<div key={index + 1} className="keen-slider__slide">
 								<div className={scss.card}>
-									<div className={scss.icon}>
-										<StarFiveIcon />
-									</div>
-									<h5 className={scss.title}>{item.title}</h5>
-									<p className={scss.text}>{item.text}</p>
-									<h5 className={scss.user__date}>
-										{item.user}, {item.date}
-									</h5>
+									<Image className={scss.img} quality={70} loading="eager" src={item.img} alt={"certificate"} />
 								</div>
 							</div>
 						))}
