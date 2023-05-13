@@ -38,7 +38,14 @@ const ContactPage: FC = () => {
 								</div>
 								<div className={scss.logo}>
 									<div className={scss.logo__bg}>
-										<Image className={scss.logo__img} src={logo} alt="logo" />
+										<Image
+											priority={true}
+											quality={25}
+											loading="eager"
+											className={scss.logo__img}
+											src={logo}
+											alt="logo"
+										/>
 									</div>
 								</div>
 							</div>

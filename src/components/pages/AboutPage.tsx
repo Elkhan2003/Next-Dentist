@@ -58,19 +58,40 @@ const AboutPage: FC = () => {
 					<div className="container">
 						<div className={scss.about__ticket}>
 							<div className={scss.card}>
-								<Image className={scss.icon} src={MedPlus} alt="MedPlus" />
+								<Image
+									priority={true}
+									quality={25}
+									loading="eager"
+									className={scss.icon}
+									src={MedPlus}
+									alt="MedPlus"
+								/>
 								<p className={scss.text}>
 									<FormattedMessage id="page.about.ticket.first" />
 								</p>
 							</div>
 							<div className={scss.card}>
-								<Image className={scss.icon} src={CheckMark} alt="CheckMark" />
+								<Image
+									priority={true}
+									quality={25}
+									loading="eager"
+									className={scss.icon}
+									src={CheckMark}
+									alt="CheckMark"
+								/>
 								<p className={scss.text}>
 									<FormattedMessage id="page.about.ticket.second" />
 								</p>
 							</div>
 							<div className={scss.card}>
-								<Image className={scss.icon} src={BxChild} alt="BxChild" />
+								<Image
+									priority={true}
+									quality={25}
+									loading="eager"
+									className={scss.icon}
+									src={BxChild}
+									alt="BxChild"
+								/>
 								<p className={scss.text}>
 									<FormattedMessage id="page.about.ticket.third" />
 								</p>
