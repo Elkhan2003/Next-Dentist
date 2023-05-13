@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import scss from "./Footer.module.scss";
 import { IsOpenProps } from "@/components/layout/Layout";
-import { DiscordIcon, GithubIcon, InstagramIcon } from "@/components/svgs";
+import { InstagramIcon, TelegramIcon, WhatAppIcon } from "@/components/svgs";
 import SwitchLogo from "@/components/theme/SwitchLogo";
 import Link from "next/link";
 import { FormattedMessage } from "react-intl";
 
-interface FooterProps extends IsOpenProps {}
+interface FooterProps extends IsOpenProps {
+}
 
 const Footer: FC<FooterProps> = (props) => {
 	return (
@@ -92,7 +93,7 @@ const Footer: FC<FooterProps> = (props) => {
 								target="_blank"
 								aria-label="Link to GitHub profile"
 							>
-								<GithubIcon />
+								<WhatAppIcon />
 							</a>
 							<a
 								className={scss.link}
@@ -100,7 +101,7 @@ const Footer: FC<FooterProps> = (props) => {
 								target="_blank"
 								aria-label="Link to Discord Call"
 							>
-								<DiscordIcon />
+								<TelegramIcon />
 							</a>
 						</div>
 					</div>
