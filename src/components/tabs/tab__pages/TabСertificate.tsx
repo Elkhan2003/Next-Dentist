@@ -118,7 +118,7 @@ const TabСertificate: FC = () => {
 						{images.map((item, index) => (
 							<div key={index + 1} className="keen-slider__slide">
 								<div className={scss.card}>
-									<Image className={scss.img} quality={70} loading="eager" src={item.img} alt={"certificate"} />
+									<Image className={scss.img} quality={50} loading="eager" src={item.img} alt={"certificate"} />
 								</div>
 							</div>
 						))}
