@@ -12,10 +12,8 @@ import { LangIcon, ArrowIcon, PhoneIcon, TimeIcon } from "@/components/svgs";
 // } from "@/components/theme/SwitchTheme";
 
 import { IsOpenProps } from "@/components/layout/Layout";
-import { motion } from "framer-motion";
 
-interface HeaderProps extends IsOpenProps {
-}
+interface HeaderProps extends IsOpenProps {}
 
 interface linksProps {
 	to: string;

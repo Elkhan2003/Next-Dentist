@@ -29,7 +29,7 @@ const Layout: FC<LayoutProps> = ({ children, dir }) => {
 	const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 	const [isOpenDropdownLanguage, setIsOpenDropdownLanguage] = useState(false);
 
-	const props = {
+	const props: any = {
 		isOpen,
 		setIsOpen,
 		isOpenDropdown,
