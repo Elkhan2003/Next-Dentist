@@ -31,7 +31,7 @@ const Header: FC<HeaderProps> = (props) => {
 	// ! Scrolling Scroll
 	useEffect(() => {
 		const changeBackground = () => {
-			if (typeof window !== "undefined" && window.scrollY >= 10) {
+			if (window.scrollY >= 10) {
 				setHeaderScroll(true);
 			} else {
 				setHeaderScroll(false);
