@@ -9,9 +9,6 @@ import { Montserrat } from "next/font/google";
 
 const font = Montserrat({ subsets: ["latin"] });
 
-// const TOKEN = process.env.TOKEN;
-// const CHAT_ID = process.env.CHAT_ID;
-
 interface FormData {
 	first_name: string;
 	last_name: string;
@@ -33,7 +30,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 		message: ""
 	});
 
-	const [isSend, setIsSend] = useState(false);
 	const [sendButton, setSendButton] = useState(false);
 
 	const TOKEN = "6182732393:AAEaon3732C55YRsWvLNdaEtLRKh4TSGhww";
@@ -72,16 +68,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 	async function sendData(e: React.FormEvent<HTMLFormElement>): Promise<void> {
 		e.preventDefault();
 
-		setFormData({
-			first_name: "",
-			last_name: "",
-			phone: "",
-			subject: "",
-			message: ""
-		});
-
-		notify();
-
 		setSendButton(!sendButton);
 
 		try {
@@ -91,13 +77,16 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 				text: messageModel()
 			});
 
-			setIsSend(!isSend);
-
-			setInterval(() => {
-				setIsSend(isSend);
-			}, 6000);
-
+			notify();
 			setSendButton(sendButton);
+
+			setFormData({
+				first_name: "",
+				last_name: "",
+				phone: "",
+				subject: "",
+				message: ""
+			});
 		} catch (err) {
 			console.log(err);
 		}
