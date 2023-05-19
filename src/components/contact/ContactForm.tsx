@@ -1,12 +1,11 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
+import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import scss from "./Contact.module.scss";
-
-import { sendContactForm } from "@/backend/lib/api";
 import { FormattedMessage, useIntl } from "react-intl";
 
-interface ContactFormValues {
+interface FormData {
 	first_name: string;
 	last_name: string;
 	phone: string;
@@ -14,75 +13,40 @@ interface ContactFormValues {
 	message: string;
 }
 
-interface ContactFormState {
-	isLoading: boolean;
-	error: string;
-	values: ContactFormValues;
-}
-
-const initValues: ContactFormValues = {
-	first_name: "",
-	last_name: "",
-	phone: "",
-	subject: "",
-	message: ""
-};
-
-const initState: ContactFormState = {
-	isLoading: false,
-	error: "",
-	values: initValues
-};
-
 interface ContactFormProps {
 	className?: any;
 }
 
 const ContactForm: FC<ContactFormProps> = ({ className }) => {
-	const [state, setState]: any = useState(initState);
-	const [touched, setTouched]: any = useState({});
+	const [formData, setFormData] = useState<FormData>({
+		first_name: "",
+		last_name: "",
+		phone: "",
+		subject: "",
+		message: ""
+	});
 
-	const { values, isLoading, error }: any = state;
+	const [isSend, setIsSend] = useState(false);
+	const [sendButton, setSendButton] = useState(false);
 
-	const onBlur = ({ target }: any) =>
-		// @ts-ignore
-		setTouched((prev) => ({ ...prev, [target.name]: true }));
+	const TOKEN = "6182732393:AAEaon3732C55YRsWvLNdaEtLRKh4TSGhww";
+	const CHAT_ID = "-1001985016010";
+	const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-	const handleChange = ({ target }: any) =>
-		setState((prev: ContactFormState): any => ({
-			...prev,
-			values: {
-				...prev.values,
-				[target.name]: target.value
-			}
-		}));
+	const messageModel = () => {
+		let messageTG = `First Name: <b>${formData.first_name}</b>\n`;
+		messageTG += `Last Name: <b>${formData.last_name}</b>\n`;
+		messageTG += `Phone: <b>${formData.phone}</b>\n`;
+		messageTG += `Subject: <b>${formData.subject}</b>\n`;
+		messageTG += `Message: <b>${formData.message}</b>\n`;
 
-	const onSubmit = async (event: any) => {
-		event.preventDefault();
-		// @ts-ignore
-		setState((prev) => ({ ...prev, isLoading: true }));
-		try {
-			await sendContactForm(values);
-			setTouched({});
-			setState(initState);
-			notify();
-		} catch (error) {
-			// @ts-ignore
-			setState((prev) => ({ ...prev, isLoading: false, error: error.message }));
-			setTimeout(() => {
-				// @ts-ignore
-				setState((prev) => ({ ...prev, error: "" }));
-			}, 3000);
-		}
+		return messageTG;
 	};
 
-	const handleKeyPress = (event: any): void => {
-		const pattern: RegExp = /[0-9+]/;
-		const inputChar: string = String.fromCharCode(event.charCode);
-
-		if (!pattern.test(inputChar)) {
-			event.preventDefault();
-		}
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
 	const notify = () => {
@@ -98,12 +62,48 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 		});
 	};
 
+	async function sendData(e: React.FormEvent<HTMLFormElement>): Promise<void> {
+		e.preventDefault();
+
+		const { first_name, last_name, phone } = formData;
+
+		setFormData({
+			first_name: "",
+			last_name: "",
+			phone: "",
+			subject: "",
+			message: ""
+		});
+
+		notify();
+
+		setSendButton(!sendButton);
+
+		try {
+			await axios.post(API_URL, {
+				chat_id: CHAT_ID,
+				parse_mode: "html",
+				text: messageModel()
+			});
+
+			setIsSend(!isSend);
+
+			setInterval(() => {
+				setIsSend(isSend);
+			}, 6000);
+
+			setSendButton(sendButton);
+		} catch (err) {
+			console.log(err);
+		}
+	}
+
 	const intl: any = useIntl();
 
 	return (
 		<>
 			<div className={className}>
-				<form className={scss.form} onSubmit={onSubmit}>
+				<form className={scss.form} onSubmit={sendData}>
 					<div className={scss.container}>
 						<div className={scss.titles}>
 							<h2>
@@ -112,7 +112,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 							<p>
 								<FormattedMessage id="page.contact.left.text" />
 							</p>
-							{error && <pre className={scss.error__message}>{error}</pre>}
 						</div>
 						<div className={scss.inputs}>
 							<div className={scss.inputBx}>
@@ -121,22 +120,14 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									name="first_name"
 									aria-labelledby="first_name"
 									id="first_name"
-									className={`${scss.input__field} ${
-										touched.first_name && !values.first_name ? scss.error : null
-									}`}
-									value={values.first_name}
+									className={scss.input__field}
+									value={formData.first_name}
 									onChange={handleChange}
-									onBlur={onBlur}
 									required
 								/>
 								<label htmlFor="first_name">
 									<FormattedMessage id="page.contact.input.fitst.name" />
 								</label>
-								{touched.first_name && !values.first_name && (
-									<p className={scss.error}>
-										<FormattedMessage id="page.contact.required.field" />
-									</p>
-								)}
 							</div>
 
 							<div className={scss.inputBx}>
@@ -145,46 +136,15 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									name="last_name"
 									aria-labelledby="last_name"
 									id="last_name"
-									className={`${scss.input__field} ${
-										touched.last_name && !values.last_name ? scss.error : null
-									}`}
-									value={values.last_name}
+									className={scss.input__field}
+									value={formData.last_name}
 									onChange={handleChange}
-									onBlur={onBlur}
 									required
 								/>
 								<label htmlFor="last_name">
 									<FormattedMessage id="page.contact.input.last.name" />
 								</label>
-								{touched.last_name && !values.last_name && (
-									<p className={scss.error}>
-										<FormattedMessage id="page.contact.required.field" />
-									</p>
-								)}
 							</div>
-
-							{/*<div className={scss.inputBx}>*/}
-							{/*	<label>Email</label>*/}
-							{/*	<input*/}
-							{/*		type="email"*/}
-							{/*		name="email"*/}
-							{/*		placeholder="Адрес электронной почты*"*/}
-							{/*		className={`${scss.input__field} ${*/}
-							{/*			touched.email && !values.email.match(/^\S+@\S+\.\S+$/)*/}
-							{/*				? scss.error*/}
-							{/*				: null*/}
-							{/*		}`}*/}
-							{/*		value={values.email}*/}
-							{/*		onChange={handleChange}*/}
-							{/*		onBlur={onBlur}*/}
-							{/*      required*/}
-							{/*	/>*/}
-							{/*	{touched.email && !values.email.match(/^\S+@\S+\.\S+$/) && (*/}
-							{/*		<p className={scss.error}>*/}
-							{/*			Пожалуйста, введите действительный адрес электронной почты*/}
-							{/*		</p>*/}
-							{/*	)}*/}
-							{/*</div>*/}
 
 							<div className={scss.inputBx}>
 								<input
@@ -192,26 +152,15 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									name="phone"
 									aria-label="phone_input"
 									id="phone_input"
-									className={`${scss.input__field} ${
-										touched.phone && !values.phone.match(/^\+?\d{12,13}$/)
-											? scss.error
-											: null
-									}`}
-									value={values.phone || "+996"}
+									className={scss.input__field}
+									value={formData.phone || "+996"}
 									maxLength={13}
 									onChange={handleChange}
-									onBlur={onBlur}
-									onKeyPress={handleKeyPress}
-									required={!values.phone || values.phone.length < 13}
+									required={!formData.phone || formData.phone.length < 13}
 								/>
 								<label htmlFor="phone">
 									<FormattedMessage id="page.contact.input.phone" />
 								</label>
-								{touched.phone && !values.phone.match(/^\+?\d{12,13}$/) && (
-									<p className={scss.error}>
-										<FormattedMessage id="page.contact.required.field" />
-									</p>
-								)}
 							</div>
 
 							<div className={scss.inputBx}>
@@ -220,22 +169,14 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									name="subject"
 									aria-labelledby="subject"
 									id="subject"
-									className={`${scss.input__field} ${
-										touched.subject && !values.subject ? scss.error : null
-									}`}
-									value={values.subject}
+									className={scss.input__field}
+									value={formData.subject}
 									onChange={handleChange}
-									onBlur={onBlur}
 									required
 								/>
 								<label htmlFor="subject">
 									<FormattedMessage id="page.contact.input.subject" />
 								</label>
-								{touched.subject && !values.subject && (
-									<p className={scss.error}>
-										<FormattedMessage id="page.contact.required.field" />
-									</p>
-								)}
 							</div>
 
 							<div className={scss.textareaBx}>
@@ -243,21 +184,20 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									name="message"
 									aria-labelledby="message"
 									id="message"
-									className={`${scss.message}`}
+									className={scss.message}
 									placeholder={intl.formatMessage({
 										id: "page.contact.input.message"
 									})}
-									value={values.message}
+									value={formData.message}
 									onChange={handleChange}
-									onBlur={onBlur}
 								/>
 							</div>
 						</div>
 						<button
-							disabled={isLoading}
-							className={`${scss.button} ${isLoading ? scss.loading : null}`}
+							disabled={sendButton}
+							className={`${scss.button} ${sendButton ? scss.loading : null}`}
 						>
-							{isLoading ? (
+							{sendButton ? (
 								<FormattedMessage id="page.contact.sending" />
 							) : (
 								<FormattedMessage id="page.contact.send" />
@@ -281,4 +221,5 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 		</>
 	);
 };
+
 export default ContactForm;

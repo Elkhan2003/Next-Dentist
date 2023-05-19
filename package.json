@@ -14,6 +14,7 @@
 		"@types/react": "18.0.35",
 		"@types/react-dom": "18.0.11",
 		"@types/react-scroll": "^1.8.6",
+		"axios": "^1.4.0",
 		"framer-motion": "^10.12.4",
 		"keen-slider": "^6.8.5",
 		"next": "13.3.0",
