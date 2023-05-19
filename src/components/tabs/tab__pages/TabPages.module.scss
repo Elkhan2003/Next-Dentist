@@ -1,3 +1,7 @@
+// ! Arrow Size
+$arrowSize: 20px;
+$arrowSizeHover: 30px;
+
 // ! FeedBack
 .FeedBack__container {
 	display: flex;
@@ -130,25 +134,25 @@
 		}
 
 		.arrow__left {
-			padding-right: 50px;
+			padding-right: $arrowSize;
 
 			&:hover {
-				padding-right: 60px;
+				padding-right: $arrowSizeHover;
 
 				@media (max-width: 500px) {
-					padding-right: 50px;
+					padding-right: $arrowSize;
 				}
 			}
 		}
 
 		.arrow__right {
-			padding-left: 50px;
+			padding-left: $arrowSize;
 
 			&:hover {
-				padding-left: 60px;
+				padding-left: $arrowSizeHover;
 
 				@media (max-width: 500px) {
-					padding-left: 50px;
+					padding-left: $arrowSize;
 				}
 			}
 		}
@@ -257,25 +261,25 @@
 		}
 
 		.arrow__left {
-			padding-right: 50px;
+			padding-right: $arrowSize;
 
 			&:hover {
-				padding-right: 60px;
+				padding-right: $arrowSizeHover;
 
 				@media (max-width: 500px) {
-					padding-right: 50px;
+					padding-right: $arrowSize;
 				}
 			}
 		}
 
 		.arrow__right {
-			padding-left: 50px;
+			padding-left: $arrowSize;
 
 			&:hover {
-				padding-left: 60px;
+				padding-left: $arrowSizeHover;
 
 				@media (max-width: 500px) {
-					padding-left: 50px;
+					padding-left: $arrowSize;
 				}
 			}
 		}
