@@ -22,10 +22,10 @@ const ContactPage: FC = () => {
 									<h1 className={scss.title}>
 										<FormattedMessage id="page.contact.right.title" />
 									</h1>
-									<p className={`${scss.text} ${scss.email}`}>
-										<EmailIcon />
-										boss.armsport@gmail.com
-									</p>
+									{/*<p className={`${scss.text} ${scss.email}`}>*/}
+									{/*	<EmailIcon />*/}
+									{/*	boss.armsport@gmail.com*/}
+									{/*</p>*/}
 									<p className={scss.text}>
 										<a className={scss.tel} href="tel:+996558777366">
 											<PhoneIcon />

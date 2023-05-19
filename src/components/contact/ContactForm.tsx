@@ -5,6 +5,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FormattedMessage, useIntl } from "react-intl";
 
+import { Montserrat } from "next/font/google";
+
+const font = Montserrat({ subsets: ["latin"] });
+
 // const TOKEN = process.env.TOKEN;
 // const CHAT_ID = process.env.CHAT_ID;
 
@@ -185,7 +189,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 									name="message"
 									aria-labelledby="message"
 									id="message"
-									className={scss.message}
+									className={`${scss.message} ${font.className}`}
 									placeholder={intl.formatMessage({
 										id: "page.contact.input.message"
 									})}

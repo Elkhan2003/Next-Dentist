@@ -66,33 +66,66 @@
 				}
 
 				.button__call {
-					bottom: 200px;
 					position: absolute;
-					padding: 20px 50px;
+					bottom: 150px;
 
-					background: #01b675;
-					box-shadow: 0 0 20px #00ffa3;
-					border-radius: 101px;
+					@media (max-width: 768px) {
+						left: 50%;
 
-					font-weight: 600;
-					font-size: 25px;
-					letter-spacing: 3px;
-					text-transform: uppercase;
-					text-decoration: none;
-					text-shadow: 0px 0px 1px black;
-
-					//color: #060606;
-					color: #ffffff;
-
-					transition: 0.4s;
-
-					&:hover {
-						background: #102d22;
+						transform: translateX(-50%);
 					}
 
-					@media (max-width: 450px) {
-						padding: 15px 30px;
-						font-size: 17px;
+					.icons {
+						gap: 25px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						.link {
+							//background-color: var(--footer-icon-bg-dark);
+							color: var(--footer-icon-dark);
+							padding: 10px;
+
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							border-radius: 50px;
+
+							transition: 0.4s;
+
+							&:hover {
+								//background-color: var(--footer-iconHover-bg-dark);
+								background: transparent;
+							}
+
+							svg {
+								font-size: 40px;
+							}
+						}
+
+						.instagram {
+							background: #9600bd;
+							@media (max-width: 768px) {
+								background: #1e1e1e;
+								color: #9600bd;
+							}
+						}
+
+						.what__app {
+							background: #50c05c;
+							@media (max-width: 768px) {
+								background: #1e1e1e;
+								color: #50c05c;
+							}
+						}
+
+						.telegram {
+							background: #269dda;
+							@media (max-width: 768px) {
+								background: #1e1e1e;
+								color: #269dda;
+							}
+						}
 					}
 				}
 			}

@@ -65,9 +65,9 @@ const Footer: FC<FooterProps> = (props) => {
 							<h6>
 								<FormattedMessage id="page.footer.block_4.title" />
 							</h6>
-							<a className={scss.link__text} href="#">
-								boss.armsport@gmail.com
-							</a>
+							{/*<a className={scss.link__text} href="#">*/}
+							{/*	boss.armsport@gmail.com*/}
+							{/*</a>*/}
 							<a className={scss.link__text} href="tel:+996558777366">
 								+996 558 777 366
 							</a>
