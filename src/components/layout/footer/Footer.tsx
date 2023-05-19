@@ -84,7 +84,7 @@ const Footer: FC<FooterProps> = (props) => {
 						<div className={scss.icons}>
 							<a
 								className={scss.link}
-								href="https://www.instagram.com/elcho911/"
+								href="https://www.instagram.com/ortodont_group/"
 								target="_blank"
 								aria-label="Link to Instagram profile"
 							>
