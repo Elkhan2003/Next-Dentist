@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import axios from "axios";
+import scss from "./Contact.module.scss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import scss from "./Contact.module.scss";
 import { FormattedMessage, useIntl } from "react-intl";
 
 interface FormData {
@@ -64,8 +64,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 
 	async function sendData(e: React.FormEvent<HTMLFormElement>): Promise<void> {
 		e.preventDefault();
-
-		const { first_name, last_name, phone } = formData;
 
 		setFormData({
 			first_name: "",
@@ -203,18 +201,7 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 								<FormattedMessage id="page.contact.send" />
 							)}
 						</button>
-						<ToastContainer
-							position="top-center"
-							autoClose={5000}
-							hideProgressBar={false}
-							newestOnTop={false}
-							closeOnClick
-							rtl={false}
-							pauseOnFocusLoss
-							draggable
-							pauseOnHover
-							theme="dark"
-						/>
+						<ToastContainer />
 					</div>
 				</form>
 			</div>
