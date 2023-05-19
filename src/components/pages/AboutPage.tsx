@@ -6,7 +6,7 @@ import TeethIcon from "@/assets/icons/Teeth.png";
 import MedPlus from "@/assets/icons/med_plus.png";
 import CheckMark from "@/assets/icons/check_mark.png";
 import BxChild from "@/assets/icons/bx-child.png";
-import ReactYoutube from "@/react-youtube/ReactYoutube";
+import ReactYoutube from "@/components/react-youtube/ReactYoutube";
 
 const AboutPage: FC = () => {
 	return (
