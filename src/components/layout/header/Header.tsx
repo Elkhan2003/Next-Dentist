@@ -196,8 +196,10 @@ const Header: FC<HeaderProps> = (props) => {
 											</p>
 										</div>
 										<div className={scss.icon__text}>
-											<PhoneIcon />
-											<p className={scss.text}>+996 990 38 50 56</p>
+											<a className={scss.tel} href="tel:+996558777366">
+												<PhoneIcon />
+												<p className={scss.text}>+996 558 777 366</p>
+											</a>
 										</div>
 									</div>
 								</div>

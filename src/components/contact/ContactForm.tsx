@@ -5,6 +5,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FormattedMessage, useIntl } from "react-intl";
 
+// const TOKEN = process.env.TOKEN;
+// const CHAT_ID = process.env.CHAT_ID;
+
 interface FormData {
 	first_name: string;
 	last_name: string;
@@ -29,8 +32,6 @@ const ContactForm: FC<ContactFormProps> = ({ className }) => {
 	const [isSend, setIsSend] = useState(false);
 	const [sendButton, setSendButton] = useState(false);
 
-	// const TOKEN: any = process.env.TOKEN;
-	// const CHAT_ID: any = process.env.CHAT_ID;
 	const TOKEN = "6182732393:AAEaon3732C55YRsWvLNdaEtLRKh4TSGhww";
 	const CHAT_ID = "-1001985016010";
 	const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;

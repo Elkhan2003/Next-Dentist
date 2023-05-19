@@ -68,8 +68,11 @@ const Footer: FC<FooterProps> = (props) => {
 							<a className={scss.link__text} href="#">
 								boss.armsport@gmail.com
 							</a>
-							<a className={scss.link__text} href="#">
-								+996 990 38 50 56
+							<a className={scss.link__text} href="tel:+996558777366">
+								+996 558 777 366
+							</a>
+							<a className={scss.link__text} href="tel:+996555801758">
+								+996 555 801 758
 							</a>
 						</div>
 					</div>
@@ -89,17 +92,17 @@ const Footer: FC<FooterProps> = (props) => {
 							</a>
 							<a
 								className={scss.link}
-								href="https://github.com/Elkhan2003"
+								href="https://wa.me/996558777366?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E"
 								target="_blank"
-								aria-label="Link to GitHub profile"
+								aria-label="Link to WhatApp profile"
 							>
 								<WhatAppIcon />
 							</a>
 							<a
 								className={scss.link}
-								href="https://discord.gg/NZpxaY4CGC"
+								href="https://t.me/+996558777366"
 								target="_blank"
-								aria-label="Link to Discord Call"
+								aria-label="Link to Telegram Call"
 							>
 								<TelegramIcon />
 							</a>
