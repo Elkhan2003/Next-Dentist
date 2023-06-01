@@ -26,3 +26,8 @@
 	max-width: 1400px;
 	padding: 0 20px;
 }
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}

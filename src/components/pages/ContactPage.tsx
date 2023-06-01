@@ -29,18 +29,18 @@ const ContactPage: FC = () => {
 									<p className={scss.text}>
 										<a className={scss.tel} href="tel:+996558777366">
 											<PhoneIcon />
-											+996 558 777 366
+											+996 990 38 50 56
 										</a>
 									</p>
 									<p className={scss.text}>
 										<a className={scss.tel} href="tel:+996555801758">
 											<PhoneIcon />
-											+996 555 801 758
+											+996 990 38 50 56
 										</a>
 									</p>
 									<p className={scss.text}>
 										<MarkerIcon />
-										Тыныстанова 9/2
+										DevX from Karakol
 										{/*DevX&nbsp;*/}
 										{/*<AnimatedNumbers value={911} />*/}
 									</p>

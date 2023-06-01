@@ -68,23 +68,21 @@ const Footer: FC<FooterProps> = (props) => {
 							{/*<a className={scss.link__text} href="#">*/}
 							{/*	boss.armsport@gmail.com*/}
 							{/*</a>*/}
-							<a className={scss.link__text} href="tel:+996558777366">
-								+996 558 777 366
+							<a className={scss.link__text} href="tel:+996990385056">
+								+996 990 38 50 56
 							</a>
-							<a className={scss.link__text} href="tel:+996555801758">
-								+996 555 801 758
+							<a className={scss.link__text} href="tel:+996990385056">
+								+996 990 38 50 56
 							</a>
 						</div>
 					</div>
 					<hr />
 					<div className={scss.footer__bottom}>
-						<div className={scss.copyright}>
-							Copyright © 2023 Ortodont-Group
-						</div>
+						<div className={scss.copyright}>Copyright © 2023 DevX</div>
 						<div className={scss.icons}>
 							<a
 								className={scss.link}
-								href="https://www.instagram.com/ortodont_group/"
+								href="https://www.instagram.com/elcho911/"
 								target="_blank"
 								aria-label="Link to Instagram profile"
 							>
@@ -92,7 +90,7 @@ const Footer: FC<FooterProps> = (props) => {
 							</a>
 							<a
 								className={scss.link}
-								href="https://wa.me/996558777366?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E"
+								href="https://wa.me/996990385056?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E"
 								target="_blank"
 								aria-label="Link to WhatApp profile"
 							>
@@ -100,7 +98,7 @@ const Footer: FC<FooterProps> = (props) => {
 							</a>
 							<a
 								className={scss.link}
-								href="https://t.me/+996558777366"
+								href="https://t.me/+996990385056"
 								target="_blank"
 								aria-label="Link to Telegram Call"
 							>
